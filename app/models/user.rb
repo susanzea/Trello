@@ -1,11 +1,11 @@
 class User < ApplicationRecord
     #FIGVAPER
-    
+    debugger
     # add model validation! this will largely reflect constraints set in db
     # V
-    validate :username, :password_digest, :session_token, presence: true
-    validate :username, uniqueness: true
-    validate :password, length: { minimum: 6 }, allow_nil: true
+    validates :username, :email, :full_name, :password_digest, :session_token, presence: true
+    validates :username, uniqueness: true
+    validates :password, length: { minimum: 6 }, allow_nil: true
 
     # A
     attr_reader :password 
@@ -40,7 +40,7 @@ class User < ApplicationRecord
     end
 
     # R
-    def reset_session_token
+    def reset_session_token!
         self.session_token = User.generate_session_token
         self.save!
         self.session_token
