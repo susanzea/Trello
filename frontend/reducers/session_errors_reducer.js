@@ -12,3 +12,5 @@ const sessionErrorsReducer = (prevState={}, action) => {
             return prevState;
     }
 }
+
+export default sessionErrorsReducer;
