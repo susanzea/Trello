@@ -1,6 +1,5 @@
 class User < ApplicationRecord
     #FIGVAPER
-    debugger
     # add model validation! this will largely reflect constraints set in db
     # V
     validates :username, :email, :full_name, :password_digest, :session_token, presence: true
