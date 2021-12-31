@@ -4,7 +4,7 @@ class Api::UsersController < ApplicationController
 
         if @user.save
             login(user)
-            render 'api/users/show'
+            render :show    # same as 'api/users/show'
         else
             render json: ['Invalid Signup Credentials'], status: 422
         end
