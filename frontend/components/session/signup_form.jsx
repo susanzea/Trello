@@ -5,11 +5,12 @@ import { signup } from '../../actions/session_actions'
 class SignupForm extends React.Component {
     constructor(props) {
         super(props);
+        debugger
 
         this.state = {
             username: '',
             email: '',
-            fullName: '',
+            full_name: '',
             password: ''
         }
 
@@ -24,7 +25,9 @@ class SignupForm extends React.Component {
     }
 
     handleSubmit(e) {
-        return null;
+        debugger
+        e.preventDefault();
+        this.props.signup(this.state);
     }
 
 
@@ -34,7 +37,7 @@ class SignupForm extends React.Component {
                 <h1>Sign up for your account</h1>
                 <form onSubmit={this.handleSubmit}>
                     <label>Name
-                        <input type="text" value={this.props.fullName} onChange={this.handleChange('fullName')}/>
+                        <input type="text" value={this.props.full_name} onChange={this.handleChange('full_name')}/>
                     </label>
                     <label>Email
                         <input type="text" value={this.props.email} onChange={this.handleChange('email')}/>

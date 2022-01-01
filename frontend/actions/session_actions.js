@@ -1,7 +1,13 @@
+import { postUser, postSession, deleteSession } from '../util/session_api_util';
+
+
+
+
 ///////////action creators
 export const RECEIVE_CURRENT_USER = `RECEIVE_CURRENT_USER`;
 
 const receiveCurrentUser = (user) => {
+    debugger
     return {
         type: RECEIVE_CURRENT_USER,
         user
@@ -36,7 +42,8 @@ const receiveSessionErrors = (errors) => {
 //////////thunk action creators
 
 export const signup = user => dispatch => {
-    return signup(user)
+    debugger
+    return postUser(user)
         .then(
             user => dispatch(receiveCurrentUser(user)),
             err => dispatch(receiveSessionErrors(err.responseJSON))
@@ -44,7 +51,7 @@ export const signup = user => dispatch => {
 }
 
 export const login = user => dispatch => {
-    return login(user)
+    return postSession(user)
         .then(
             user => dispatch(receiveCurrentUser(user)),
             err => dispatch(receiveSessionErrors(err.responseJSON))
@@ -52,6 +59,6 @@ export const login = user => dispatch => {
 }
 
 export const logout = () => dispatch => {
-    return logout()
+    return deleteSession()
         .then(() => dispatch(logoutCurrentUser()))
 }

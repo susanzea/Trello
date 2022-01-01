@@ -1,10 +1,13 @@
 class Api::UsersController < ApplicationController
     def create
+        debugger
         @user = User.new(new_user_params)
 
         if @user.save
+            debugger
             login(@user)
-            render :show    # same as 'api/users/show'
+            render 'api/users/show'   # same as 'api/users/show'
+            debugger
         else
             render json: ['Invalid Signup Credentials'], status: 422
         end

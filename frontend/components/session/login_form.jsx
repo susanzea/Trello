@@ -29,7 +29,6 @@ class LoginForm extends React.Component {
     render() {
         return (
             <div>
-                <img src="/Users/susanzea/Desktop/Fullstack_Proj/Trelloh_proj/app/assets/images/trello-logo-blue.svg" alt="" />
                 <form onSubmit={this.handleSubmit}>
                     <h1>Log in to Trello</h1>
                     <label>Email
