@@ -5,9 +5,9 @@ import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
 import BoardIndex from './boards/board_index';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import QuickSignup from '../quickSignup/quick_signup';
+import QuickSignup from '../SplashPage/quick_signup';
 import NavBar from './navbars/nav_bar';
-const App = (props) => {
+const App = () => {
     return(
         <div>
             <header>

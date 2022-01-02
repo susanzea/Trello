@@ -1,16 +1,16 @@
 import React from 'react';
+import SplashContent from './splash_content';
 
 class QuickSignup extends React.Component {
 
     render() {
         return (
             <div>
-                <span>
+                <SplashContent/>
+                <form>
                     <input type="text" />
-                </span>
-                <span>
                     <button>Sign up-it's free!</button>
-                </span>
+                </form>
             </div>
         )
     }
