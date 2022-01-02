@@ -1,5 +1,7 @@
 import React from 'react';
 import { login } from '../../actions/session_actions'
+import { Link } from 'react-router-dom';
+import LangMenu from './lang_menu';
 
 
 class LoginForm extends React.Component {
@@ -30,18 +32,18 @@ class LoginForm extends React.Component {
     render() {
         return (
             <div>
+                <h1>Trelloh</h1>
                 <form onSubmit={this.handleSubmit}>
-                    <h1>Log in to Trello</h1>
-                    <label>Email
-                        <input type="text" value={this.props.email} onChange={this.handleChange('email')} />
-                    </label>
-                    <br/>
-                    <label>Password
-                        <input type="password" value={this.props.password} onChange={this.handleChange('password')} />
-                    </label>
-                    <br/>
+                    <h3>Log in to Trello</h3>
+                    <input type="text" value={this.props.email} placeholder="Enter email" onChange={this.handleChange('email')} />
+                    <input type="password" value={this.props.password} placeholder="Enter password" onChange={this.handleChange('password')} />
                     <button type="submit">Log in</button>
+                    <footer>
+                        <button>Can't log in?</button>
+                        <Link to="/signup">Sign up for an account</Link>
+                    </footer>
                 </form>
+                <LangMenu/>
             </div>
         )
     }

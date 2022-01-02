@@ -5,14 +5,14 @@ const NavBar = ({ currentUser, logout }) => {
 
     const loggedInLinks = () => {
     return <nav>
-        <h1>Trelloh</h1>
+        <h2>Trelloh</h2>
         <Link to="/" onClick={logout}>Logout</Link>
     </nav>
     }
 
     const loggedOutLinks = () => {
         return <nav>
-            <h1>Trelloh</h1>
+            <h2>Trelloh</h2>
             <Link to={`/login`}>Log in</Link>
             <Link to={`/signup`}>Sign up</Link>
         </nav>
