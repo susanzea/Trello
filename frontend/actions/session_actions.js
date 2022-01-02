@@ -2,12 +2,10 @@ import { postUser, postSession, deleteSession } from '../util/session_api_util';
 
 
 
-
 ///////////action creators
 export const RECEIVE_CURRENT_USER = `RECEIVE_CURRENT_USER`;
 
 const receiveCurrentUser = (user) => {
-    debugger
     return {
         type: RECEIVE_CURRENT_USER,
         user
@@ -50,7 +48,6 @@ export const signup = user => dispatch => {
 }
 
 export const login = user => dispatch => {
-    debugger
     return postSession(user)
         .then(
             user => dispatch(receiveCurrentUser(user)),

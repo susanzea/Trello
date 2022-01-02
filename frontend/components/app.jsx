@@ -5,15 +5,19 @@ import SignupFormContainer from './session/signup_form_container';
 import LoginFormContainer from './session/login_form_container';
 import BoardIndex from './boards/board_index';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-
+import QuickSignup from '../quickSignup/quick_signup';
+import NavBar from './navbars/nav_bar';
 const App = (props) => {
     return(
         <div>
+            <header>
+                <NavBarContainer/>
+            </header>
             <Switch>
                 <AuthRoute exact path="/signup" component={SignupFormContainer} />
                 <AuthRoute exact path="/login" component={LoginFormContainer} />
                 <ProtectedRoute exact path="/home" component={BoardIndex} />
-                <Route exact path="/" component={NavBarContainer} />
+                <AuthRoute exact path="/" component={QuickSignup} />
             </Switch>
         </div>
     )

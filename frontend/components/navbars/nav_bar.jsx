@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 const NavBar = ({ currentUser, logout }) => {
+
     const loggedInLinks = () => {
     return <nav>
-        <button onClick={logout}>Log out</button>
+        <Link to="/" onClick={logout}>Logout</Link>
     </nav>
     }
 
@@ -14,7 +15,6 @@ const NavBar = ({ currentUser, logout }) => {
             <Link to={`/signup`}>Sign up</Link>
         </nav>
     }
-    debugger
     return(
         currentUser ? loggedInLinks() : loggedOutLinks()
     )
