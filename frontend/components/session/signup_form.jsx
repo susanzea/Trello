@@ -5,7 +5,6 @@ import { signup } from '../../actions/session_actions'
 class SignupForm extends React.Component {
     constructor(props) {
         super(props);
-        debugger
 
         this.state = {
             username: '',
@@ -25,7 +24,6 @@ class SignupForm extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
         e.preventDefault();
         this.props.signup(this.state);
     }
