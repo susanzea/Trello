@@ -1,0 +1,84 @@
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.loggedOutNav {
+  padding: 0em 0.25em 0.25em 0.25em;
+  margin: 0%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.splash {
+    display: flex;
+    background-image: url("/images/splash/gradient.jpeg");
+    height: 100vh;
+    background-position: center;
+    background-size: contain;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    line-height: 1.55;
+    color: #091e42;
+}
+
+.splash-form {
+    width: 50%;
+    margin-right: 30%;
+    margin-bottom: 3%;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+}
+
+#splash-title {
+    font-size: 42px;
+    font-weight: bolder;
+    line-height: 1.4;
+    margin-bottom: 1%;
+}
+
+#root-img {
+    height: 70%;
+    position: absolute;
+    right: 3%;
+    bottom: 12%;
+}
+
+.splash-button {
+    color: white;
+    background-color:#0164ff;
+    border-radius: 6px;
+    border: none;
+    text-decoration: none;
+}
+
+#quick-signup-input {
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    width: 50%;
+    height: 2.8em;
+    padding: 0px 8px 0px 15px;
+    margin: 6% 3% 0% 0%;
+    font-size: 17px;
+    font-weight: 550;
+    color: #7493a6;
+}
+
+#quick-signup-button {
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: 20px;
+    height: 2.25em;
+    width: 35%;
+}
+
+.quick-signup-section {
+    width: 100%;
+}
+
+.logo {
+    height: 35px;
+}

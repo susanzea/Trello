@@ -7,11 +7,14 @@ class QuickSignup extends React.Component {
     render() {
         return (
             <div className="splash">
-                <SplashContent/>
-                <form>
-                    <input type="text" />
-                    <button>Sign up-it's free!</button>
+                <form className='splash-form'>
+                    <SplashContent />
+                    <section className='quick-signup-section'>
+                        <input id="quick-signup-input" type="text" placeholder="Email"/>
+                        <button className='splash-button' id="quick-signup-button">Sign up-it's free!</button>
+                    </section>
                 </form>
+                <img id="root-img" src="/images/splash/root-img.png" alt="" />
             </div>
         )
     }
