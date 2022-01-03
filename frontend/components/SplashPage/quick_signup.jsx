@@ -1,12 +1,13 @@
 import React from 'react';
 import SplashContent from './splash_content';
-import NavBarContainer from '../components/navbars/nav_bar_container';
+import SplashNavBar from '../navbars/splash_nav_bar';
 
 class QuickSignup extends React.Component {
 
     render() {
         return (
             <div className="splash">
+                <SplashNavBar />
                 <form className='splash-form'>
                     <SplashContent />
                     <section className='quick-signup-section'>
