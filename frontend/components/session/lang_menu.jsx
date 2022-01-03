@@ -7,7 +7,7 @@ const LangMenu = (props) => {
             <option value="deutsch">Deutsch</option>
             <option value="english">English</option>
             <option value="english-au">English (AU)</option>
-            <option value="english-us" selected="true">English (US)</option>
+            <option value="english-us" defaultValue={true}>English (US)</option>
             <option value="español">Español</option>
             <option value="français">Français</option>
             <option value="italiano">Italiano</option>
