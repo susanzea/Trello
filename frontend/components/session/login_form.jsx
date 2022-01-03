@@ -54,9 +54,9 @@ class LoginForm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='session-form'>
                 <h1>Trelloh</h1>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} className='login-form'>
                     <h3>Log in to Trello</h3>
                     {this.displayErrors()}
                     <input type="text" value={this.props.email} placeholder="Enter email" onChange={this.handleChange('email')} />
@@ -70,7 +70,11 @@ class LoginForm extends React.Component {
                         <Link to="/signup">Sign up for an account</Link>
                     </footer>
                 </form>
-                <LangMenu/>
+                <LangMenu className="lang-menu"/>
+                <footer className='session-images'>
+                    <img src="/images/session_forms/login_form/left.png" alt="" className='session-img' />
+                    <img src="/images/session_forms/login_form/right.png" alt="" className='session-img' />
+                </footer>
             </div>
         )
     }

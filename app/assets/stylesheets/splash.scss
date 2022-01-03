@@ -2,17 +2,6 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 
-.loggedOutNav {
-  padding: 0em 0.25em 0.25em 0.25em;
-  margin: 0%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  width: 100%
-}
-
 .splash {
     display: flex;
     background-image: url("/images/splash/gradient.jpeg");

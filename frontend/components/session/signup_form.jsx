@@ -50,7 +50,7 @@ class SignupForm extends React.Component {
         return(
             <div>
                 <h1>Trelloh</h1>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} className='signup-form'>
                     <h3>Sign up for your account</h3>
                     {this.displayErrors()}
                     <input type="text" value={this.props.full_name} onChange={this.handleChange('full_name')} placeholder="Enter full name"/>
