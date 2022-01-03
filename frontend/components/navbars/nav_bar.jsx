@@ -2,6 +2,7 @@ import React from 'react';
 import { Link} from 'react-router-dom';
 
 const NavBar = ({ currentUser, logout }) => {
+    debugger
 
     const loggedInLinks = () => {
     return <nav className='loggedInNav'>
