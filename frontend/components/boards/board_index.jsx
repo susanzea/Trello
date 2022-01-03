@@ -1,12 +1,12 @@
 import React from 'react';
-import MainNavBar from '../navbars/mainNavBar/main_nav_bar';
+import MainNavBarContainer from '../navbars/mainNavBar/main_nav_bar_container';
 
 class BoardIndex extends React.Component {
 
     render() {
         return (
             <div>
-                <MainNavBar />
+                <MainNavBarContainer />
                 <h1>Boards Index</h1>
             </div>
         )

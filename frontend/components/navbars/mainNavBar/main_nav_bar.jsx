@@ -5,7 +5,6 @@ import LogoHomeButton  from './logo_home_button'
 import SearchBar  from './search_bar'
 import NotificationMenu from './notification_menu';
 import UserMenu from './user_menu';
-import { logout } from '../../../actions/session_actions'
 
 class MainNavBar extends React.Component {
     constructor(props) {
@@ -21,7 +20,7 @@ class MainNavBar extends React.Component {
                 <button>ℹ️</button>
                 <NotificationMenu />
                 <UserMenu />
-                <Link to="/" onClick={logout}>Logout</Link>
+                <Link to="/" onClick={this.props.logout}>Logout</Link>
             </nav>
         )
     }
