@@ -5,6 +5,7 @@ const usersReducer = (prevState={}, action) => {
     let nextState = Object.assign({}, prevState)
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
+            nextState = {};
             nextState[action.user.id] = action.user;
             return nextState;
         default:

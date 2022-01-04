@@ -48,7 +48,7 @@ class SignupForm extends React.Component {
 
     render() {
         return(
-            <div>
+            <div className='session-form'>
                 <h1>Trelloh</h1>
                 <form onSubmit={this.handleSubmit} className='signup-form'>
                     <h3>Sign up for your account</h3>

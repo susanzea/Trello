@@ -30,13 +30,16 @@ class LoginForm extends React.Component {
     }
 
     handleDemoUser(e) {
-        e.preventDefault;
-        this.setState({
+        e.preventDefault();
+        const user = ({
+            username: 'demo_user',
             email: 'demo@user.com',
+            full_name: 'Demo User',
             password: 'password'
-        })
-        setTimeout(() => {this.props.login(this.state)}, 1000)
+        });
+        this.props.login(user);
     }
+
 
     displayErrors() {
         return (

@@ -11,6 +11,15 @@ class MainNavBar extends React.Component {
         super(props);
     }
 
+    // handleLogout(e) {
+    //     e.preventDefault();
+    //     this.props.logout()
+    //     .then(user => {
+    //         this.props.history.push("/login")
+    //     })
+    // }
+
+
     render(){
         return (
             <nav className='top-nav-bar' id='main-nav-bar'>
@@ -20,9 +29,10 @@ class MainNavBar extends React.Component {
                 <button>ℹ️</button>
                 <NotificationMenu />
                 <UserMenu />
-                <Link to="/" onClick={this.props.logout}>Logout</Link>
+                <Link to="/login" onClick={this.props.logout}>Logout</Link>
             </nav>
         )
+        //issue
     }
 }
 

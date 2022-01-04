@@ -3,6 +3,16 @@ import SplashContent from './splash_content';
 import SplashNavBar from '../navbars/splash_nav_bar';
 
 class QuickSignup extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            
+        }
+    }
+
+    onChange(e) {
+
+    }
 
     render() {
         return (

@@ -4,6 +4,7 @@ import MainNavBarContainer from '../navbars/mainNavBar/main_nav_bar_container';
 class BoardIndex extends React.Component {
 
     render() {
+        //get ownProps to MainNavContainer
         return (
             <div>
                 <MainNavBarContainer />

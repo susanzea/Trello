@@ -48,14 +48,19 @@ export const signup = user => dispatch => {
 }
 
 export const login = user => dispatch => {
+    debugger
     return postSession(user)
         .then(
             user => dispatch(receiveCurrentUser(user)),
-            err => dispatch(receiveSessionErrors(err.responseJSON))
+            err => {
+                dispatch(receiveSessionErrors(err.responseJSON))
+            }
         )
 }
 
 export const logout = () => dispatch => {
     return deleteSession()
-        .then(() => dispatch(logoutCurrentUser()))
+        .then(() => dispatch(logoutCurrentUser()),
+        err => dispatch(receiveSessionErrors(err.responseJSON))
+        )
 }
