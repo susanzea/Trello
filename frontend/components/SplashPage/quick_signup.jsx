@@ -1,28 +1,37 @@
 import React from 'react';
 import SplashContent from './splash_content';
 import SplashNavBar from '../navbars/splash_nav_bar';
+import { withRouter, Link } from 'react-router-dom';
 
 class QuickSignup extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            
+            quick_email: ''
+        }
+
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange() {
+        return e => {
+            this.setState({ quick_email: e.target.value })
         }
     }
 
-    onChange(e) {
-
-    }
-
     render() {
+        console.log(this.props)
         return (
             <div className="splash">
                 <SplashNavBar />
                 <form className='splash-form'>
                     <SplashContent />
                     <section className='quick-signup-section'>
-                        <input id="quick-signup-input" type="text" placeholder="Email"/>
-                        <button className='splash-button' id="quick-signup-button">Sign up-it's free!</button>
+                        <input id="quick-signup-input" type="text" placeholder="Email" onChange={this.handleChange} value={this.props.quick_email}/>
+                        <Link 
+                            className='splash-button' 
+                            id="quick-signup-button"
+                            to={`/signup/${this.state.quick_email}`}>Sign up-it's free!</Link>
                     </section>
                 </form>
                 <img id="root-img" src="/images/splash/root-img.png" alt="" />
@@ -31,4 +40,4 @@ class QuickSignup extends React.Component {
     }
 }
 
-export default QuickSignup;
+export default withRouter(QuickSignup);

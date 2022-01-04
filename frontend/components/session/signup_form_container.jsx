@@ -1,7 +1,8 @@
 import React from "react";
 import SignupForm from "./signup_form";
+import QuickSignupForm from "./quick_signup_form";
 import { connect } from 'react-redux';
-import { signup } from "../../actions/session_actions";
+import { signup, removeSessionErrors } from "../../actions/session_actions";
 
 const mapStateToProps = state => {
     return {
@@ -11,8 +12,10 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        signup: (user) => dispatch(signup(user))
+        signup: (user) => dispatch(signup(user)),
+        removeSessionErrors: () => dispatch(removeSessionErrors())
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignupForm);
+export const SignupFormContainer = connect(mapStateToProps, mapDispatchToProps)(SignupForm);
+export const QuickSignupFormContainer = connect(mapStateToProps, mapDispatchToProps)(QuickSignupForm);

@@ -18,6 +18,10 @@ class LoginForm extends React.Component {
         this.handleDemoUser = this.handleDemoUser.bind(this);
     }
 
+    componentWillUnmount() {
+        this.props.removeSessionErrors();
+    }
+
     handleChange(field) {
         return e => {
             this.setState({ [field]: e.target.value })
@@ -25,7 +29,7 @@ class LoginForm extends React.Component {
     }
 
     handleSubmit(e) {
-        e.preventDefault;
+        e.preventDefault();
         this.props.login(this.state);
     }
 

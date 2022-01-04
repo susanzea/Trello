@@ -32,9 +32,13 @@ const receiveSessionErrors = (errors) => {
     }
 }
 
+export const REMOVE_SESSION_ERRORS = `REMOVE_SESSION_ERRORS`
 
-
-
+export const removeSessionErrors = () => {
+    return {
+        type: REMOVE_SESSION_ERRORS
+    }
+}
 
 
 //////////thunk action creators
@@ -48,7 +52,6 @@ export const signup = user => dispatch => {
 }
 
 export const login = user => dispatch => {
-    debugger
     return postSession(user)
         .then(
             user => dispatch(receiveCurrentUser(user)),
