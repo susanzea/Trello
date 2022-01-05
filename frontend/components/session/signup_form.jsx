@@ -35,7 +35,6 @@ class SignupForm extends React.Component {
     }
 
     displayErrors() {
-        //issue: errors is undefined in the func below for signup form only
         return(
             <ul className='signup-errors'>
                 {
@@ -66,9 +65,11 @@ class SignupForm extends React.Component {
                     <input id="session-input" type="password" value={this.props.password} onChange={this.handleChange('password')} placeholder="  Enter password"/>
                     <button className="session-button" id="signup-button" type="submit">Sign up</button>
                     <hr className='session-hr' />
-                    <Link className="session-redirect" to="/login">Already have an account? Log In</Link>
+                    <Link className="session-redirect" id="signup-redirect" to="/login">Already have an account? Log In</Link>
                 </form>
-                <LangMenu/>
+                <div className="signup-lang-menu">
+                    <LangMenu />
+                </div>
                 <footer className='session-images'>
                     <img id="session-left" src={window.session_left} alt="" />
                     <img id="session-right" src={window.session_right} alt="" />

@@ -13,6 +13,7 @@
     align-items: center;
     font-size: 48px;
     font-weight: bolder;
+    margin-top: 35px;
 }
 
 .session-header > img {
@@ -100,15 +101,25 @@
     color: #0754cc;
 }
 
+#signup-redirect {
+    margin-bottom: 35px;
+}
+
 .login-redirect-footer {
     display: flex;
     justify-content: space-evenly;
     width: 260px;
-    margin-top: 25px;
 }
 
 #signup-button {
     margin-top: 11px;
+}
+
+.session-hr {
+    color: #cccccc;
+    width: 78%;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .lang-menu {
@@ -120,7 +131,15 @@
     font-size: 14px;
     font-weight: lighter;
     letter-spacing: 0.015em;
-    margin-bottom: 180px;
+}
+
+.login-lang-menu {
+    margin-bottom: 135px;
+}
+
+.signup-lang-menu {
+    margin-top: 50px;
+    margin-bottom: 80px;
 }
 
 .terms-footer {
@@ -131,5 +150,5 @@
     font-weight: lighter;
     color: #0052cc;  
     margin-top: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }

@@ -85,7 +85,9 @@ class LoginForm extends React.Component {
                     <p>·</p>
                     <p>Terms of Service</p>
                 </footer>
-                <LangMenu/>
+                <div className="login-lang-menu">
+                    <LangMenu />
+                </div>
                 <footer className='session-images'>
                     <img id="session-left" src={window.session_left} alt="" />
                     <img id="session-right" src={window.session_right} alt="" />

@@ -32,7 +32,7 @@ class QuickSignup extends React.Component {
                                 state: {
                                     email: this.state.quick_email,
                                 },
-                                pathname: "/quick/sign"
+                                pathname: "/quicksignup"
                             }
                                 
                             }>Sign up-it's free!</Link>

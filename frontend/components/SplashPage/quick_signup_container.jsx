@@ -1,9 +1,10 @@
 import QuickSignupForm from '../session/quick_signup_form'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
+import { signup, removeSessionErrors } from "../../actions/session_actions";
+
 
 const mapStateToProps = (state, ownProps) => {
-    console.log('quick signup container!!!!!!!!!!')
     return {
         errors: state.errors.session
     }
@@ -11,7 +12,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        login: (user) => dispatch(login(user))
+        signup: (user) => dispatch(signup(user)),
+        removeSessionErrors: () => dispatch(removeSessionErrors())
     }
 }
 
