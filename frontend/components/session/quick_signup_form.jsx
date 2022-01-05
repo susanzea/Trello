@@ -31,7 +31,6 @@ class QuickSignupForm extends React.Component {
     }
 
     displayErrors() {
-        //issue: errors is undefined in the func below for signup form only
         return (
             <ul className='signup-errors'>
                 {
@@ -47,7 +46,8 @@ class QuickSignupForm extends React.Component {
 
 
     render() {
-        console.log(this.props)
+        console.log('quick signup form!!!!!!')
+        console.log(this.props.location.state.email)
         return (
             <div className='session-form'>
                 <h1>Trelloh</h1>
@@ -55,7 +55,7 @@ class QuickSignupForm extends React.Component {
                     <h3>Sign up for your account</h3>
                     {this.displayErrors()}
                     <input type="text" value={this.props.full_name} onChange={this.handleChange('full_name')} placeholder="Enter full name" />
-                    <input type="text" value={this.props.match.params.email} onChange={this.handleChange('email')} placeholder="Enter email" />
+                    <input type="text" value={this.props.location.state.email} onChange={this.handleChange('email')} placeholder="Enter email" />
                     <input type="text" value={this.props.username} onChange={this.handleChange('username')} placeholder="Enter username" />
                     <input type="password" value={this.props.password} onChange={this.handleChange('password')} placeholder="Enter password" />
                     <button type="submit">Sign up</button>

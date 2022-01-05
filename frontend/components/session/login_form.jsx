@@ -61,26 +61,34 @@ class LoginForm extends React.Component {
 
     render() {
         return (
-            <div className='session-form'>
-                <h1>Trelloh</h1>
+            <div className='session-page'>
+                <header className="session-header">
+                    <img src={window.trelloh_logo_url} alt="" />
+                    <h1>Trelloh</h1>
+                </header>
                 <form onSubmit={this.handleSubmit} className='login-form'>
                     <h3>Log in to Trello</h3>
                     {this.displayErrors()}
-                    <input type="text" value={this.props.email} placeholder="Enter email" onChange={this.handleChange('email')} />
-                    <input type="password" value={this.props.password} placeholder="Enter password" onChange={this.handleChange('password')} />
-                    <button type="submit">Log in</button>
+                    <input id="session-input" type="text" value={this.props.email} placeholder="Enter email" onChange={this.handleChange('email')} />
+                    <input id="session-input" type="password" value={this.props.password} placeholder="Enter password" onChange={this.handleChange('password')} />
+                    <button type="submit" className="session-button">Log in</button>
                     <p>OR</p>
                     <hr />
-                    <button onClick={this.handleDemoUser}>Log in as Demo User</button>
+                    <button onClick={this.handleDemoUser} className="session-button">Log in as Demo User</button>
                     <footer>
                         <button>Can't log in?</button>
                         <Link to="/signup">Sign up for an account</Link>
                     </footer>
                 </form>
-                <LangMenu className="lang-menu"/>
+                <footer className='terms-footer'>
+                    <p>Privacy Policy</p>
+                    <p>·</p>
+                    <p>Terms of Service</p>
+                </footer>
+                <LangMenu/>
                 <footer className='session-images'>
-                    <img src="/images/session_forms/login_form/left.png" alt="" className='session-img' />
-                    <img src="/images/session_forms/login_form/right.png" alt="" className='session-img' />
+                    <img id="session-left" src={window.session_left} alt="" />
+                    <img id="session-right" src={window.session_right} alt="" />
                 </footer>
             </div>
         )

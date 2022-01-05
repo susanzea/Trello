@@ -5,7 +5,7 @@ const NavBar = ({ currentUser, logout }) => {
 
     const loggedInLinks = () => {
     return <nav className='loggedInNav'>
-        <img src="/images/navbar/trelloh-logo.png" alt="" className='logo'/>
+        <img src={window.trelloh_logo_url} alt="" className='logo'/>
         <h2>Trelloh</h2>
         <Link to="/" onClick={logout}>Logout</Link>
     </nav>
@@ -13,7 +13,7 @@ const NavBar = ({ currentUser, logout }) => {
 
     const loggedOutLinks = () => {
         return <nav className='loggedOutNav'>
-            <img src="/images/navbar/trelloh-logo.png" alt="" className='logo' />
+            <img src={window.trelloh_logo_url} className='logo' />
             <h2>Trelloh</h2>
             <Link to={`/login`}>Log in</Link>
             <Link to={`/signup`} className='splash-button'>Sign up</Link>

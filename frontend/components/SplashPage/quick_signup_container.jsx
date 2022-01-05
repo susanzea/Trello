@@ -1,8 +1,9 @@
-import QuickSignup from './quick_signup';
+import QuickSignupForm from '../session/quick_signup_form'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
+    console.log('quick signup container!!!!!!!!!!')
     return {
         errors: state.errors.session
     }
@@ -14,4 +15,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
+export default connect(mapStateToProps, mapDispatchToProps)(QuickSignupForm);

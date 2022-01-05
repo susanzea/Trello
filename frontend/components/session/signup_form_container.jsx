@@ -4,9 +4,11 @@ import QuickSignupForm from "./quick_signup_form";
 import { connect } from 'react-redux';
 import { signup, removeSessionErrors } from "../../actions/session_actions";
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
+    // debugger
+    //check ownprops here
     return {
-        errors: state.errors.session
+        errors: state.errors.session,
     }
 }
 
@@ -17,5 +19,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export const SignupFormContainer = connect(mapStateToProps, mapDispatchToProps)(SignupForm);
-export const QuickSignupFormContainer = connect(mapStateToProps, mapDispatchToProps)(QuickSignupForm);
+export default connect(mapStateToProps, mapDispatchToProps)(SignupForm);

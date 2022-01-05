@@ -8,6 +8,17 @@
 
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
+<%# attaching images to window %>
+    <script type="text/javascript">
+      window.trelloh_logo_url = "<%= image_url('navbar/trelloh-logo.png') %>"
+      window.session_left = "<%= image_url('session_forms/left.png') %>"
+      window.session_right = "<%= image_url('session_forms/right.png') %>"
+      window.splash_gradient_background = "<%= image_url('splash/gradient.jpeg') %>"
+      window.splash_robo = "<%= image_url('splash/root-img.png') %>"
+    </script>
+
+<%# setting current user %>
     <% if current_user %>
       <script>
         window.currentUser = <%= render(

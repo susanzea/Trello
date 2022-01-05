@@ -51,21 +51,27 @@ class SignupForm extends React.Component {
 
 
     render() {
-
         return(
-            <div className='session-form'>
-                <h1>Trelloh</h1>
+            <div className='session-page'>
+                <header className="session-header">
+                    <img src={window.trelloh_logo_url} alt="" />
+                    <h1>Trelloh</h1>
+                </header>
                 <form onSubmit={this.handleSubmit} className='signup-form'>
                     <h3>Sign up for your account</h3>
                     {this.displayErrors()}
-                    <input type="text" value={this.props.full_name} onChange={this.handleChange('full_name')} placeholder="Enter full name"/>
-                    <input type="text" value={this.props.email} onChange={this.handleChange('email')} placeholder="Enter email"/>
-                    <input type="text" value={this.props.username} onChange={this.handleChange('username')} placeholder="Enter username"/>
-                    <input type="password" value={this.props.password} onChange={this.handleChange('password')} placeholder="Enter password"/>
+                    <input id="session-input" type="text" value={this.props.full_name} onChange={this.handleChange('full_name')} placeholder="Enter full name"/>
+                    <input id="session-input" type="text" value={this.props.email} onChange={this.handleChange('email')} placeholder="Enter email"/>
+                    <input id="session-input" type="text" value={this.props.username} onChange={this.handleChange('username')} placeholder="Enter username"/>
+                    <input id="session-input" type="password" value={this.props.password} onChange={this.handleChange('password')} placeholder="Enter password"/>
                     <button type="submit">Sign up</button>
                     <Link to="/login">Already have an account? Log In</Link>
                 </form>
                 <LangMenu/>
+                <footer className='session-images'>
+                    <img id="session-left" src={window.session_left} alt="" />
+                    <img id="session-right" src={window.session_right} alt="" />
+                </footer>
             </div>
         )
     }

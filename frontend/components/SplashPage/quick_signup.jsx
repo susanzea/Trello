@@ -13,14 +13,11 @@ class QuickSignup extends React.Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange() {
-        return e => {
-            this.setState({ quick_email: e.target.value })
-        }
+    handleChange(e) {
+        this.setState({ quick_email: e.target.value })
     }
 
     render() {
-        console.log(this.props)
         return (
             <div className="splash">
                 <SplashNavBar />
@@ -31,12 +28,20 @@ class QuickSignup extends React.Component {
                         <Link 
                             className='splash-button' 
                             id="quick-signup-button"
-                            to={`/signup/${this.state.quick_email}`}>Sign up-it's free!</Link>
+                            to={{
+                                state: {
+                                    email: this.state.quick_email,
+                                },
+                                pathname: "/quick/sign"
+                            }
+                                
+                            }>Sign up-it's free!</Link>
                     </section>
                 </form>
-                <img id="root-img" src="/images/splash/root-img.png" alt="" />
+                <img id="root-img" src={window.splash_robo} alt="" />
             </div>
         )
+        debugger
     }
 }
 
