@@ -67,17 +67,17 @@ class LoginForm extends React.Component {
                     <h1>Trelloh</h1>
                 </header>
                 <form onSubmit={this.handleSubmit} className='login-form'>
-                    <h3>Log in to Trello</h3>
+                    <h2 className="session-form-title">Log in to Trello</h2>
                     {this.displayErrors()}
-                    <input id="session-input" type="text" value={this.props.email} placeholder="Enter email" onChange={this.handleChange('email')} />
-                    <input id="session-input" type="password" value={this.props.password} placeholder="Enter password" onChange={this.handleChange('password')} />
+                    <input id="session-input" type="text" value={this.props.email} placeholder="  Enter email" onChange={this.handleChange('email')} />
+                    <input id="session-input" type="password" value={this.props.password} placeholder="  Enter password" onChange={this.handleChange('password')} />
                     <button type="submit" className="session-button">Log in</button>
-                    <p>OR</p>
-                    <hr />
                     <button onClick={this.handleDemoUser} className="session-button">Log in as Demo User</button>
-                    <footer>
-                        <button>Can't log in?</button>
-                        <Link to="/signup">Sign up for an account</Link>
+                    <hr className='session-hr' />
+                    <footer className='login-redirect-footer'> 
+                        <Link className="session-redirect">Can't log in?</Link>&nbsp;
+                        <p>·</p>&nbsp;
+                        <Link className="session-redirect" to="/signup">Sign up for an account</Link>
                     </footer>
                 </form>
                 <footer className='terms-footer'>

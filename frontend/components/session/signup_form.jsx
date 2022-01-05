@@ -58,14 +58,15 @@ class SignupForm extends React.Component {
                     <h1>Trelloh</h1>
                 </header>
                 <form onSubmit={this.handleSubmit} className='signup-form'>
-                    <h3>Sign up for your account</h3>
+                    <h2 className="session-form-title">Sign up for your account</h2>
                     {this.displayErrors()}
-                    <input id="session-input" type="text" value={this.props.full_name} onChange={this.handleChange('full_name')} placeholder="Enter full name"/>
-                    <input id="session-input" type="text" value={this.props.email} onChange={this.handleChange('email')} placeholder="Enter email"/>
-                    <input id="session-input" type="text" value={this.props.username} onChange={this.handleChange('username')} placeholder="Enter username"/>
-                    <input id="session-input" type="password" value={this.props.password} onChange={this.handleChange('password')} placeholder="Enter password"/>
-                    <button type="submit">Sign up</button>
-                    <Link to="/login">Already have an account? Log In</Link>
+                    <input id="session-input" type="text" value={this.props.full_name} onChange={this.handleChange('full_name')} placeholder="  Enter full name"/>
+                    <input id="session-input" type="text" value={this.props.email} onChange={this.handleChange('email')} placeholder="  Enter email"/>
+                    <input id="session-input" type="text" value={this.props.username} onChange={this.handleChange('username')} placeholder="  Enter username"/>
+                    <input id="session-input" type="password" value={this.props.password} onChange={this.handleChange('password')} placeholder="  Enter password"/>
+                    <button className="session-button" id="signup-button" type="submit">Sign up</button>
+                    <hr className='session-hr' />
+                    <Link className="session-redirect" to="/login">Already have an account? Log In</Link>
                 </form>
                 <LangMenu/>
                 <footer className='session-images'>
