@@ -2,12 +2,12 @@ import React from 'react';
 
 const LangMenu = (props) => {
     return(
-        <select className="lang-menu">
+        <select className="lang-menu" defaultValue="english-us">
             <option value="čeština">Čeština</option>
             <option value="deutsch">Deutsch</option>
             <option value="english">English</option>
             <option value="english-au">English (AU)</option>
-            <option value="english-us" selected="selected">English (US)</option>
+            <option value="english-us">English (US)</option>
             <option value="español">Español</option>
             <option value="français">Français</option>
             <option value="italiano">Italiano</option>

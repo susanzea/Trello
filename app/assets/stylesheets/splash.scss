@@ -38,14 +38,6 @@ body {
     bottom: 12%;
 }
 
-.splash-button {
-    color: white;
-    background-color:#0164ff;
-    border-radius: 6px;
-    border: none;
-    text-decoration: none;
-}
-
 #quick-signup-input {
     border: 1px solid #ced4da;
     border-radius: 6px;
@@ -59,7 +51,15 @@ body {
 }
 
 #quick-signup-button {
-    padding: 0.5em 1em 0.5em 1em;
+    color: white;
+    font-weight: bolder;
+    background-color:#0164ff;
+    border-radius: 6px;
+    border: none;
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin-right: 17px;
+    padding: 12px 55px 12px;
     font-size: 20px;
     height: 2.25em;
     width: 35%;
@@ -67,8 +67,4 @@ body {
 
 .quick-signup-section {
     width: 100%;
-}
-
-.logo {
-    height: 35px;
 }

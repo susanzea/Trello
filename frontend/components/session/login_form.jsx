@@ -69,15 +69,15 @@ class LoginForm extends React.Component {
                 <form onSubmit={this.handleSubmit} className='login-form'>
                     <h2 className="session-form-title">Log in to Trello</h2>
                     {this.displayErrors()}
-                    <input id="session-input" type="text" value={this.props.email} placeholder="  Enter email" onChange={this.handleChange('email')} />
-                    <input id="session-input" type="password" value={this.props.password} placeholder="  Enter password" onChange={this.handleChange('password')} />
+                    <input className="session-input" type="text" value={this.props.email} placeholder="  Enter email" onChange={this.handleChange('email')} />
+                    <input className="session-input" type="password" value={this.props.password} placeholder="  Enter password" onChange={this.handleChange('password')} />
                     <button type="submit" className="session-button">Log in</button>
                     <button onClick={this.handleDemoUser} className="session-button">Log in as Demo User</button>
                     <hr className='session-hr' />
                     <footer className='login-redirect-footer'> 
-                        <Link className="session-redirect">Can't log in?</Link>&nbsp;
+                        <Link className="session-redirect" to={`/login`}>Can't log in?</Link>&nbsp;
                         <p>·</p>&nbsp;
-                        <Link className="session-redirect" to="/signup">Sign up for an account</Link>
+                        <Link to={`/signup`} className="session-redirect">Sign up for an account</Link>
                     </footer>
                 </form>
                 <footer className='terms-footer'>
