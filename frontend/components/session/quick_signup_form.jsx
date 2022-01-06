@@ -35,9 +35,6 @@ class QuickSignupForm extends React.Component {
     }
 
     displayErrors() {
-        console.log("---------")
-        console.log(this.props)
-        console.log("------")
         return (
             <ul className='signup-errors'>
                 {
