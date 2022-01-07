@@ -7,7 +7,6 @@ class BoardIndex extends React.Component {
         //get ownProps to MainNavContainer
         return (
             <div>
-                <MainNavBarContainer />
                 <h1>Boards Index</h1>
             </div>
         )

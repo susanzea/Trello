@@ -12,8 +12,8 @@ class User < ApplicationRecord
 
     has_many :workspaces
 
-    has_many :boards
-        through :workspaces
+    has_many :boards,
+        through: :workspaces
 
     # F
     def self.find_by_credentials(email, password)

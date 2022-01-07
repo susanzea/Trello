@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from "react-router-dom";
-import NavBarContainer from './navbars/nav_bar_container';
+import MainNavBarContainer from './navbars/mainNavBar/main_nav_bar';
 import SignupFormContainer from './session/signup_form_container';
 import QuickSignupFormContainer from './SplashPage/quick_signup_container';
 import LoginFormContainer from './session/login_form_container';
@@ -11,6 +11,8 @@ import QuickSignup from './SplashPage/quick_signup';
 const App = () => {
     return(
         <>
+            <MainNavBarContainer/>
+
             <Switch>
                 <AuthRoute exact path="/signup" component={SignupFormContainer} />
                 <AuthRoute exact path="/quicksignup" component={QuickSignupFormContainer} />
