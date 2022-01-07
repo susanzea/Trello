@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_31_183331) do
+ActiveRecord::Schema.define(version: 2022_01_07_030507) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "boards", force: :cascade do |t|
+    t.string "title", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "workspace_id", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
@@ -25,6 +32,13 @@ ActiveRecord::Schema.define(version: 2021_12_31_183331) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["session_token"], name: "index_users_on_session_token"
     t.index ["username"], name: "index_users_on_username"
+  end
+
+  create_table "workspaces", force: :cascade do |t|
+    t.string "title", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end
