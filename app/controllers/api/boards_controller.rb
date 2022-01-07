@@ -12,8 +12,8 @@ class Api::BoardsController < ApplicationController
     def destroy
         @board = Board.find_by(title: params[:title])
 
-        if @user
-            # return to BoardIndex
+        if @board
+            render 'api/boards/index'
         else
             render json: ['That board does not exist'], status: 404
         end

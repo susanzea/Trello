@@ -7,6 +7,10 @@ class Board < ApplicationRecord
     belongs_to :user
         through :workspace
 
+    has_many :lists
+
+    has_many :cards
+        through :lists
 
 
 
