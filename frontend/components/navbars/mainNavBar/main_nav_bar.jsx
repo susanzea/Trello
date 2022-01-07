@@ -35,6 +35,7 @@ class MainNavBar extends React.Component {
         console.log(this.props)
 
         return this.props.currentUser ? loggedInBar() : null;
+    
     }
 }
 

@@ -11,9 +11,17 @@ import Root from './components/root'
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById('root');
+    const store = configureStore(preloadedState);
+
+    window.signup = signup;
+    window.login = login;
+    window.logout = logout;
+    window.getState = store.getState;
+    window.dispatch = store.dispatch;
 
     let preloadedState;
     if(window.currentUser) {
+        debugger
         preloadedState = {
             entities: {
                 users: { [window.currentUser.id]: window.currentUser }
@@ -27,11 +35,5 @@ document.addEventListener("DOMContentLoaded", () => {
         preloadedState = {};
     }
 
-    const store = configureStore(preloadedState);
     ReactDOM.render(<Root store={store}/>, root);
-    window.signup = signup;
-    window.login = login;
-    window.logout = logout;
-    window.getState = store.getState;
-    window.dispatch = store.dispatch;
 })
