@@ -3,7 +3,6 @@ import WorkspacesIndex from "./workspaces_index";
 import { fetchAllUserWorkspaces } from "../../actions/workspace_actions";
 
 const mapStateToProps = state => {
-    debugger
     return{
         userId: state.entities.users[state.session.id].id,
         workspaces: state.entities.workspaces

@@ -5,8 +5,6 @@ import { connect } from 'react-redux';
 import { signup, removeSessionErrors } from "../../actions/session_actions";
 
 const mapStateToProps = (state) => {
-    // debugger
-    //check ownprops here
     return {
         errors: state.errors.session,
     }

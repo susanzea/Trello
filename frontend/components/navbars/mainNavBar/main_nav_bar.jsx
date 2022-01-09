@@ -12,7 +12,6 @@ class MainNavBar extends React.Component {
 
 
     render(){
-        // debugger
         return (
             <nav className='top-nav-bar' id='main-nav-bar'>
                 <AtlassianLogo />

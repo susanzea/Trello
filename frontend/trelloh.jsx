@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let preloadedState;
     if(window.currentUser) {
-        // debugger
         preloadedState = {
             entities: {
                 users: { [window.currentUser.id]: window.currentUser }

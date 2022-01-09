@@ -1,9 +1,9 @@
 import React from "react";
+import WorkspaceIndexItem from "./workspaces_index_item";
 
 class WorkspacesIndex extends React.Component {
     constructor(props) {
         super(props);
-        debugger
     }
 
     componentDidMount() {
@@ -11,10 +11,17 @@ class WorkspacesIndex extends React.Component {
     }
 
     render() {
+        debugger
+        if (!this.props.workspaces) {
+            return <p>You don't have any workspaces.</p>
+        }
         return(
-            <ul className="workspaces-index-list">
-                <li>WorkspaceIndexItem</li>
-                <li>WorkspaceIndexItem</li>
+            <ul className="workspaces-index">
+                {
+                    this.props.workspaces.map((workspace) => {
+                        return <WorkspaceIndexItem key={workspace.id} workspace={workspace} />
+                    })  
+                }
             </ul>
         )
     }
@@ -25,8 +32,3 @@ class WorkspacesIndex extends React.Component {
 
 export default WorkspacesIndex;
 
-// {
-//     this.props.workspaces.map((workspace) => {
-//         return <WorkspaceIndexItem workspace={workspace} />
-//     })
-// }

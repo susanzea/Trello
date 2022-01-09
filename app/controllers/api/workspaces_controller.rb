@@ -6,7 +6,6 @@ class Api::WorkspacesController < ApplicationController
     end
 
     def index
-        debugger
         @workspaces = Workspace.all
 
     end
