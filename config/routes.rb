@@ -7,6 +7,6 @@ Rails.application.routes.draw do
       resources :workspaces, only: [:index]
     end
     resource :session, only: [:create, :destroy]
-    resources :workspaces, only: [:create, :show]
+    resources :workspaces, only: [:show, :create, :destroy]
   end
 end

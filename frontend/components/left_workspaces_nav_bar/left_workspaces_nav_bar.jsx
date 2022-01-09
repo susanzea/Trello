@@ -4,14 +4,36 @@ import WorkspacesIndexContainer from './workspaces_index/workspaces_index_contai
 class LeftWorkspacesNavBar extends React.Component {
     constructor(props) {
         super(props);
+        this.state ={
+            title: '',
+            user_id: this.props.userId
+        }
+        debugger
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    handleChange(e) {
+        this.setState({ title: e.target.value })
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        debugger
+        this.props.createWorkspace(this.state);
+    }
+
+
     render() {
+        debugger
         return(
             <nav className='left-workspaces_nav_bar'>
                 <header className=''>
                     <h3>Workspaces</h3>
-                    <button>+</button>
+                    <form onSubmit={this.handleSubmit}>
+                        <input type="text" onChange={this.handleChange} value={this.state.title} />
+                        <button>+</button>
+                    </form>
                 </header>
                 <WorkspacesIndexContainer />
             </nav>

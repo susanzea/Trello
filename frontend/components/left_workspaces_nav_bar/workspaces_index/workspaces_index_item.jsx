@@ -5,7 +5,10 @@ const WorkspaceIndexItem =(props) => {
 
 
     return(
-        <li className="workspaces-index-item" >{props.workspace.title}</li>
+        <li>
+            <p className="workspaces-index-item" >{props.workspace.title}</p>
+            <button onClick={props.deleteWorkspaceIndexItem}> - </button>
+        </li>
     )
 }
 

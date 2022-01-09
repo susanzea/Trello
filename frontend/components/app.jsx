@@ -7,11 +7,11 @@ import LoginFormContainer from './session/login_form_container';
 import BoardIndex from './boards/board_index';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import QuickSignup from './SplashPage/quick_signup';
-import LeftWorkspacesNavBar from './left_workspaces_nav_bar/left_workspaces_nav_bar';
+import LeftWorkspacesNavBarContainer from './left_workspaces_nav_bar/left_workspaces_nav_bar_container';
 const App = () => {
     return(
         <>
-            <ProtectedRoute path="/home" component={LeftWorkspacesNavBar} />
+            <ProtectedRoute path="/home" component={LeftWorkspacesNavBarContainer} />
             
             <Switch>
                 <AuthRoute exact path="/signup" component={SignupFormContainer} />
@@ -25,3 +25,5 @@ const App = () => {
 }
 
 export default App;
+
+//maybe add wildcard to line 20 (/home, renders BoardsIndex)

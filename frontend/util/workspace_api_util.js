@@ -8,3 +8,17 @@ export const getAllUserWorkspaces = (userId) => {
     })
 }
 
+export const postWorkspace = (workspace) => {
+    return $.ajax({
+        method: 'POST',
+        url: `/api/workspaces`,
+        data: { workspace }
+    })
+}
+
+export const deleteWorkspace = (workspaceId) => {
+    return $.ajax({
+        method: 'DELETE',
+        url: `/api/workspaces/${workspaceId}`
+    })
+}
