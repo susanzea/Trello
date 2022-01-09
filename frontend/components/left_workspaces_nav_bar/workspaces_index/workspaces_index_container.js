@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import WorkspacesIndex from "./workspaces_index";
-import { fetchAllUserWorkspaces } from "../../actions/workspace_actions";
+import { fetchAllUserWorkspaces } from "../../../actions/workspace_actions";
 
 const mapStateToProps = state => {
     return{
