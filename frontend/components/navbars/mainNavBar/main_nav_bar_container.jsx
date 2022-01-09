@@ -5,13 +5,14 @@ import { logout } from '../../../actions/session_actions';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = state => {
-    debugger
+    // debugger
     return {
         currentUser: state.entities.users[state.session.id]
     }
 }
 
 const mapDispatchToProps = dispatch => {
+    // debugger
     return {
         logout: () => dispatch(logout())
     }

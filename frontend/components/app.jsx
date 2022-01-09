@@ -7,12 +7,13 @@ import LoginFormContainer from './session/login_form_container';
 import BoardIndex from './boards/board_index';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import QuickSignup from './SplashPage/quick_signup';
+import WorkspacesIndexContainer from './workspaces/workspaces_index_container';
 
 const App = () => {
     return(
         <>
-            <MainNavBarContainer/>
-
+            <ProtectedRoute path="/home" component={WorkspacesIndexContainer} />
+            
             <Switch>
                 <AuthRoute exact path="/signup" component={SignupFormContainer} />
                 <AuthRoute exact path="/quicksignup" component={QuickSignupFormContainer} />

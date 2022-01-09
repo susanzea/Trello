@@ -41,7 +41,6 @@ class QuickSignup extends React.Component {
                 <img id="root-img" src={window.splash_robo} alt="" />
             </div>
         )
-        debugger
     }
 }
 

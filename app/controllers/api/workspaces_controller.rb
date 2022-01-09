@@ -1,8 +1,14 @@
-class WorkspacesController < ApplicationController
+class Api::WorkspacesController < ApplicationController
 
     def show
         @workspace = Workspace.find(params[:id]).includes(:boards)
         render :show
+    end
+
+    def index
+        debugger
+        @workspaces = Workspace.all
+
     end
 
     def create

@@ -1,7 +1,10 @@
+//get id from current User
 
-export const fetchAllUserWorkspaces = (user) => {
-    return $CombinedState.ajax({
+
+export const getAllUserWorkspaces = (userId) => {
+    return $.ajax({
         method: 'GET',
-        url: ``
+        url: `/api/users/${userId}/workspaces`
     })
 }
+

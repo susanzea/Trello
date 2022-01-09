@@ -6,7 +6,6 @@ import LangMenu from './lang_menu';
 class QuickSignupForm extends React.Component {
     constructor(props) {
         super(props);
-        debugger
         this.state = {
             username: '',
             email: `${this.props.quick_email}`,
@@ -50,7 +49,6 @@ class QuickSignupForm extends React.Component {
 
 
     render() {
-        debugger
         return (
             <div className='session-page'>
                 <header className="session-header">
