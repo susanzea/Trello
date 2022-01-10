@@ -17,6 +17,35 @@
     height: 17px;
 }
 
+#main-nav-left {
+    display: flex;
+    align-items: center;
+}
+
+#personal-links {
+    display: flex;
+    justify-content: space-evenly;
+    width: 230px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(137deg) brightness(108%) contrast(102%);
+}
+
+#personal-links > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    height: 32px;
+    width: 32px;
+}
+
+#personal-links > a > img {
+    height: 26px;
+}
+
+#personal-links > a:hover {
+    background-color: #4787b9;
+}
+
 #logout-button {
     text-decoration: none;
 }
@@ -35,12 +64,26 @@
 }
 
 
-#main-nav-bar > input {
+#main-nav-bar > #main-nav-right > input {
     height: 27px;
     width: 245px;
     background-color: #5f97c2;
     color: white;
-    border: none
+    border: none;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+
+#main-nav-right {
+    display: flex;
+    justify-content: space-evenly;
+    width: 400px;
+    margin-right: 7px;
+}
+
+#logout-button {
+    text-decoration: none;
+    color: white;
 }
 
 ::placeholder {
@@ -50,6 +93,11 @@
 ::placeholder:focus {
     color: white;
     outline: none;
+}
+
+.main-nav-bar, #main-nav-right { 
+    display: flex;
+    align-items: center;
 }
 
 #logged-in-user-icon {
@@ -69,7 +117,7 @@
     top: 42px;
     width: 240px;
     border: 1px solid red;
-    padding-left: 22px;
+    padding-left: 17px;
     // padding-right: 12px;
     padding-top: 140px;
 }
@@ -81,8 +129,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-right: 5px;
-    margin-bottom: 26px;
+    padding-top: 11px;
+    margin-top: 2px;
+    padding-bottom: 11px;
+    margin-bottom: 2px;
+    border-radius: 3px;
+}
+
+.workspaces-index-item:hover {
+    background-color: #e6e9ed;
 }
 
 #workspaces-index-header {
@@ -103,7 +161,6 @@
     font-weight: bold;
     background-color: transparent;
     font-size: 10px;
-    margin-right: 5px;
 }
 
 .workspace-index-item-symbol {
