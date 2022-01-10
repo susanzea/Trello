@@ -43,12 +43,12 @@ export const fetchAllUserWorkspaces = (userId) => (dispatch) => {
 
 export const createWorkspace = workspace => dispatch => {
     return postWorkspace(workspace)
-    .then(workspace => dispatch(receiveUserWorkspace(workspace)))
+    .then(workspace => dispatch(receiveUserWorkspace(workspace)));
 }
 
 export const destroyWorkspace = workspaceId => dispatch => {
     return deleteWorkspace(workspaceId)
-    .then(() => dispatch(removeUserWorkspace(workspaceId)))
+    .then(() => dispatch(removeUserWorkspace(workspaceId)));
 }
 
 
