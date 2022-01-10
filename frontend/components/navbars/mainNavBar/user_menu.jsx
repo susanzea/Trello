@@ -6,6 +6,7 @@ class UserMenu extends React.Component {
     }
 
     render() {
+        debugger
         return (
             <div id="logged-in-user-icon">
                 {this.props.currentUser.full_name.slice(0,1).toUpperCase()}

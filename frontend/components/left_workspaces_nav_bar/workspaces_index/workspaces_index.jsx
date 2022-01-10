@@ -5,11 +5,19 @@ class WorkspacesIndex extends React.Component {
     constructor(props) {
         super(props);
 
-        
+        this.state = {
+            selected: 0
+        }
+
+        this.setSelected = this.setSelected.bind(this);
     }
 
     componentDidMount() {
         this.props.fetchAllUserWorkspaces(this.props.userId)
+    }
+
+    setSelected(idx) {
+        this.setState({ selected: idx })
     }
 
     render() {
@@ -21,7 +29,7 @@ class WorkspacesIndex extends React.Component {
             <ul className="workspaces-index">
                 {
                     this.props.workspaces.map((workspace, idx) => {
-                        return <WorkspaceIndexItem key={workspace.id} colorNum={idx} destroyWorkspace={(workspaceId) => this.props.destroyWorkspace(workspaceId)} workspace={workspace} />
+                        return <WorkspaceIndexItem key={workspace.id} idx={idx} setSelected={(idx) => this.setSelected(idx)} destroyWorkspace={(workspaceId) => this.props.destroyWorkspace(workspaceId)} workspace={workspace} />
                     })  
                 }
             </ul>
