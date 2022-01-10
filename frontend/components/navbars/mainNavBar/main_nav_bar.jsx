@@ -13,7 +13,7 @@ class MainNavBar extends React.Component {
 
     render(){
         return (
-            <nav className='top-nav-bar' id='main-nav-bar'>
+            <nav id='main-nav-bar'>
                 <AtlassianLogo />
                 <LogoHomeButton />
                 <SearchBar />

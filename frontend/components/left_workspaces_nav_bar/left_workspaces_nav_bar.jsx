@@ -26,9 +26,9 @@ class LeftWorkspacesNavBar extends React.Component {
 
     render() {
         return(
-            <nav className='left-workspaces_nav_bar'>
-                <header className=''>
-                    <h3>Workspaces</h3>
+            <nav className='left-workspaces-nav-bar'>
+                <header id='workspaces-index-header'>
+                    <h3 id="workspaces-index-title">Workspaces</h3>
                     <form onSubmit={this.handleSubmit}>
                         <input type="text" onChange={this.handleChange} value={this.state.title} />
                         <button>+</button>
