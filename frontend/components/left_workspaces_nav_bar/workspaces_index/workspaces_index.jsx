@@ -11,7 +11,6 @@ class WorkspacesIndex extends React.Component {
     }
 
     render() {
-        debugger
         if (!this.props.workspaces) {
             return <p>You don't have any workspaces.</p>
         }
@@ -19,7 +18,7 @@ class WorkspacesIndex extends React.Component {
             <ul className="workspaces-index">
                 {
                     this.props.workspaces.map((workspace) => {
-                        return <WorkspaceIndexItem key={workspace.id} workspace={workspace} />
+                        return <WorkspaceIndexItem key={workspace.id} destroyWorkspace={(workspaceId) => this.props.destroyWorkspace(workspaceId)} workspace={workspace} />
                     })  
                 }
             </ul>

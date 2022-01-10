@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 
 
 const Auth = ({ path, component: Component, loggedIn, exact}) => {
-    // debugger
     return (
         <Route 
             path={path}
@@ -18,9 +17,7 @@ const Auth = ({ path, component: Component, loggedIn, exact}) => {
     )
 }
 
-//loggedIn is evaluating to false
 const Protected = ({path, component: Component, loggedIn, exact}) => {
-    // debugger
     return (
         <Route
             path={path}

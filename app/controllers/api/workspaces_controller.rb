@@ -11,22 +11,18 @@ class Api::WorkspacesController < ApplicationController
     end
 
     def create
-        @workspace = Workspace.new(new_workspace_params)
+        @workspace = Workspace.create!(new_workspace_params)
 
-        if @workspace.save
-            render 'api/workspaces/show'
-        else
-            render json: @workspace.errors.full_messages, status: 422
-        end
+        render 'api/workspaces/index'
     end
 
     def destroy
         @workspace = Workspace.find(params[:id])
 
         if @workspace.destroy
-            render 'api/workspaces/index'
+            render 'api/workspaces/show'
         else
-            render json: ['Workspce not found'], status: 404
+            render json: ['Workspace not found'], status: 404
         end
     end
 

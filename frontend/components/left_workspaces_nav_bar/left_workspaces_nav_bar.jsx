@@ -8,7 +8,7 @@ class LeftWorkspacesNavBar extends React.Component {
             title: '',
             user_id: this.props.userId
         }
-        debugger
+        
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -25,7 +25,6 @@ class LeftWorkspacesNavBar extends React.Component {
 
 
     render() {
-        debugger
         return(
             <nav className='left-workspaces_nav_bar'>
                 <header className=''>
