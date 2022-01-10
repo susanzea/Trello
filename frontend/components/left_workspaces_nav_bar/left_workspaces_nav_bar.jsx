@@ -4,7 +4,7 @@ import WorkspacesIndexContainer from './workspaces_index/workspaces_index_contai
 class LeftWorkspacesNavBar extends React.Component {
     constructor(props) {
         super(props);
-        this.state ={
+        this.state = {
             title: '',
             user_id: this.props.userId
         }
@@ -19,8 +19,8 @@ class LeftWorkspacesNavBar extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        debugger
         this.props.createWorkspace(this.state);
+        this.setState({ title: '' })
     }
 
 

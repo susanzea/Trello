@@ -10,10 +10,7 @@ const WorkspaceIndexItem =(props) => {
         4: "#017951"
 
     }
-    debugger
-    // let num = Math.floor(Math.random(4))
-    // let color = colorOptions[num]
-
+    
     return(
         <li className="workspaces-index-item">
             <div className='workspaces-index-item-header'>

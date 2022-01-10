@@ -13,7 +13,7 @@ class Api::WorkspacesController < ApplicationController
     def create
         @workspace = Workspace.create!(new_workspace_params)
 
-        render 'api/workspaces/index'
+        render 'api/workspaces/show'
     end
 
     def destroy

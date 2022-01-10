@@ -4,6 +4,8 @@ import WorkspaceIndexItem from "./workspaces_index_item";
 class WorkspacesIndex extends React.Component {
     constructor(props) {
         super(props);
+
+        
     }
 
     componentDidMount() {
@@ -14,6 +16,7 @@ class WorkspacesIndex extends React.Component {
         if (!this.props.workspaces) {
             return <p>You don't have any workspaces.</p>
         }
+        console.log(this.props.workspaces)
         return(
             <ul className="workspaces-index">
                 {
