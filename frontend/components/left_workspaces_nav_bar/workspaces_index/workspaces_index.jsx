@@ -17,8 +17,8 @@ class WorkspacesIndex extends React.Component {
         return(
             <ul className="workspaces-index">
                 {
-                    this.props.workspaces.map((workspace) => {
-                        return <WorkspaceIndexItem key={workspace.id} destroyWorkspace={(workspaceId) => this.props.destroyWorkspace(workspaceId)} workspace={workspace} />
+                    this.props.workspaces.map((workspace, idx) => {
+                        return <WorkspaceIndexItem key={workspace.id} colorNum={idx} destroyWorkspace={(workspaceId) => this.props.destroyWorkspace(workspaceId)} workspace={workspace} />
                     })  
                 }
             </ul>
