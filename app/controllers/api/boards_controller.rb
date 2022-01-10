@@ -1,4 +1,13 @@
 class Api::BoardsController < ApplicationController
+    
+    def show
+        @board = Board.find(params[:id]).includes(:lists)
+    end
+    
+    def index
+        @boards = Board.all.where("boards.workspace_id = ?", params[:id])
+    end
+    
     def create
         @board = Board.new(new_board_params)
 
@@ -21,7 +30,7 @@ class Api::BoardsController < ApplicationController
     end
 
     def new_board_params
-        params.require(:board).permit(:title, :creator_id, :collaborator_id)
+        params.require(:board).permit(:title, :user_id)
     end
 
 end

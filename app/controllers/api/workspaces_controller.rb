@@ -7,13 +7,16 @@ class Api::WorkspacesController < ApplicationController
 
     def index
         @workspaces = Workspace.all
-
     end
 
     def create
-        @workspace = Workspace.create!(new_workspace_params)
+        @workspace = Workspace.new(new_workspace_params)
 
-        render 'api/workspaces/show'
+        if @workspace.save
+            render 'api/workspaces/show'
+        else
+            render json: @workspace.errors.full_messages, status: 422
+        end
     end
 
     def destroy
