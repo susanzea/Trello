@@ -28,7 +28,13 @@ class WorkspacesIndex extends React.Component {
             <ul className="workspaces-index">
                 {
                     this.props.workspaces.map((workspace, idx) => {
-                        return <WorkspaceIndexItem selected={this.state.selected} key={workspace.id} idx={idx} setSelected={(idx) => this.setSelected(idx)} destroyWorkspace={(workspaceId) => this.props.destroyWorkspace(workspaceId)} workspace={workspace} />
+                        return <WorkspaceIndexItem 
+                        selected={this.state.selected} 
+                        key={workspace.id} 
+                        idx={idx} 
+                        setSelected={(idx) => this.setSelected(idx)} 
+                        destroyWorkspace={(workspaceId) => this.props.destroyWorkspace(workspaceId)} 
+                        workspace={workspace} />
                     })  
                 }
             </ul>

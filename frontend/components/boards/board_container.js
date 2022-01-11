@@ -3,6 +3,7 @@ import Board from './board'
 import { fetchWorkspaceBoard } from '../../actions/board_actions'
 
 const mapStateToProps = (state, ownProps) => {
+    debugger
     return {
         boardId: ownProps.match.params.board_id
     }
@@ -14,4 +15,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Board)
+export default connect(mapStateToProps, mapDispatchToProps)(Board);

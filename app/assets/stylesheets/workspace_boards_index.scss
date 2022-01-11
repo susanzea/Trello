@@ -1,0 +1,73 @@
+.workspace-boards-index {
+    margin-left: 300px;
+    margin-top: 200px;
+}
+
+.workspace-boards-index > header {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    margin-bottom: 2px;
+}
+
+.workspace-boards-index > header > img {
+    height: 20px;
+    width: auto;
+}
+
+.workspace-boards-index > header > h2 {
+    color: #182a4d;
+    font-size: 15.5px;
+    letter-spacing: 0.015em;
+    font-weight: bold;
+    margin-left: 13px;
+}
+
+.boards-index-item {
+    color: white;
+    background-color: #6f777b;
+    height: 100px;
+    width: 195px;
+    margin: 10px;
+    border-radius: 3px;
+}
+
+.boards-index-item:hover {
+    background-color: #61666C;
+}
+
+.boards-index-item-title {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.015em;
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+.boards-index-item-link {
+    display: block;
+    text-decoration: none;
+    height: 100px;
+}
+
+.boards-index-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.boards-index-button {
+    height: 100px;
+    width: 195px;
+    margin: 10px;
+    border: none;
+    background-color: #f1f2f4;
+    border-radius: 3px;
+    letter-spacing: 0.025em;
+}
+
+.boards-index-button:hover {
+    background-color: #E7E8EA;
+}
+

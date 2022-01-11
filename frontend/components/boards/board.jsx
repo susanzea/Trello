@@ -6,12 +6,17 @@ class Board extends React.Component {
     }
 
     componentDidMount() {
+        debugger
         this.props.fetchWorkspaceBoard(this.props.boardId)
     }
 
     render() {
+        debugger
         return (
-            <p>{this.props.boardId}</p>
+            <div className="board">
+                <h2>Board</h2>
+                <button>+ Add a list</button>
+            </div>
         )
     }
 

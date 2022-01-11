@@ -14,8 +14,9 @@ const WorkspaceIndexItem = (props) => {
 
     const selected = props.selected === props.idx
     
+        debugger
     return(
-        <Link className={`workspaces-index-item ${selected ? "selected" : "notSelected" }`}
+        <Link className={`${selected ? "selected" : "notSelected"} workspaces-index-item`}
             onClick={() => props.setSelected(props.idx)}
             to={`/workspaces/${props.workspace.id}/boards`}
         >

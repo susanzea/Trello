@@ -1,6 +1,10 @@
 class Api::BoardsController < ApplicationController
     
     def show
+        # note: review active record query slides to look into .includes()
+        # dispatch board.list, board.card, etc
+        #pass in multiline callback to .then in thunk action creator
+        # import actions from other action files
         @board = Board.find(params[:id])
         render :show
     end
