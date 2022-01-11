@@ -6,10 +6,13 @@ class WorkspaceBoardsIndex extends React.Component {
         super(props);
     }
 
+    componentDidMount() {
+        debugger //being hit
+        this.props.fetchAllWorkspaceBoards(this.props.workspaceId)
+    }
+
 
     render() {
-        debugger
-        //get ownProps to MainNavContainer
         return (
             <div>
                 <MainNavBarContainer />

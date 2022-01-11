@@ -5,7 +5,9 @@ class Api::BoardsController < ApplicationController
     end
     
     def index
-        @boards = Board.all.where("boards.workspace_id = ?", params[:id])
+        @boards = Board.all 
+        # .where("workspace_id = ?", params[:workspace_id])
+        render 'api/boards/index'
     end
     
     def create
