@@ -1,6 +1,6 @@
 import React from 'react';
 import MainNavBarContainer from '../navbars/mainNavBar/main_nav_bar_container';
-import BoardsIndexItem from './workspace_boards_index_item';
+import BoardsIndexItem from './boards_index_item';
 
 class WorkspaceBoardsIndex extends React.Component {
     constructor(props) {
