@@ -8,16 +8,21 @@ class WorkspaceBoardsIndex extends React.Component {
     }
 
     componentDidMount() {
+        debugger
         this.props.fetchAllWorkspaceBoards(this.props.workspaceId)
     }
 
-    componentDidUpdate() {
-        this.props.fetchAllWorkspaceBoards(this.props.workspaceId)
+    componentDidUpdate(prevProps, prevState) {
+        debugger
+        if (prevProps.match.params.workspaceId !== this.props.match.params.workspaceId) {
+            this.props.fetchAllWorkspaceBoards(this.props.workspaceId)
+        }
     }
 
     //note: look into component did update
 
     render() {
+        debugger
         if (!this.props.boards) {
             return <p>Create a board!</p>
         }

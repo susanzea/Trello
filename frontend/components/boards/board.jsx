@@ -7,14 +7,20 @@ class Board extends React.Component {
 
     componentDidMount() {
         debugger
-        this.props.fetchWorkspaceBoard(this.props.boardId)
+        this.props.fetchWorkspaceBoard(parseInt(this.props.boardId))
+        debugger
     }
 
     render() {
         debugger
+        if (!this.props.board) {
+            return <p>loading!!</p>
+        }
+
+        debugger
         return (
             <div className="board">
-                <h2>Board</h2>
+                <h2>{this.props.board.title}</h2>
                 <button>+ Add a list</button>
             </div>
         )
