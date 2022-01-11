@@ -3,11 +3,9 @@ import { RECEIVE_WORKSPACE_BOARDS, RECEIVE_WORKSPACE_BOARD, REMOVE_WORKSPACE_BOA
 const boardsReducer = (prevState=[], action) => {
     Object.freeze(prevState);
     let nextState = Object.assign({}, prevState)
-    debugger
 
     switch (action.type) {
         case RECEIVE_WORKSPACE_BOARDS:
-            debugger
             return Object.values(action.boards);
         case RECEIVE_WORKSPACE_BOARD:
             nextState[action.board.id] = action.board

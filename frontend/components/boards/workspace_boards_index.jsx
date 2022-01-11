@@ -1,5 +1,6 @@
 import React from 'react';
 import MainNavBarContainer from '../navbars/mainNavBar/main_nav_bar_container';
+import BoardsIndexItem from './workspace_boards_index_item';
 
 class WorkspaceBoardsIndex extends React.Component {
     constructor(props) {
@@ -7,16 +8,25 @@ class WorkspaceBoardsIndex extends React.Component {
     }
 
     componentDidMount() {
-        debugger //being hit
         this.props.fetchAllWorkspaceBoards(this.props.workspaceId)
     }
 
 
     render() {
+        if (!this.props.boards) {
+            return <p>Create a board!</p>
+        }
+        console.log(this.props.boards)
         return (
             <div>
                 <MainNavBarContainer />
-                <h1>Workspace Boards Index</h1>
+                <ul className="workspace-boards-index">
+                    {
+                        this.props.boards.map((board, idx) => {
+                            return <BoardsIndexItem key={board.id} idx={idx} destroyBoard={(boardId) => this.props.destroyBoard(boardId)} board={board} />
+                        })
+                    }
+                </ul>
             </div>
         )
     }

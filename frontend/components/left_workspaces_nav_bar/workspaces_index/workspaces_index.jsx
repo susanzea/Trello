@@ -24,7 +24,6 @@ class WorkspacesIndex extends React.Component {
         if (!this.props.workspaces) {
             return <p>You don't have any workspaces.</p>
         }
-        console.log(this.props.workspaces)
         return(
             <ul className="workspaces-index">
                 {

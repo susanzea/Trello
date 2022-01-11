@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-const WorkspaceIndexItem =(props) => {
+const WorkspaceIndexItem = (props) => {
 
     const colorOptions = {
         0: "#cb5223",

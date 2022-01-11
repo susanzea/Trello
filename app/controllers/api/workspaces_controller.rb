@@ -1,18 +1,18 @@
 class Api::WorkspacesController < ApplicationController
 
     def show
-        @workspace = Workspace.find(params[:id]).includes(:boards)
+        @workspace = Workspace.find(params[:id])
         render :show
     end
 
     def index
-        @workspaces = Workspace.all
+        @workspaces = Workspace.all.where("user_id = ?", current_user.id)
     end
 
     def create
         @workspace = Workspace.new(new_workspace_params)
 
-        if @workspace.save
+        if @workspace
             render 'api/workspaces/show'
         else
             render json: @workspace.errors.full_messages, status: 422

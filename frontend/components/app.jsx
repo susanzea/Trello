@@ -10,6 +10,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import QuickSignup from './SplashPage/quick_signup';
 import LeftWorkspacesNavBarContainer from './left_workspaces_nav_bar/left_workspaces_nav_bar_container';
 import WorkspacesImage from './workspaces_image';
+import BoardContainer from './boards/board_container';
 
 const App = () => {
     return(
@@ -24,6 +25,7 @@ const App = () => {
                 <AuthRoute exact path="/login" component={LoginFormContainer} />
                 <ProtectedRoute exact path="/workspaces/:workspaceId/boards" component={WorkspaceBoardsIndexContainer} />
                 <AuthRoute exact path="/" component={QuickSignup} />
+                <ProtectedRoute exact path="/boards/:board_id" component={BoardContainer} />
             </Switch>
         </>
     )

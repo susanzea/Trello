@@ -1,12 +1,12 @@
 class Api::BoardsController < ApplicationController
     
     def show
-        @board = Board.find(params[:id]).includes(:lists)
+        @board = Board.find(params[:id])
+        render :show
     end
     
     def index
-        @boards = Board.all 
-        # .where("workspace_id = ?", params[:workspace_id])
+        @boards = Board.all.where("workspace_id = ?", params[:workspace_id])
         render 'api/boards/index'
     end
     

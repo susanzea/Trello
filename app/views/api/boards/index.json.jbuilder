@@ -1,5 +1,5 @@
 @boards.each do |board|
-    board.set! board.id do 
-        board.extract! board, :id, :title, :workspace_id
+    json.set! board.id do 
+        json.extract! board, :id, :title, :workspace_id
     end
 end

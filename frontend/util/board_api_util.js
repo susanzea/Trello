@@ -1,6 +1,5 @@
 
 export const getAllWorkspaceBoards = (workspaceId) => {
-    debugger
     return $.ajax({
         method: 'GET',
         url: `/api/workspaces/${workspaceId}/boards`

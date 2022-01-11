@@ -11,7 +11,6 @@ import {
 export const RECEIVE_WORKSPACE_BOARDS = `RECEIVE_WORKSPACE_BOARDS`;
 
 const receiveWorkspaceBoards = (boards) => {
-    debugger
     return {
         type: RECEIVE_WORKSPACE_BOARDS,
         boards
@@ -42,7 +41,6 @@ export const removeWorkspaceBoard = (boardId) => {
 
 //thunk action creators
 export const fetchAllWorkspaceBoards = (workspaceId) => (dispatch) => {
-    debugger
     return getAllWorkspaceBoards(workspaceId)
     .then(boards => dispatch(receiveWorkspaceBoards(boards)));
 }

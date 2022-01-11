@@ -12,8 +12,6 @@ const workspacesReducer = (prevState=[], action) => {
             nextState[action.workspace.id] = action.workspace
             return Object.values(nextState);
         case REMOVE_USER_WORKSPACE:
-            // debugger //delete action properly hitting
-            // dletee not working in line below
             nextState = Object.values(nextState)
 
             const hash = {}
@@ -22,8 +20,6 @@ const workspacesReducer = (prevState=[], action) => {
             }
             delete hash[action.workspaceId]
 
-            // debugger
-            //nextState below is unchanged
             return Object.values(hash);
         default:
             return prevState;
