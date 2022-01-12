@@ -8,7 +8,7 @@ class ListIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchAllBoardLists()
+        this.props.fetchAllBoardLists(this.props.boardId)
     }
 
     render() {
@@ -16,7 +16,6 @@ class ListIndex extends React.Component {
             return <p>loading!!</p>
         }
 
-        debugger // this.props.lists is undefined until hard refresh
         return (
         <ul className='list-index'>
             {

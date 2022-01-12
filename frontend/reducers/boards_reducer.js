@@ -6,20 +6,18 @@ const boardsReducer = (prevState=[], action) => {
 
     switch (action.type) {
         case RECEIVE_WORKSPACE_BOARDS:
-            return Object.values(action.boards);
+            return action.boards;
         case RECEIVE_WORKSPACE_BOARD:
             nextState[action.board.id] = action.board
-            return Object.values(nextState);
+            return nextState;
         case REMOVE_WORKSPACE_BOARD:
-            nextState = Object.values(nextState)
+            // const hash = {}
+            // for (let i = 0; i < nextState.length; i++) {
+            //     hash[nextState[i].id] = nextState[i]
+            // }
+            delete nextState[action.boardId]
 
-            const hash = {}
-            for (let i = 0; i < nextState.length; i++) {
-                hash[nextState[i].id] = nextState[i]
-            }
-            delete hash[action.boardId]
-
-            return Object.values(hash);
+            return nextState;
         default:
             //default being hit
             return prevState;

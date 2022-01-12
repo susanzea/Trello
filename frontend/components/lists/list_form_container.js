@@ -1,10 +1,12 @@
 import ListForm from "./list_form";
 import { connect } from 'react-redux';
 import { createList, destroyList } from "../../actions/list_actions";
+import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
+    // debugger
     return {
-        boardId: state.entities.boards[0].id
+        boardId: ownProps.match.params.board_id
     }
 }
 
@@ -14,4 +16,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ListForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ListForm));

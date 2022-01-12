@@ -5,7 +5,7 @@ import { fetchAllWorkspaceBoards, createBoard } from '../../actions/board_action
 const mapStateToProps = (state, ownProps) => {
     return {
         workspaceId: parseInt(ownProps.match.params.workspaceId),
-        boards: state.entities.boards
+        boards: Object.values(state.entities.boards)
     }
 }
 

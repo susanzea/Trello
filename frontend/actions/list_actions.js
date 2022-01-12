@@ -15,6 +15,7 @@ export const receiveBoardLists = (lists) => {
 export const RECEIVE_BOARD_LIST = `RECEIVE_BOARD_LIST`;
 
 export const receiveBoardList = (list) => {
+    debugger
     return {
         type: RECEIVE_BOARD_LIST,
         list
@@ -40,6 +41,7 @@ export const fetchAllBoardLists = (boardId) => (dispatch) => {
 }
 
 export const createList = (list) => (dispatch) => {
+    debugger
     return postList(list)
         .then(list => dispatch(receiveBoardList(list)));
 }
