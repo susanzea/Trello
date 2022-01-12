@@ -1,4 +1,5 @@
 import React from 'react';
+import MainNavBar from '../navbars/mainNavBar/main_nav_bar';
 
 class Board extends React.Component {
     constructor(props) {
@@ -19,10 +20,13 @@ class Board extends React.Component {
 
         debugger
         return (
-            <div className="board">
-                <h2>{this.props.board.title}</h2>
-                <button>+ Add a list</button>
-            </div>
+            <>
+                <div className="board">
+                    <MainNavBar />
+                    <h2>{this.props.board.title}</h2>
+                    <button>+ Add a list</button>
+                </div>
+            </>
         )
     }
 

@@ -1,0 +1,43 @@
+.board {
+    background-color: #838c90;
+    margin-top: 44px;
+    padding-top: 8px;
+    height: 100vw;
+}
+
+.board #main-nav-bar {
+    background-color: #484d4f;
+}
+
+.board #main-nav-bar #main-nav-right #search-input {
+    background-color: #7f8384;
+}
+x
+.board #main-nav-bar #main-nav-right #logged-in-user-icon {
+    background-color: #7f8384;
+    // issue: not changing the color
+}
+
+.board > h2 {
+    color: white;
+    font-size: 19px;
+    letter-spacing: 0px;
+    font-weight: 550;
+    background-color: #a1a7ab;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 6px 12px;
+    border-radius: 3px;
+    margin-bottom: 4px;
+}
+
+.board > button {
+    color: white;
+    font-size: 15px;
+    font-weight: 100;
+    border-radius: 3px;
+    letter-spacing: 0.02em;
+    background-color: #a1a7ab;
+    border: none;
+    padding: 10px 18px;
+}
