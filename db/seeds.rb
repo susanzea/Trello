@@ -66,7 +66,7 @@ b5 = Board.create!(
 
 l1 = List.create!(
     title: 'Entertainment',
-    board_id: 
+    board_id: b1.id
 )
 
 l2 = List.create!(

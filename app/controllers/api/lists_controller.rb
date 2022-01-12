@@ -11,7 +11,7 @@ class Api::ListsController < ApplicationController
     end
 
     def destroy
-        @list = Board.find_by(title: params[:title])
+        @list = List.find(params[:id])
 
         if @list
             @list.destroy

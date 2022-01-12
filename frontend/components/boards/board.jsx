@@ -8,18 +8,14 @@ class Board extends React.Component {
     }
 
     componentDidMount() {
-        debugger
         this.props.fetchWorkspaceBoard(parseInt(this.props.boardId))
-        debugger
     }
 
     render() {
-        debugger
         if (!this.props.board) {
             return <p>loading!!</p>
         }
 
-        debugger
         return (
             <>
                 <div className="board">

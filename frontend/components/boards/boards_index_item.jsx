@@ -3,7 +3,6 @@ import { withRouter, Link } from 'react-router-dom'
 
 const BoardsIndexItem = (props) => {
 
-    debugger //board is in props here
     return (
         <div className="boards-index-item">
             <Link className='boards-index-item-link' 

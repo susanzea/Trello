@@ -1,6 +1,5 @@
 
 export const postList = (list) => {
-    debugger
     return $.ajax({
         method: 'POST',
         url: `/api/lists`,
@@ -9,6 +8,7 @@ export const postList = (list) => {
 }
 
 export const deleteList = (listId) => {
+    debugger
     return $.ajax({
         method: 'DELETE',
         url: `/api/lists/${listId}`,

@@ -1,6 +1,6 @@
 import ListForm from "./list_form";
 import { connect } from 'react-redux';
-import { createList } from "../../actions/list_actions";
+import { createList, destroyList } from "../../actions/list_actions";
 
 const mapStateToProps = (state, ownProps) => {
     return {
