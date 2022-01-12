@@ -4,7 +4,7 @@ class List < ApplicationRecord
     belongs_to :board
 
     has_one :user,
-        through: board
+        through: :board
 
     has_one :workspace,
         through: :board

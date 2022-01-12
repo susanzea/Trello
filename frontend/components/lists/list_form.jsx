@@ -5,7 +5,8 @@ class ListForm extends React.Component {
         super(props);
 
         this.state = {
-            title: ''
+            title: '',
+            board_id: this.props.boardId
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -17,8 +18,10 @@ class ListForm extends React.Component {
     }
 
     handleSubmit(e) {
+        debugger
         e.preventDefault();
         this.props.createList(this.state);
+        this.setState({ title: '' })
     }
 
     render() {

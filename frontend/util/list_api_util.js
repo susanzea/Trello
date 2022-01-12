@@ -1,8 +1,9 @@
 
 export const postList = (list) => {
+    debugger
     return $.ajax({
         method: 'POST',
-        url: `/api/boards`,
+        url: `/api/lists`,
         data: { list }
     })
 }

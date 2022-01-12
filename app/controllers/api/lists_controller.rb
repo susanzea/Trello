@@ -1,9 +1,11 @@
 
 class Api::ListsController < ApplicationController
     def create
-        @list = Board.new(new_board_params)
+        @list = List.new(new_list_params)
 
-        if !@list.save
+        if @list.save
+            render 'api/lists/show'
+        else
             render json: @list.errors.full_messages, status: 422
         end 
     end
