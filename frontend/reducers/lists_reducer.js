@@ -6,10 +6,8 @@ const listsReducer = (prevState = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_BOARD_LISTS:
-            debugger
             return action.lists;
         case RECEIVE_BOARD_LIST:
-            debugger
             nextState[action.list.id] = action.list
             return nextState;
         case REMOVE_BOARD_LIST:

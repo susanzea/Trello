@@ -6,6 +6,7 @@ class Api::WorkspacesController < ApplicationController
     end
 
     def index
+        debugger
         @workspaces = Workspace.all.where("user_id = ?", current_user.id)
     end
 
