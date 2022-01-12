@@ -6,6 +6,7 @@ class Api::BoardsController < ApplicationController
         #pass in multiline callback to .then in thunk action creator
         # import actions from other action files
         @board = Board.find(params[:id])
+        @lists = List.all.where(board_id: @board.id)
         render :show
     end
     
