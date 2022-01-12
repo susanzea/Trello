@@ -32,7 +32,6 @@ class Api::BoardsController < ApplicationController
         else
             render json: ['That board does not exist'], status: 404
         end
-
     end
 
     def new_board_params
