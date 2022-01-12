@@ -14,5 +14,6 @@ Rails.application.routes.draw do
     end
 
     resources :boards, only: [:show, :create, :destroy]
+    resources :lists, only: [:create, :destroy]
   end
 end
