@@ -1,5 +1,11 @@
 
 class Api::ListsController < ApplicationController
+    
+    def index
+        @lists = List.all.where(board_id: params[:id])
+        render :index
+    end
+    
     def create
         @list = List.new(new_list_params)
 

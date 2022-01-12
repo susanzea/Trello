@@ -1,4 +1,11 @@
 
+export const getAllBoardLists = (boardId) => {
+    return $.ajax({
+        method: 'GET',
+        url: `/api/boards/${boardId}/lists`
+    })
+}
+
 export const postList = (list) => {
     return $.ajax({
         method: 'POST',
@@ -8,7 +15,6 @@ export const postList = (list) => {
 }
 
 export const deleteList = (listId) => {
-    debugger
     return $.ajax({
         method: 'DELETE',
         url: `/api/lists/${listId}`,

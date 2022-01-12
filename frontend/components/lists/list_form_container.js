@@ -9,7 +9,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = dispatch => {
-    return {
+    return { 
         createList: (list) => dispatch(createList(list))
     }
 }

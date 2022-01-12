@@ -18,7 +18,6 @@ class ListForm extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
         e.preventDefault();
         this.props.createList(this.state);
         this.setState({ title: '' })

@@ -21,7 +21,9 @@ class Board extends React.Component {
                 <div className="board">
                     <MainNavBar />
                     <h2>{this.props.board.title}</h2>
-                    <ListIndex lists={this.props.board.lists}/>
+                    <ListIndex
+                    fetchAllBoardLists={() => this.props.fetchAllBoardLists(this.props.boardId)}
+                    lists={this.props.board.lists}/>
                 </div>
             </>
         )

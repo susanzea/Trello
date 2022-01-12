@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ListIndexItem = (props) => {
-    debugger
     return(
         <div className='list-index-item'>
             <h1>{props.list.title}</h1>
