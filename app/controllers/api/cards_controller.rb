@@ -6,6 +6,11 @@ class Api::CardsController < ApplicationController
         render :index
     end 
 
+    def show
+        @card = Card.find(params[:id])
+        render :show
+    end
+
     def create
         @card = Card.new(new_card_params)
 
