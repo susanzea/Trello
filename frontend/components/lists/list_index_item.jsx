@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter} from 'react-router-dom';
 import CardIndexItem from '../cards/card_index_item';
+import CardFormContainer from '../cards/card_form_container'
 
 
 class ListIndexItem extends React.Component {
@@ -20,12 +21,13 @@ class ListIndexItem extends React.Component {
                         this.props.cards.map((card, idx) => {
                             debugger
                             return (<CardIndexItem
+                                list={this.props.list}
                                 key={card.id}
                                 card={card}
                             />)
                         })
                     }
-                    <li>CardFormContainer</li>
+                    <li><CardFormContainer list={this.props.list}/></li>
                 </ul>
 
 
@@ -34,7 +36,6 @@ class ListIndexItem extends React.Component {
                 > 
                     — 
                 </button>
-                <button> + Add a new card </button>
             </div>
         )
     }

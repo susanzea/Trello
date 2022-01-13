@@ -15,6 +15,7 @@ const mapStateToProps = (state, ownProps) => {
     debugger
     return {
         cards: getListCard(ownProps.list.id)
+        
     }
 }
 

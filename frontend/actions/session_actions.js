@@ -16,7 +16,7 @@ const receiveCurrentUser = (user) => {
 export const LOGOUT_CURRENT_USER = `LOGOUT_CURRENT_USER`;
 
 const logoutCurrentUser = () => {
-    // debugger
+
     return {
         type: LOGOUT_CURRENT_USER
     }
@@ -63,7 +63,6 @@ export const login = user => dispatch => {
 }
 
 export const logout = () => dispatch => {
-    // debugger
     return deleteSession()
         .then(() => dispatch(logoutCurrentUser()),
         err => dispatch(receiveSessionErrors(err.responseJSON))

@@ -41,7 +41,6 @@ export const removeListCard = (cardId) => {
 
 //thunk action creators
 export const fetchAllListCards = (listId) => (dispatch) => {
-    debugger
     return getAllListCards(listId)
         .then(cards => dispatch(receiveListCards(cards)));
 }
