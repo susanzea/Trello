@@ -11,7 +11,7 @@ class CardIndexItem extends React.Component {
         return (
             <div className='card-index-item'>
                 <li>{this.props.card.title}</li>
-                <button onClick={() => this.props.destroyCard(this.props.card.id)}> - </button>
+                <button onClick={() => this.props.destroyCard(this.props.card.id)}> — </button>
             </div>
         )
     }

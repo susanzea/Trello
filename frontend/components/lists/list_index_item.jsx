@@ -15,7 +15,15 @@ class ListIndexItem extends React.Component {
         debugger
         return (
             <div className='list-index-item'>
-                <h1>{this.props.list.title}</h1>
+                <div className='list-header'>
+                    <h1>{this.props.list.title}</h1>
+                    <button
+                        className='list-delete-button'
+                        onClick={() => this.props.destroyList(this.props.list.id)}
+                    >
+                        —
+                    </button>
+                </div>
                 <ul className='card-index'>
                     {
                         this.props.cards.map((card, idx) => {
@@ -30,13 +38,6 @@ class ListIndexItem extends React.Component {
                     }
                     <li><CardFormContainer list={this.props.list}/></li>
                 </ul>
-
-
-                <button 
-                    onClick={() => this.props.destroyList(this.props.list.id)}
-                > 
-                    — 
-                </button>
             </div>
         )
     }
