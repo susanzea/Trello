@@ -1,5 +1,5 @@
 
-export const getAllListCards = (cardId) => {
+export const getAllListCards = (listId) => {
     return $.ajax({
         method: 'GET',
         url: `/api/lists/${listId}/cards`

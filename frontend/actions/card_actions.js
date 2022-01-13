@@ -10,7 +10,7 @@ import {
 //action creators
 export const RECEIVE_LIST_CARDS = `RECEIVE_LIST_CARDS`;
 
-const receiveListCards = (cards) => {
+export const receiveListCards = (cards) => {
     return {
         type: RECEIVE_LIST_CARDS,
         cards
@@ -41,6 +41,7 @@ export const removeListCard = (cardId) => {
 
 //thunk action creators
 export const fetchAllListCards = (listId) => (dispatch) => {
+    debugger
     return getAllListCards(listId)
         .then(cards => dispatch(receiveListCards(cards)));
 }

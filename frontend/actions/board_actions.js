@@ -4,8 +4,8 @@ import {
         postBoard,
         deleteBoard
     } from "../util/board_api_util";
-
-
+import { receiveBoardLists } from "./list_actions";
+import { receiveListCards } from "./card_actions";
 
 //action creators
 export const RECEIVE_WORKSPACE_BOARDS = `RECEIVE_WORKSPACE_BOARDS`;
@@ -48,8 +48,13 @@ export const fetchAllWorkspaceBoards = (workspaceId) => (dispatch) => {
 
 export const fetchWorkspaceBoard = (boardId) => (dispatch) => {
     return getWorkspaceBoard(boardId)
-        .then(board => dispatch(receiveWorkspaceBoard(board)));
+        .then(({ board, lists, cards }) => {
+            dispatch(receiveListCards(cards)),
+            dispatch(receiveBoardLists(lists)),
+            dispatch(receiveWorkspaceBoard(board))
+        });
 }
+//issue: dispatch 3 times, for board, lists, cards
 
 export const createBoard = (board) => (dispatch) => {
     return postBoard(board)

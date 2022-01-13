@@ -7,15 +7,7 @@ class ListIndex extends React.Component {
         super(props)
     }
 
-    componentDidMount() {
-        this.props.fetchAllBoardLists(this.props.boardId)
-    }
-
     render() {
-        if (!this.props.lists) {
-            return <p>loading!!</p>
-        }
-
         return (
         <ul className='list-index'>
             {

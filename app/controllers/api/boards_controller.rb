@@ -5,8 +5,8 @@ class Api::BoardsController < ApplicationController
         # dispatch board.list, board.card, etc
         #pass in multiline callback to .then in thunk action creator
         # import actions from other action files
-        @board = Board.find(params[:id])
-        @lists = List.all.where(board_id: @board.id)
+        @board = Board.includes(:lists, :cards).find(params[:id])
+        # @lists = List.all.where(board_id: @board.id)
         render :show
     end
     
