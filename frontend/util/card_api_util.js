@@ -6,7 +6,7 @@ export const getAllListCards = (cardId) => {
     })
 }
 
-export const getListCards = (cardId) => {
+export const getListCard = (cardId) => {
     return $.ajax({
         method: 'GET',
         url: `/api/cards/${cardId}`

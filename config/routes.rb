@@ -16,6 +16,11 @@ Rails.application.routes.draw do
     resources :boards, only: [:show, :create, :destroy] do
       resources :lists, only: [:index]
     end
-    resources :lists, only: [:create, :destroy]
+
+    resources :lists, only: [:create, :destroy] do
+      resources :cards, only: [:index]
+    end
+
+    resources :cards, only: [:show, :destroy, :create]
   end
 end
