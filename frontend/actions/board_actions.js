@@ -27,6 +27,7 @@ export const receiveWorkspaceBoard = (board) => {
     }
 }
 
+
 export const REMOVE_WORKSPACE_BOARD = `REMOVE_WORKSPACE_BOARD`;
 
 export const removeWorkspaceBoard = (boardId) => {
@@ -41,7 +42,6 @@ export const removeWorkspaceBoard = (boardId) => {
 
 //thunk action creators
 export const fetchAllWorkspaceBoards = (workspaceId) => (dispatch) => {
-    debugger
     return getAllWorkspaceBoards(workspaceId)
     .then(boards => dispatch(receiveWorkspaceBoards(boards)));
 }
