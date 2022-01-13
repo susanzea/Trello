@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Card.delete_all
 Board.delete_all
 Workspace.delete_all
 User.delete_all
@@ -83,36 +84,43 @@ l3 = List.create!(
 
 ###CARDS
 c1 = Card.create!(
-    title: `Confirm with Darryl's band`,
+    title: "Confirm with Darryl's band",
+    user_id: u1.id,
     list_id: l1.id
 )
 
 c2 = Card.create!(
-    title: `Finish writing song that I'm singing for Toby`,
+    title: "Finish writing song that I'm singing for Toby",
+    user_id: u1.id,
     list_id: l1.id
 )
 
 c3 = Card.create!(
-    title: 'Buy fireworks',
+    title: "Buy fireworks",
+    user_id: u1.id,
     list_id: l1.id
 )
 
 c4 = Card.create!(
-    title: `Give fire department a heads up`,
+    title: "Give fire department a heads up",
+    user_id: u1.id,
     list_id: l2.id
 )
 
 c5 = Card.create!(
-    title: `Locate fire extinguisher in office`,
+    title: "Locate fire extinguisher in office",
+    user_id: u1.id,
     list_id: l2.id
 )
 
 c6 = Card.create!(
-    title: `Get CPR dummy`,
+    title: "Get CPR dummy",
+    user_id: u1.id,
     list_id: l3.id
 )
 
 c7 = Card.create!(
-    title: `Download "Stayin' Alive" by the Bee Gees`,
+    title: "Download `Stayin' Alive` by the Bee Gees",
+    user_id: u1.id,
     list_id: l3.id
 )

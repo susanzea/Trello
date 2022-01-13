@@ -1,6 +1,6 @@
 import { RECEIVE_WORKSPACE_BOARDS, RECEIVE_WORKSPACE_BOARD, REMOVE_WORKSPACE_BOARD } from "../actions/board_actions";
 
-const boardsReducer = (prevState=[], action) => {
+const boardsReducer = (prevState={}, action) => {
     Object.freeze(prevState);
     let nextState = Object.assign({}, prevState)
 
@@ -19,7 +19,6 @@ const boardsReducer = (prevState=[], action) => {
 
             return nextState;
         default:
-            //default being hit
             return prevState;
     }
 }
