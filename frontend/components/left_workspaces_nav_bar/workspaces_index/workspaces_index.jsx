@@ -13,7 +13,7 @@ class WorkspacesIndex extends React.Component {
     }
 
     componentDidMount() {
-        debugger
+        // debugger
         this.props.fetchAllUserWorkspaces(this.props.userId)
     }
 
@@ -22,12 +22,12 @@ class WorkspacesIndex extends React.Component {
     }
 
     render() {
-        debugger
+        // debugger
         if (this.props.workspaces.length === 0) {
             return <p>You don't have any workspaces.</p>
         }
 
-        debugger
+        // debugger
         return(
             <ul className="workspaces-index">
                 {

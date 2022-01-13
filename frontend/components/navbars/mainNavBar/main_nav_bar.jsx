@@ -12,7 +12,7 @@ class MainNavBar extends React.Component {
 
 
     render(){
-        debugger
+        // debugger
         return (
             <nav id='main-nav-bar'>
                 <div id="main-nav-left">
@@ -22,7 +22,7 @@ class MainNavBar extends React.Component {
                 <div id="main-nav-right">
                     <SearchBar />
                     <UserMenu currentUser={this.props.currentUser} />
-                    <Link id="logout-button" to="/login" onClick={this.props.logout}>Logout</Link>
+                    <button id="logout-button" onClick={this.props.logout}>Logout</button>
                 </div>
             </nav>
         )

@@ -7,20 +7,22 @@ const workspacesReducer = (prevState=[], action) => {
 
     switch(action.type) {
         case RECEIVE_USER_WORKSPACES:
-            return Object.values(action.workspaces);
+            return action.workspaces;
         case RECEIVE_USER_WORKSPACE:
             nextState[action.workspace.id] = action.workspace
-            return Object.values(nextState);
+            return nextState;
         case REMOVE_USER_WORKSPACE:
-            nextState = Object.values(nextState)
+            // nextState = Object.values(nextState)
 
-            const hash = {}
-            for (let i = 0; i < nextState.length; i++) {
-                hash[nextState[i].id] = nextState[i]
-            }
-            delete hash[action.workspaceId]
+            // const hash = {}
+            // for (let i = 0; i < nextState.length; i++) {
+            //     hash[nextState[i].id] = nextState[i]
+            // }
+            // delete hash[action.workspaceId]
 
-            return Object.values(hash);
+            // return Object.values(hash);
+            delete nextState[action.workspaceId];
+            return nextState;
         default:
             return prevState;
     }

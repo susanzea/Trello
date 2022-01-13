@@ -5,7 +5,7 @@ import { fetchAllUserWorkspaces, destroyWorkspace } from "../../../actions/works
 const mapStateToProps = state => {
     return{
         userId: state.entities.users[state.session.id].id,
-        workspaces: state.entities.workspaces
+        workspaces: Object.values(state.entities.workspaces)
     }
 }
 

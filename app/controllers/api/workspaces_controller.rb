@@ -6,14 +6,14 @@ class Api::WorkspacesController < ApplicationController
     end
 
     def index
-        debugger
+        # there is a current user id here
         @workspaces = Workspace.all.where("user_id = ?", current_user.id)
     end
 
     def create
         @workspace = Workspace.new(new_workspace_params)
 
-        if @workspace
+        if @workspace.save
             render 'api/workspaces/show'
         else
             render json: @workspace.errors.full_messages, status: 422
