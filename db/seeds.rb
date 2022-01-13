@@ -81,37 +81,38 @@ l3 = List.create!(
 
 
 
-# c1 = Card.create!(
-#     title: `Confirm with Darryl's band`,
-#     list_id: l1.id
-# )
+###CARDS
+c1 = Card.create!(
+    title: `Confirm with Darryl's band`,
+    list_id: l1.id
+)
 
-# c2 = Card.create!(
-#     title: `Finish writing song that I'm singing for Toby`,
-#     list_id: l1.id
-# )
+c2 = Card.create!(
+    title: `Finish writing song that I'm singing for Toby`,
+    list_id: l1.id
+)
 
-# c3 = Card.create!(
-#     title: 'Buy fireworks',
-#     list_id: l1.id
-# )
+c3 = Card.create!(
+    title: 'Buy fireworks',
+    list_id: l1.id
+)
 
-# c4 = Card.create!(
-#     title: `Give fire department a heads up`,
-#     list_id: l2.id
-# )
+c4 = Card.create!(
+    title: `Give fire department a heads up`,
+    list_id: l2.id
+)
 
-# c5 = Card.create!(
-#     title: `Locate fire extinguisher in office`,
-#     list_id: l2.id
-# )
+c5 = Card.create!(
+    title: `Locate fire extinguisher in office`,
+    list_id: l2.id
+)
 
-# c6 = Card.create!(
-#     title: `Get CPR dummy`,
-#     list_id: l3.id
-# )
+c6 = Card.create!(
+    title: `Get CPR dummy`,
+    list_id: l3.id
+)
 
-# c7 = Card.create!(
-#     title: `Download "Stayin' Alive" by the Bee Gees`,
-#     list_id: l3.id
-# )
+c7 = Card.create!(
+    title: `Download "Stayin' Alive" by the Bee Gees`,
+    list_id: l3.id
+)
