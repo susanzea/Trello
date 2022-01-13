@@ -7,7 +7,8 @@ class CardForm extends React.Component {
 
         this.state = {
             title: '',
-            board_id: this.props.listId
+            list_id: this.props.list.id,
+            user_id: this.props.currentUserId
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -25,7 +26,6 @@ class CardForm extends React.Component {
     }
 
     render() {
-        debugger
         return (
             <form onSubmit={this.handleSubmit}>
                 <div className='card-form'>

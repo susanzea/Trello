@@ -9,7 +9,6 @@ const cardsReducer = (prevState = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_LIST_CARDS:
-            debugger
             return action.cards;
         case RECEIVE_LIST_CARD:
             nextState[action.card.id] = action.card

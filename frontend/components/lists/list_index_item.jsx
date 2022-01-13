@@ -24,6 +24,7 @@ class ListIndexItem extends React.Component {
                                 list={this.props.list}
                                 key={card.id}
                                 card={card}
+                                destroyCard={this.props.destroyCard}
                             />)
                         })
                     }

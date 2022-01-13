@@ -51,8 +51,8 @@ export const fetchListCard = (boardId) => (dispatch) => {
 }
 
 export const createCard = (card) => (dispatch) => {
-    return postBoard(card)
-        .then(card => dispatch(receiveWorkspaceBoard(card)));
+    return postCard(card)
+        .then(card => dispatch(receiveListCard(card)));
 }
 
 export const destroyCard = (cardId) => (dispatch) => {

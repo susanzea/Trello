@@ -4,9 +4,9 @@ import { createCard, destroyCard } from "../../actions/card_actions";
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
-    debugger
     return {
-        listId: ownProps.match.params.list_id
+        listId: ownProps.match.params.list_id,
+        currentUserId: state.session.id
     }
 }
 
