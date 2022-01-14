@@ -49,7 +49,6 @@ export const fetchAllWorkspaceBoards = (workspaceId) => (dispatch) => {
 export const fetchWorkspaceBoard = (boardId) => (dispatch) => {
     return getWorkspaceBoard(boardId)
         .then(({ board, cards=[], lists=[] }) => {
-            debugger
             dispatch(receiveListCards(cards)),
             dispatch(receiveBoardLists(lists)),
             dispatch(receiveWorkspaceBoard(board))

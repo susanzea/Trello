@@ -29,8 +29,9 @@ class CardForm extends React.Component {
         return (
             <form onSubmit={this.handleSubmit}>
                 <div className='card-form'>
-                    <input type="text" value={this.state.title} onChange={this.handleChange} placeholder='Enter card title' />
-                    <button type='submit'>+ Add a new card</button>
+                    <textarea value={this.state.title} onChange={this.handleChange} placeholder="Enter a title for the card..."></textarea>
+                    <button className="add-button" type='submit'><span className='add'>＋</span> Add a card</button>
+                    <button className='form-x-button'>✕</button>
                 </div>
             </form>
         )

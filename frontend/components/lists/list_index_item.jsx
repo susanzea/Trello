@@ -11,8 +11,6 @@ class ListIndexItem extends React.Component {
 
 
     render() {
-
-        debugger
         return (
             <div className='list-index-item'>
                 <div className='list-header'>
@@ -27,7 +25,6 @@ class ListIndexItem extends React.Component {
                 <ul className='card-index'>
                     {
                         this.props.cards.map((card, idx) => {
-                            debugger
                             return (<CardIndexItem
                                 list={this.props.list}
                                 key={card.id}

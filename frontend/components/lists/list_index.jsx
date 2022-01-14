@@ -18,7 +18,7 @@ class ListIndex extends React.Component {
                     />
                 })
             }
-            <li><ListFormContainer /></li>
+            <li><ListFormContainer totalBoardLists={this.props.lists.length} /></li>
         </ul>
         )
     }

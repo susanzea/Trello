@@ -3,6 +3,7 @@
   display: flex;
   align-items: flex-start;
   display: -webkit-flex;
+  margin-left: 12px;
 }
 
 .list-index-item {
@@ -19,6 +20,30 @@
 .list-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    font-weight: 520;
+    color: #182a4d;
+    font-size: 1em;
+    margin-top: 3px;
+    margin-left: 17px;
+    margin-right: 4px;
+    margin-bottom: 3px;
+}
+
+.list-header > button {
+    border: none;
+    border-radius: 3px;
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+    color: #657185;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.list-header > button:hover {
+    color: #182a4d;
+    background-color: #dadbe2;
 }
 
 .list-form {

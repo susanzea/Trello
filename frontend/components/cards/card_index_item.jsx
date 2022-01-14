@@ -7,7 +7,6 @@ class CardIndexItem extends React.Component {
     }
 
     render() {
-        debugger //should have accesss to destroy card
         return (
             <div className='card-index-item'>
                 <li>{this.props.card.title}</li>

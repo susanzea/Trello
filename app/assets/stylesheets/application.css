@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+ .add {
+    font-size: 19px;
+    font-weight: 500;
+    margin-right: 5px;
+ }
+
+ .add-button {
+     display: flex;
+     align-items: center;
+ }
+
+ .x-close-button {
+     font-weight: bolder;
+     font-size: 26px;
+ }

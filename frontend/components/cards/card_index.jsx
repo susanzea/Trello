@@ -12,7 +12,6 @@ class CardIndex extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        debugger
         if (prevProps.lists === this.props.lists) {
             this.props.fetchAllListCards(parseInt(this.props.lists[0].id))
         }

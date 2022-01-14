@@ -24,11 +24,18 @@ class ListForm extends React.Component {
     }
 
     render() {
+        debugger
         return (
             <form onSubmit={this.handleSubmit}>
                 <div className='list-form'>
                     <input type="text" value={this.state.title} onChange={this.handleChange} placeholder='Enter list title' />
-                    <button type='submit'>+ Add a list</button>
+                    <button 
+                        className="add-button" 
+                        type='submit'
+                    >
+                        <span className='add'>＋</span>
+                        {this.props.totalBoardLists === 0 ? "Add a list" : "Add another list"}
+                    </button>
                 </div>
             </form>
         )
