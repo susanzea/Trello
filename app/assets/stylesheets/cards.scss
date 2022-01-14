@@ -73,23 +73,21 @@
     width: 255px;
 }
 
-.card-form > textarea {
+.card-form > input {
+    background-color: #dde4e9;
     font-family: arial, sans-serif;
     color: #182a4d;
     border: none;
     display: block;
     margin: 0 auto;
     padding: 8px;
-    inline-size: 248px;
-    overflow-wrap: break-word;
     width: 240px;
-    height: 52px;
     resize: none;
     border-radius: 3px;
     margin-bottom: 8px;
     box-shadow: 0 2px 2px -1px #b3b8c5;
 }
 
-.card-form > textarea:focus {
+.card-form > input:focus {
     outline: none;
 }

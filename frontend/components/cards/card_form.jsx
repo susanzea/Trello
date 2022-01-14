@@ -25,13 +25,20 @@ class CardForm extends React.Component {
         this.setState({ title: '' })
     }
 
+    addOnClick() {
+        
+    }
+
+
     render() {
+
+        const toggleInput = document.querySelector('card-form-textarea')
+
         return (
             <form onSubmit={this.handleSubmit}>
                 <div className='card-form'>
-                    <textarea value={this.state.title} onChange={this.handleChange} placeholder="Enter a title for the card..."></textarea>
+                    <input type="text" id='card-form-input' placeholder='Enter a title for the card...' value={this.state.title} onChange={this.handleChange} />
                     <button className="add-button" type='submit'><span className='add'>＋</span> Add a card</button>
-                    <button className='form-x-button'>✕</button>
                 </div>
             </form>
         )
@@ -39,3 +46,5 @@ class CardForm extends React.Component {
 }
 
 export default CardForm;
+
+<button className='form-x-button'>✕</button>
