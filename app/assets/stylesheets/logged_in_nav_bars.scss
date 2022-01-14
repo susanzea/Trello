@@ -158,7 +158,6 @@
     font-weight: bold;
     color: #606e86;
     letter-spacing: 0.5px;
-    margin-bottom: 5px;
 }
 
 .workspaces-index-item > button {
@@ -187,3 +186,36 @@
     margin-left: 7px;
 }
 
+.workspaces-index-header-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ .workspaces-index-header-title > button {   
+    border: none;
+    color: #637189;
+    font-weight: lighter;
+    background-color: transparent;
+    font-size: 17px;
+    margin-right: 5px;
+ }
+
+.create-workspace-form {
+    display: none;
+}
+
+ .create-workspace-form > button {
+    border: none;
+    color: #637189;
+    font-weight: lighter;
+    background-color: transparent;
+    font-size: 17px;
+    margin-right: 5px; 
+ }
+
+ .create-workspace-form > input {
+     width: 110px;
+     border: 1px solid gray;
+     border-radius: 3px;
+ }
