@@ -25,11 +25,14 @@ class ListForm extends React.Component {
     }
 
     toggle(e) {
-        // if (e.target.className === 'reveal-workspace-board') {
-
-        // } else if () {
-
-        // }
+        if (e.target.className === 'reveal-workspace-board-form add-button') {
+            debugger
+            $(e.target).hide();
+            $(e.target).siblings().show();
+        } else if (e.target.className === 'hide-workspace-board-form add-button') {
+            $(e.target.parentElement).hide();
+            $(e.target.parentElement).siblings().show();
+        }
     }
 
     render() {
@@ -37,23 +40,24 @@ class ListForm extends React.Component {
         return (
             <div className='list-form'>
                 <button
-                    className="reveal-workspace-board add-button"
+                    className="reveal-workspace-board-form add-button"
                     type='submit'
+                    onClick={this.toggle}
                 >
                     <span className='add'>＋</span>
                     {this.props.totalBoardLists === 0 ? "Add a list" : "Add another list"}
                 </button>
-                <form onSubmit={this.handleSubmit}>
-                    <div className='list-form'>
-                        <input type="text" value={this.state.title} onChange={this.handleChange} placeholder='Enter list title' />
+                <form onSubmit={this.handleSubmit} className='create-workspace-form-2'>
+                        <input type="text" id="create-workspace-input-2" value={this.state.title} onChange={this.handleChange} placeholder='Enter list title' />
                         <button
-                            className="add-button"
+                            className="hide-workspace-board-form add-button"
+                            id="add-workspace"
                             type='submit'
+                            onClick={this.toggle}
                         >
                             <span className='add'>＋</span>
                             {this.props.totalBoardLists === 0 ? "Add a list" : "Add another list"}
                         </button>
-                    </div>
                 </form>
             </div>
         )
