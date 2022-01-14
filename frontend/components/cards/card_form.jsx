@@ -32,7 +32,7 @@ class CardForm extends React.Component {
         if (e.target.className === "reveal-card-form") {
             $(e.target).hide();
             $(e.target).siblings().show();
-        } else if (e.target.className === "add-card-and-hide-card-form") {
+        } else if (e.target.className === "add-card") {
             $(e.target.parentElement).hide();
             $(e.target.parentElement).siblings().show();
         } else if (e.target.className === "hide-card-form") {
@@ -71,8 +71,7 @@ class CardForm extends React.Component {
                             onChange={this.handleChange}
                         />
 
-                        <button className="add-card-and-hide-card-form" 
-                            onClick={this.toggle} 
+                        <button className="add-card" 
                             type='submit'
                         >
                             Add card
