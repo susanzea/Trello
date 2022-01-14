@@ -29,3 +29,7 @@
      font-weight: bolder;
      font-size: 26px;
  }
+
+ ::placeholder {
+  color: #5e6c84;
+}

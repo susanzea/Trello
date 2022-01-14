@@ -56,25 +56,39 @@
 //     align-items: center;
 // }
 
-.card-form > button {
-    background-color: transparent;
+.add-card-and-hide-card-form {
+    background-color: #0179bf;
     border: none;
-    color: #5e6c84;
+    border-radius: 3px;
+    color: white;
     font-size: 14px;
     letter-spacing: 0.02em;
+    height: 32px;
+    width: 86px;
     margin-left: 8px;
     margin-bottom: 8px;
 }
 
-.card-form > button:hover {
-    color: #203153;
-    background-color: #dadbe2;
-    border-radius: 3px;
-    width: 255px;
+.hide-card-form {
+    position: relative;
+    color: #5e6c84;
+    font-weight: lighter;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    margin-left: 9px;
+    top: 3px;
 }
 
+// .card-form > button:hover {
+//     color: #203153;
+//     background-color: #dadbe2;
+//     border-radius: 3px;
+//     width: 255px;
+// }
+
 .card-form > input {
-    background-color: #dde4e9;
+    background-color: white;
     font-family: arial, sans-serif;
     color: #182a4d;
     border: none;
@@ -91,3 +105,18 @@
 .card-form > input:focus {
     outline: none;
 }
+
+.create-card-form {
+    display: none;
+}
+
+.reveal-card-form {
+    background-color: transparent;
+    border: none;
+    color: #5e6c84;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    margin-left: 8px;
+    margin-bottom: 8px;
+}
+
