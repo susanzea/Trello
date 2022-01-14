@@ -80,6 +80,11 @@ l3 = List.create!(
     board_id: b2.id
 )
 
+l4 = List.create!(
+    title: 'Prep',
+    board_id: b4.id
+)
+
 
 
 ###CARDS
@@ -123,4 +128,10 @@ c7 = Card.create!(
     title: "Download `Stayin' Alive` by the Bee Gees",
     user_id: u1.id,
     list_id: l3.id
+)
+
+c8 = Card.create!(
+    title: "Hang plasma screen",
+    user_id: u1.id,
+    list_id: l4.id
 )
