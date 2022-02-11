@@ -3,8 +3,9 @@ import WorkspaceBoardsIndex from './workspace_boards_index';
 import { fetchAllWorkspaceBoards, createBoard } from '../../actions/board_actions'
 
 const mapStateToProps = (state, ownProps) => {
+    debugger
     return {
-        workspaceId: ownProps.match.params.workspaceId,
+        workspaceId: parseInt(ownProps.match.params.workspaceId),
         boards: Object.values(state.entities.boards)
     }
 }
@@ -12,7 +13,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
     return {
         fetchAllWorkspaceBoards: (workspaceId) => dispatch(fetchAllWorkspaceBoards(workspaceId)),
-        createBoards: (board) => dispatch(createBoard(board))
+        createBoard: (board) => dispatch(createBoard(board))
     }
 }
 

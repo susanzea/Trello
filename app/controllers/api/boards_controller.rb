@@ -36,7 +36,7 @@ class Api::BoardsController < ApplicationController
     end
 
     def new_board_params
-        params.require(:board).permit(:title, :user_id)
+        params.require(:board).permit(:title, :workspace_id)
     end
 
 end

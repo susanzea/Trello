@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+//proud
 class CardForm extends React.Component {
     constructor(props) {
         super(props);
@@ -14,8 +14,8 @@ class CardForm extends React.Component {
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.toggle = this.toggle.bind(this);
-        this.addCardHideForm = this.addCardHideForm.bind(this);
-        this.hideForm = this.hideForm.bind(this);
+        // this.addCardHideForm = this.addCardHideForm.bind(this);
+        // this.hideForm = this.hideForm.bind(this);
     }
     
     handleChange(e) {
@@ -42,13 +42,13 @@ class CardForm extends React.Component {
         }
     }
 
-    addCardHideForm() {
-        return null;
-    }
+    // addCardHideForm() {
+    //     return null;
+    // }
 
-    hideForm() {
-        return null;
-    }
+    // hideForm() {
+    //     return null;
+    // }
 
 
     render() {
