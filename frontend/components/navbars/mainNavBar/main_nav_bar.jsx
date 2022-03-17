@@ -12,7 +12,6 @@ class MainNavBar extends React.Component {
 
 
     render(){
-        // debugger
         return (
             <nav id='main-nav-bar'>
                 <div id="main-nav-left">

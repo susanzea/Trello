@@ -26,7 +26,6 @@ class ListForm extends React.Component {
 
     toggle(e) {
         if (e.target.className === 'reveal-workspace-board-form add-button') {
-            debugger
             $(e.target).hide();
             $(e.target).siblings().show();
         } else if (e.target.className === 'hide-workspace-board-form add-button') {
@@ -36,7 +35,6 @@ class ListForm extends React.Component {
     }
 
     render() {
-        debugger
         return (
             <div className='list-form'>
                 <button

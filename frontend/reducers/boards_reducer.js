@@ -8,7 +8,9 @@ const boardsReducer = (prevState={}, action) => {
         case RECEIVE_WORKSPACE_BOARDS:
             return action.boards;
         case RECEIVE_WORKSPACE_BOARD:
-            return action.board;
+            let key = Object.keys(action.board)[0]
+            nextState[key] = action.board[key]
+            return nextState;
         case REMOVE_WORKSPACE_BOARD:
             // const hash = {}
             // for (let i = 0; i < nextState.length; i++) {

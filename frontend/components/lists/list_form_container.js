@@ -4,7 +4,6 @@ import { createList, destroyList } from "../../actions/list_actions";
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
-    // debugger
     return {
         boardId: ownProps.match.params.board_id
     }

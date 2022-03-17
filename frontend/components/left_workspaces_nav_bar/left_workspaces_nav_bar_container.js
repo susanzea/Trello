@@ -5,7 +5,6 @@ import { createWorkspace } from '../../actions/workspace_actions';
 
 
 const mapStateToProps = state => {
-    // debugger
     return {
         userId: state.session.id,
     }

@@ -22,7 +22,7 @@ class WorkspaceBoardsIndex extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        // need to figure out hot to trigger update after adding new board
+        debugger
         if (prevProps.match.params.workspaceId !== this.props.match.params.workspaceId) {
             this.props.fetchAllWorkspaceBoards(this.props.workspaceId)
         }
@@ -33,11 +33,9 @@ class WorkspaceBoardsIndex extends React.Component {
     }
 
     handleSubmit(e) {
-        debugger
         e.preventDefault();
         this.props.createBoard(this.state);
         this.setState({ title: '' })
-        debugger
     }
 
     toggle(e) {
@@ -69,7 +67,7 @@ class WorkspaceBoardsIndex extends React.Component {
                         this.props.boards.map((board, idx) => {
                             return <BoardsIndexItem 
                             key={board.id+idx} idx={idx} 
-                            destroyBoard={(boardId) => this.props.destroyBoard(boardId)} 
+                            destroyBoard={() => this.props.destroyBoard(board.id)} 
                             board={board} />
                         })
                     }

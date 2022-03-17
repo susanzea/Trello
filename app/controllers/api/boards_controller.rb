@@ -26,9 +26,10 @@ class Api::BoardsController < ApplicationController
     end
 
     def destroy
-        @board = Board.find_by(title: params[:title])
+        # ? issue: this method is now working but only after page is refreshed
+        @board = Board.find(params[:id])
 
-        if @board
+        if @board.destroy
             render 'api/boards/index'
         else
             render json: ['That board does not exist'], status: 404
@@ -36,7 +37,7 @@ class Api::BoardsController < ApplicationController
     end
 
     def new_board_params
-        params.require(:board).permit(:title, :workspace_id)
+        params.require(:board).permit(:title, :workspace_id, :id)
     end
 
 end

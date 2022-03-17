@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Board from './board'
-import { fetchWorkspaceBoard } from '../../actions/board_actions'
+import { destroyBoard, fetchWorkspaceBoard } from '../../actions/board_actions'
 import { fetchAllBoardLists } from '../../actions/list_actions'
 
 const mapStateToProps = (state, ownProps) => {

@@ -58,7 +58,7 @@ export const fetchWorkspaceBoard = (boardId) => (dispatch) => {
 
 export const createBoard = (board) => (dispatch) => {
     return postBoard(board)
-        .then(board => dispatch(receiveWorkspaceBoard(board)));
+        .then(board => dispatch(receiveWorkspaceBoard(board.board)));
 }
 
 export const destroyBoard = (boardId) => (dispatch) => {
