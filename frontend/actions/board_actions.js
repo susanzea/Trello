@@ -63,5 +63,5 @@ export const createBoard = (board) => (dispatch) => {
 
 export const destroyBoard = (boardId) => (dispatch) => {
     return deleteBoard(boardId)
-        .then(()=> dispatch(removeWorkspaceBoard(boardId)));
+        .then(() => dispatch(removeWorkspaceBoard(boardId)));
 }

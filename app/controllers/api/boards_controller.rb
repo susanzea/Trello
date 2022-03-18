@@ -26,10 +26,11 @@ class Api::BoardsController < ApplicationController
     end
 
     def destroy
-        # ? issue: this method is now working but only after page is refreshed
         @board = Board.find(params[:id])
 
         if @board.destroy
+            # TODO: refactor view rendered below, the @boards is a bit hacky
+            @boards = Board.all
             render 'api/boards/index'
         else
             render json: ['That board does not exist'], status: 404

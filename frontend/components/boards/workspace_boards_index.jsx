@@ -22,7 +22,6 @@ class WorkspaceBoardsIndex extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        debugger
         if (prevProps.match.params.workspaceId !== this.props.match.params.workspaceId) {
             this.props.fetchAllWorkspaceBoards(this.props.workspaceId)
         }

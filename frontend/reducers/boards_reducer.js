@@ -3,7 +3,7 @@ import { RECEIVE_WORKSPACE_BOARDS, RECEIVE_WORKSPACE_BOARD, REMOVE_WORKSPACE_BOA
 const boardsReducer = (prevState={}, action) => {
     Object.freeze(prevState);
     let nextState = Object.assign({}, prevState)
-
+    
     switch (action.type) {
         case RECEIVE_WORKSPACE_BOARDS:
             return action.boards;
