@@ -1,5 +1,6 @@
 import React from "react";
 
+
 class CardTitleForm extends React.Component {
     constructor(props) {
         super(props);
@@ -9,21 +10,19 @@ class CardTitleForm extends React.Component {
         }
 
         this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChange() {
-        return null;
-    }
-
-    handleSubmit() {
+    handleChange(e) {
+        this.setState({ title: e.target.value });
+        console.log(this.state.title)
+        // TODO: figure out how to implement edit func. State is currently updating properly.
         return null;
     }
 
 
     render() {
         return (
-            <form className='card-title-form' onSubmit={this.handleSubmit} action="">
+            <form className='card-title-form'>
                 <input type="text"
                 className='card-title-input'
                 value={this.state.title}

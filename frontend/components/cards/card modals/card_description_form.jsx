@@ -1,11 +1,30 @@
 import React from "react";
 
 class CardDescriptionForm extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            description: this.props.card.description
+        }
+    }
 
 
     render() {
+        console.log(this.props.card.description)
         return (
-            <h1>card description form</h1>
+            <div>
+                <br />
+                <br />
+                <form action="">
+                    <h1>Description</h1>
+                    <p>
+                        {this.state.description === undefined ? "Add a more detailed description..." : this.state.description}    
+                    </p>
+                </form>
+                <br />
+                <br />
+            </div>
         )
     }
 }
