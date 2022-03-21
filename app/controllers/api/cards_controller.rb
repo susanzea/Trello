@@ -31,7 +31,18 @@ class Api::CardsController < ApplicationController
         end
     end
 
+    def update
+        @card = Card.find(params[:id])
+
+        if @card.update(new_card_params)
+            render :show
+        else
+            render json: @card.errors.full_messages, status: 422
+        end
+    end
+
+
     def new_card_params
-        params.require(:card).permit(:title, :description, :user_id, :list_id, :due_date)
+        params.require(:card).permit(:id, :title, :description, :user_id, :list_id, :due_date)
     end
 end

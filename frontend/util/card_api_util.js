@@ -28,3 +28,12 @@ export const deleteCard = (cardId) => {
         data: { cardId }
     })
 }
+
+export const patchCard = (card) => {
+    debugger
+    return $.ajax({
+        method: 'PATCH',
+        url: `/api/cards/${card.id}`,
+        data: { card }
+    })
+}

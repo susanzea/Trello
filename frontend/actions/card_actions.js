@@ -2,7 +2,8 @@ import {
     getAllListCards,
     getListCard,
     postCard, 
-    deleteCard
+    deleteCard,
+    patchCard
 } from '../util/card_api_util';
 
 
@@ -58,4 +59,11 @@ export const createCard = (card) => (dispatch) => {
 export const destroyCard = (cardId) => (dispatch) => {
     return deleteCard(cardId)
         .then(() => dispatch(removeListCard(cardId)));
+}
+
+// TODO: make sure this is correct
+export const editCard = (card) => (dispatch) => {
+    debugger
+    return patchCard(card)
+        .then(() => dispatch(receiveListCard(card)));
 }
