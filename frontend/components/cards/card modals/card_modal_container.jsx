@@ -1,5 +1,5 @@
 import React from 'react';
-import CardContentForm from './card_content_form';
+import CardTitleForm from './card_title_form';
 import CardDescriptionForm from './card_description_form';
 import CardCommentForm from './card_comment_form';
 import CardCommentsIndex from './card_comments_index';
@@ -9,7 +9,7 @@ function CardModal(props) {
         <div className='card-modal-background'>
             <div className='modal-container'>
                 <button className='close-card-modal' onClick={() => props.openModal(false)}>✕</button>
-                <CardContentForm card={props.card} />
+                <CardTitleForm card={props.card} />
                 <CardDescriptionForm card={props.card} />
                 <CardCommentForm card={props.card} />
                 <CardCommentsIndex card={props.card} />
