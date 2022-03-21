@@ -1,7 +1,6 @@
 import React from 'react';
 
 function CardModal(props) {
-    debugger
     return (
         <div className='card-modal-background'>
             <div className='modal-container'>
