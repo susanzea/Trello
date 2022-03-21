@@ -28,7 +28,6 @@ const App = () => {
                 <ProtectedRoute exact path="/workspaces/:workspaceId/boards" component={WorkspaceBoardsIndexContainer} />
                 <AuthRoute exact path="/" component={QuickSignup} />
                 <ProtectedRoute  exact path="/boards/:board_id" component={BoardContainer} />
-                {/* <ProtectedRoute exact path="/boards/:board_id/:card_id" component={CardModalContainer} /> */}
             </Switch>
         </>
     )
