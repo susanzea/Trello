@@ -46,9 +46,9 @@ export const fetchAllListCards = (listId) => (dispatch) => {
         .then(cards => dispatch(receiveListCards(cards)));
 }
 
-export const fetchListCard = (boardId) => (dispatch) => {
-    return getListCard(boardId)
-        .then(board => dispatch(receiveListCard(board)));
+export const fetchListCard = (cardId) => (dispatch) => {
+    return getListCard(cardId)
+        .then(card => dispatch(receiveListCard(card)));
 }
 
 export const createCard = (card) => (dispatch) => {
