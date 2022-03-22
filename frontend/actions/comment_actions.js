@@ -18,7 +18,7 @@ export const receiveCardComments = (comments) => {
     }
 }
 
-export const RECEIVE_CARD_Comment = `RECEIVE_CARD_COMMENT`;
+export const RECEIVE_CARD_COMMENT = `RECEIVE_CARD_COMMENT`;
 
 export const receiveCardComment = (comment) => {
     return {
