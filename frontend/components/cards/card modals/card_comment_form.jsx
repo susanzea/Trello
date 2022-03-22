@@ -69,9 +69,6 @@ class CardCommentForm extends React.Component {
                         <button className='hide-card-comment-form' onClick={this.toggle} type="button" >✕</button>
                 </form>
                 <br />
-
-                <br />
-                <br />
             </div>
         )
     }
