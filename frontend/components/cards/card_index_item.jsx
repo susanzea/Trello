@@ -15,6 +15,7 @@ function CardIndexItem (props) {
                     onClick={() => openModal(true) }
                 >✎</button>
                 { cardModalOpen && <CardModal card={props.card}
+                    list={props.list}
                     editCard={props.editCard}
                     openModal={openModal}
                 />}

@@ -11,6 +11,7 @@ class ListIndexItem extends React.Component {
 
 
     render() {
+        console.log(this.props)
         return (
             <div className='list-index-item'>
                 <div className='list-header'>
