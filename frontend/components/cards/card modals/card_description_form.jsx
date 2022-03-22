@@ -24,10 +24,7 @@ class CardDescriptionForm extends React.Component {
     
     handleSubmit(e) {
         e.preventDefault();
-        console.log(e.target.value)
-        this.setState({ description: e.target.value })
         this.props.editCard(this.state);
-        console.log(this.state)
     }
 
     toggle(e) {

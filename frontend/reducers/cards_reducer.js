@@ -4,6 +4,7 @@ import {
     REMOVE_LIST_CARD } from "../actions/card_actions";
 
 const cardsReducer = (prevState = {}, action) => {
+    debugger
     Object.freeze(prevState);
     let nextState = Object.assign({}, prevState)
 
