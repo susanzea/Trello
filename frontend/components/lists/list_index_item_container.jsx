@@ -1,7 +1,7 @@
 import ListIndexItem from './list_index_item'
 import { connect } from 'react-redux';
 import { destroyList } from '../../actions/list_actions'
-import { fetchAllListCards, destroyCard } from '../../actions/card_actions'
+import { fetchAllListCards, destroyCard, editCard } from '../../actions/card_actions'
 
 const mapStateToProps = (state, ownProps) => {
     const getListCard = (listId) => {
@@ -18,6 +18,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        editCard: (card) => dispatch(editCard(card)),
         destroyCard: (cardId) => dispatch(destroyCard(cardId)),
         destroyList: (listId) => dispatch(destroyList(listId)),
         fetchAllListCards: (listId) => dispatch(fetchAllListCards(listId))

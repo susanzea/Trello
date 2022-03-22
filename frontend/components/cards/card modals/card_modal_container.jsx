@@ -9,10 +9,10 @@ function CardModal(props) {
         <div className='card-modal-background'>
             <div className='modal-container'>
                 <button className='close-card-modal' onClick={() => props.openModal(false)}>✕</button>
-                <CardTitleForm card={props.card} />
-                <CardDescriptionForm card={props.card} />
-                <CardCommentForm card={props.card} />
-                <CardCommentsIndex card={props.card} />
+                <CardTitleForm card={props.card} editCard={props.editCard}/>
+                <CardDescriptionForm card={props.card} editCard={props.editCard}/>
+                <CardCommentForm card={props.card} editCard={props.editCard}/>
+                <CardCommentsIndex card={props.card} editCard={props.editCard}/>
                 <h1>{props.card.title}</h1>
                 <h2>description</h2>
                 <h2>comments</h2>

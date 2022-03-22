@@ -11,7 +11,6 @@ class CardDescriptionForm extends React.Component {
 
 
     render() {
-        console.log(this.props.card.description)
         return (
             <div>
                 <br />

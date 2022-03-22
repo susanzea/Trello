@@ -30,6 +30,7 @@ class ListIndexItem extends React.Component {
                                 key={card.id}
                                 card={card}
                                 destroyCard={this.props.destroyCard}
+                                editCard={this.props.editCard}
                             />)
                         })
                     }

@@ -6,7 +6,6 @@ function CardIndexItem (props) {
     // first time using useState to conditionally render a modal below
     const [cardModalOpen, openModal] = useState(false)
 
-
         return (
             <div className='card-index-item'>
                 <li>{props.card.title}</li>
@@ -15,7 +14,10 @@ function CardIndexItem (props) {
                     className='card-edit' 
                     onClick={() => openModal(true) }
                 >✎</button>
-                { cardModalOpen && <CardModal card={props.card} openModal={openModal}/>}
+                { cardModalOpen && <CardModal card={props.card}
+                    editCard={props.editCard}
+                    openModal={openModal}
+                />}
             </div>
         )
 }

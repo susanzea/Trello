@@ -20,7 +20,6 @@ class CardTitleForm extends React.Component {
 
     handleChange(e) {
         this.setState({ title: e.target.value });
-        console.log(this.props.card)
 
         // TODO: figure out how to implement edit func. State is currently updating properly.
     }
