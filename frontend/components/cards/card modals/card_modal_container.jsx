@@ -5,6 +5,7 @@ import CardCommentForm from './card_comment_form';
 import CardCommentsIndex from './card_comments_index';
 
 function CardModal(props) {
+    console.log(props.card)
     return (
         <div className='card-modal-background'>
             <div className='modal-container'>
