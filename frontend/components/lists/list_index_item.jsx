@@ -11,7 +11,6 @@ class ListIndexItem extends React.Component {
 
 
     render() {
-        console.log(this.props)
         return (
             <div className='list-index-item'>
                 <div className='list-header'>
@@ -32,6 +31,9 @@ class ListIndexItem extends React.Component {
                                 card={card}
                                 destroyCard={this.props.destroyCard}
                                 editCard={this.props.editCard}
+                                createComment={this.props.createComment}
+                                destroyComment={this.props.destroyComment}
+                                editComment={this.props.editComment}
                             />)
                         })
                     }

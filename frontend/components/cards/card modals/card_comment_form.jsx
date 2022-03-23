@@ -4,9 +4,10 @@ class CardCommentForm extends React.Component {
     constructor(props) {
         super(props);
 
+        // ? need to figure out how to get logged in user id, 3 is a placeholder
         this.state = {
-            id: props.card.id,
-            user_id: props.card.user_id,
+            body: '',
+            user_id: 3,
             card_id: props.card.id,
         }
 
@@ -38,6 +39,8 @@ class CardCommentForm extends React.Component {
     }
 
     render() {
+        console.log(this.props.card)
+
         return (
             <div>
                 <br />
@@ -46,7 +49,7 @@ class CardCommentForm extends React.Component {
                 <button className="reveal-card-comment-form" 
                     onClick={this.toggle} 
                     type='submit'>
-                    {this.state.body === undefined ? "Add a comment..." : this.state.body}    
+                    {this.state.body === '' ? "Add a comment..." : this.state.body}    
                 </button>
 
                  <form className='card-comment-form' 

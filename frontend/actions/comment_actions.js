@@ -1,6 +1,6 @@
 import {
     getAllCardComments,
-    getListComment,
+    getCardComment,
     postComment, 
     deleteComment,
     patchComment

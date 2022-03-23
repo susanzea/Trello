@@ -61,9 +61,7 @@ export const destroyCard = (cardId) => (dispatch) => {
         .then(() => dispatch(removeListCard(cardId)));
 }
 
-// TODO: make sure this is correct
 export const editCard = (card) => (dispatch) => {
-    debugger
     return patchCard(card)
         .then(() => dispatch(receiveListCard(card)));
 }

@@ -6,4 +6,6 @@ class Card < ApplicationRecord
     has_one :board,
         through: :list
 
+    has_many :comments
+
 end
