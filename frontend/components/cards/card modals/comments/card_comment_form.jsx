@@ -4,7 +4,6 @@ class CardCommentForm extends React.Component {
     constructor(props) {
         super(props);
 
-        // ? need to figure out how to get logged in user id, 3 is a placeholder
         this.state = {
             body: '',
             user_id: 3,

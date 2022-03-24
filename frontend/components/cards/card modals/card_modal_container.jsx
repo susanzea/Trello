@@ -1,8 +1,8 @@
 import React from 'react';
 import CardTitleForm from './card_title_form';
 import CardDescriptionForm from './card_description_form';
-import CardCommentForm from './card_comment_form';
-import CardCommentsIndex from './card_comments_index';
+import CardCommentForm from './comments/card_comment_form';
+import CardCommentsIndex from './comments/card_comments_index';
 
 function CardModal(props) {
 
