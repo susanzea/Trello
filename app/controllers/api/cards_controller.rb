@@ -1,13 +1,16 @@
 
 class Api::CardsController < ApplicationController
-    
+    skip_before_action :verify_authenticity_token
+
     def index
         @cards = Card.all.where(list_id: params[:list_id])
+        debugger
         render :index
     end 
 
     def show
         @card = Card.find(params[:id])
+        debugger
         render :show
     end
 
@@ -32,9 +35,8 @@ class Api::CardsController < ApplicationController
     end
 
     def update
-        debugger
         @card = Card.find(params[:id])
-        debugger
+
         if @card.update(new_card_params)
             render :show
         else

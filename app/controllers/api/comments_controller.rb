@@ -1,5 +1,6 @@
 class Api::CommentsController < ApplicationController
-    
+    skip_before_action :verify_authenticity_token
+
     def index
         @comments = Comment.all.where(card_id: params[:card_id])
         render :index
@@ -12,6 +13,7 @@ class Api::CommentsController < ApplicationController
 
     def create
         @comment = Comment.new(new_comment_params)
+        debugger
 
         if @comment.save
             render 'api/comments/show'
