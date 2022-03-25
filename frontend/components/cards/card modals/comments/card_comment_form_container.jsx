@@ -2,7 +2,7 @@ import CardCommentForm from "./card_comment_form";
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
     return {
         currentUserId: state.session.id
     }
