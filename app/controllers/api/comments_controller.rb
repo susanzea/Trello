@@ -13,7 +13,6 @@ class Api::CommentsController < ApplicationController
 
     def create
         @comment = Comment.new(new_comment_params)
-        debugger
 
         if @comment.save
             render 'api/comments/show'

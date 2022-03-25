@@ -30,7 +30,6 @@ export const deleteCard = (cardId) => {
 }
 
 export const patchCard = (card) => {
-    debugger
     return $.ajax({
         method: 'PATCH',
         url: `/api/cards/${card.id}`,

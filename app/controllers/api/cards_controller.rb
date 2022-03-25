@@ -4,13 +4,11 @@ class Api::CardsController < ApplicationController
 
     def index
         @cards = Card.all.where(list_id: params[:list_id])
-        debugger
         render :index
     end 
 
     def show
         @card = Card.find(params[:id])
-        debugger
         render :show
     end
 

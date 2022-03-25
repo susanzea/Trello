@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Link, withRouter } from 'react-router-dom';
-import CardModal from './card modals/card_modal_container';
+import CardModal from './card modals/card_modal';
 
 function CardIndexItem (props) {
     // first time using useState to conditionally render a modal below
