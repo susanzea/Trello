@@ -8,8 +8,5 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return null;
-}
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(CardCommentForm));
+export default withRouter(connect(mapStateToProps)(CardCommentForm));

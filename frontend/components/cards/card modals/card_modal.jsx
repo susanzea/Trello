@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import CardTitleForm from './card_title_form';
 import CardDescriptionForm from './card_description_form';
 import CardCommentFormContainer from './comments/card_comment_form_container';
-import CardCommentsIndex from './comments/card_comments_index';
+import CardCommentsIndexContainer from './comments/card_comments_index_container';
 
 function CardModal(props) {
 
@@ -21,7 +21,7 @@ function CardModal(props) {
                     destroyComment={props.destroyComment}
                     editComment={props.editComment}
                 />
-                <CardCommentsIndex card={props.card} 
+                <CardCommentsIndexContainer card={props.card} 
                     editCard={props.editCard}
                     createComment={props.createComment}
                     destroyComment={props.destroyComment}

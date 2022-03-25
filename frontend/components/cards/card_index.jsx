@@ -5,6 +5,7 @@ import CardFormContainer from '../cards/card_form_container';
 class CardIndex extends React.Component {
     constructor(props) {
         super(props)
+        debugger
     }
 
     componentDidMount() {

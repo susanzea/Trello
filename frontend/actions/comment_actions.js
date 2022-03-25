@@ -13,7 +13,7 @@ export const RECEIVE_CARD_COMMENTS = `RECEIVE_CARD_COMMENTS`;
 
 export const receiveCardComments = (comments) => {
     return {
-        type: RECEIVE_LIST_CARDS,
+        type: RECEIVE_CARD_COMMENTS,
         comments
     }
 }
@@ -41,8 +41,8 @@ export const removeCardComment = (commentId) => {
 
 
 //thunk action creators
-export const fetchAllCardComments = (CardId) => (dispatch) => {
-    return getAllCardComments(CardId)
+export const fetchAllCardComments = (cardId) => (dispatch) => {
+    return getAllCardComments(cardId)
         .then(comments => dispatch(receiveCardComments(comments)));
 }
 
