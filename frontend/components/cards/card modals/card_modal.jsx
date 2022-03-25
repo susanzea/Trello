@@ -1,7 +1,7 @@
 import React from 'react';
 import CardTitleForm from './card_title_form';
 import CardDescriptionForm from './card_description_form';
-import CardCommentForm from './comments/card_comment_form';
+import CardCommentFormContainer from './comments/card_comment_form_container';
 import CardCommentsIndex from './comments/card_comments_index';
 
 function CardModal(props) {
@@ -15,7 +15,7 @@ function CardModal(props) {
                 <CardTitleForm card={props.card} editCard={props.editCard}/>
                 <p>in <span>{props.list.title}</span></p>
                 <CardDescriptionForm card={props.card} editCard={props.editCard}/>
-                <CardCommentForm card={props.card} 
+                <CardCommentFormContainer card={props.card} 
                     editCard={props.editCard}
                     createComment={props.createComment}
                     destroyComment={props.destroyComment}

@@ -6,7 +6,7 @@ class CardCommentForm extends React.Component {
 
         this.state = {
             body: '',
-            user_id: 54,
+            user_id: props.currentUserId,
             card_id: props.card.id,
         }
 
