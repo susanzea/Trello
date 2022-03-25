@@ -35,6 +35,7 @@ class CardDescriptionForm extends React.Component {
             $(e.target.parentElement).hide();
             $(e.target.parentElement).siblings().show();
         } else if (e.target.className === "hide-card-description-form") {
+            this.setState({ description: this.props.card.description })
             $(e.target.parentElement).hide();
             $(e.target.parentElement).siblings().show();
         }
@@ -49,7 +50,7 @@ class CardDescriptionForm extends React.Component {
                 <button className="reveal-card-description-form" 
                     onClick={this.toggle} 
                     type='submit'>
-                    {this.state.description === undefined ? "Add a more detailed description..." : this.state.description}    
+                    {this.state.description === undefined ? "Add a more detailed description..." : this.props.card.description}    
                 </button>
 
                  <form className='card-description-form' 

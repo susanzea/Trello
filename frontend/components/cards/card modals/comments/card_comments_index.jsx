@@ -7,13 +7,7 @@ class CardCommentsIndex extends React.Component {
     }
 
     componentDidMount() {
-        debugger
         this.props.fetchAllCardComments(this.props.card.id)
-    }
-
-    componentDidUpdate(prevProps, prevState) {
-        debugger
-        return null;
     }
 
     render() {

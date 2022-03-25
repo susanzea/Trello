@@ -15,7 +15,6 @@ const mapStateToProps = (state, ownProps) => {
 
 
 const mapDispatchToProps = dispatch => {
-    debugger
     return {
         fetchAllCardComments: (cardId) => dispatch(fetchAllCardComments(cardId))
     }
