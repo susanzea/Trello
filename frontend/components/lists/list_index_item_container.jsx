@@ -2,7 +2,7 @@ import ListIndexItem from './list_index_item'
 import { connect } from 'react-redux';
 import { destroyList } from '../../actions/list_actions'
 import { fetchAllListCards, destroyCard, editCard } from '../../actions/card_actions';
-import { createComment, editComment, destroyComment } from '../../actions/comment_actions';
+import { createComment } from '../../actions/comment_actions';
 
 const mapStateToProps = (state, ownProps) => {
     const getListCard = (listId) => {
@@ -20,8 +20,6 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
     return {
         createComment: (comment) => dispatch(createComment(comment)),
-        editComment: (comment) => dispatch(editComment(comment)),
-        destroyComment: (commentId) => dispatch(destroyComment(commentId)),
         editCard: (card) => dispatch(editCard(card)),
         destroyCard: (cardId) => dispatch(destroyCard(cardId)),
         destroyList: (listId) => dispatch(destroyList(listId)),

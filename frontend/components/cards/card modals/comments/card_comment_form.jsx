@@ -33,6 +33,7 @@ class CardCommentForm extends React.Component {
             $(e.target.parentElement).hide();
             $(e.target.parentElement).siblings().show();
         } else if (e.target.className === "hide-card-comment-form") {
+            this.setState({ body: '' })
             $(e.target.parentElement).hide();
             $(e.target.parentElement).siblings().show();
         }

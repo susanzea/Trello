@@ -19,8 +19,6 @@ function CardIndexItem (props) {
                     editCard={props.editCard}
                     openModal={openModal}
                     createComment={props.createComment}
-                    destroyComment={props.destroyComment}
-                    editComment={props.editComment}
                 />}
             </div>
         )

@@ -70,7 +70,12 @@ class CardDescriptionForm extends React.Component {
                             Save
                         </button>
 
-                        <button className='hide-card-description-form' onClick={this.toggle} type="button" >✕</button>
+                        <button className='hide-card-description-form' 
+                            onClick={this.toggle} 
+                            type="button"
+                        >
+                            ✕
+                        </button>
                 </form>
                 <br />
 
