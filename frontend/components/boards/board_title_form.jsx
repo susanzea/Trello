@@ -24,7 +24,6 @@ class BoardTitleForm extends React.Component {
 
 
     render() {
-        debugger
         return(
             <form className='board-title-form'>
                 <input type="text"

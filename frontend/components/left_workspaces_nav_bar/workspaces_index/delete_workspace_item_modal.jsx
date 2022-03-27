@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 
 function DeleteWorkspaceItemModal(props) {
-    debugger
 
     return (
         <div className='edit-workspace-modal-background'>
