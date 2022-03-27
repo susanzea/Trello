@@ -65,6 +65,7 @@ class CardDescriptionForm extends React.Component {
                         />
 
                         <button className="save-description" 
+                            onClick={this.toggle}
                             type='submit'
                         >
                             Save

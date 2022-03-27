@@ -37,8 +37,18 @@ class Api::BoardsController < ApplicationController
         end
     end
 
+    def update
+        @board = Board.find(params[:id])
+
+        if @board.update(new_board_params)
+            render :show
+        else
+            render json: @board.errors.full_messages, status: 422
+        end
+    end
+
     def new_board_params
-        params.require(:board).permit(:title, :workspace_id, :id)
+        params.require(:board).permit(:id, :title, :workspace_id)
     end
 
 end

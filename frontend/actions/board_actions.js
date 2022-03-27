@@ -65,3 +65,8 @@ export const destroyBoard = (boardId) => (dispatch) => {
     return deleteBoard(boardId)
         .then(() => dispatch(removeWorkspaceBoard(boardId)));
 }
+
+export const editBoard = (board) => (dispatch) => {
+    return patchBoard(board)
+        .then(() => dispatch(receiveListBoard(board)));
+}
