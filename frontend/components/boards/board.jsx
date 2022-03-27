@@ -1,7 +1,7 @@
 import React from 'react';
 import MainNavBar from '../navbars/mainNavBar/main_nav_bar';
 import ListIndex from '../lists/list_index';
-import BoardTitleEditForm from './board_title_edit_form';
+import BoardTitleForm from './board_title_form';
 
 class Board extends React.Component {
     constructor(props) {
@@ -21,7 +21,10 @@ class Board extends React.Component {
             <>
                 <div className="board">
                     <MainNavBar />
-                    <BoardTitleEditForm board={this.props.board} />
+                    <BoardTitleForm 
+                        board={this.props.board} 
+                        editBoard={this.props.editBoard}
+                    />
                     <ListIndex
                     lists={this.props.lists}/>
                 </div>

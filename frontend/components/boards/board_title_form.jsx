@@ -1,17 +1,13 @@
-import React from "react";
+import React from 'react';
 
-
-class CardTitleForm extends React.Component {
+class BoardTitleForm extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            id: props.card.id,
-            title: props.card.title,
-            description: props.card.description,
-            user_id: props.card.user_id,
-            list_id: props.card.list_id,
-            due_date: props.card.due_date
+            id: props.board.id,
+            title: props.board.title,
+            workspaceId: props.board.workspace_id
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -23,15 +19,16 @@ class CardTitleForm extends React.Component {
     }
 
     handleSubmit() {
-        this.props.editCard(this.state);
+        this.props.editBoard(this.state);
     }
 
 
     render() {
-        return (
-            <form className='card-title-form'>
+        debugger
+        return(
+            <form className='board-title-form'>
                 <input type="text"
-                className='card-title-input'
+                className='board-title-input'
                 value={this.state.title}
                 onChange={this.handleChange}
                 onBlur={this.handleSubmit}
@@ -41,4 +38,4 @@ class CardTitleForm extends React.Component {
     }
 }
 
-export default CardTitleForm;
+export default BoardTitleForm

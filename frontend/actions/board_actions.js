@@ -2,7 +2,8 @@ import {
         getAllWorkspaceBoards,
         getWorkspaceBoard,
         postBoard,
-        deleteBoard
+        deleteBoard,
+        patchBoard
     } from "../util/board_api_util";
 import { receiveBoardLists } from "./list_actions";
 import { receiveListCards } from "./card_actions";
@@ -68,5 +69,5 @@ export const destroyBoard = (boardId) => (dispatch) => {
 
 export const editBoard = (board) => (dispatch) => {
     return patchBoard(board)
-        .then(() => dispatch(receiveListBoard(board)));
+        .then(() => dispatch(receiveWorkspaceBoard(board)));
 }
