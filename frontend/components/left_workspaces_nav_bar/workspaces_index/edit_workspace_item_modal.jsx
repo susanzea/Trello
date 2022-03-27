@@ -4,13 +4,11 @@ function EditWorkspaceItemModal(props) {
 
     return (
         <div className='edit-workspace-modal-background'>
-            <div className='modal-container'>
+            <div className='edit-modal-container'>
                 <button className='edit-workspace-modal' 
                     onClick={() => props.openModal(false)}
                 >✕</button>
                 
-            
-
             </div>
         </div>
     )

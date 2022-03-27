@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 import { postWorkspace } from '../../../util/workspace_api_util';
+import DeleteWorkspaceItemModal from './delete_workspace_item_modal'
+import EditWorkspaceItemModal from './edit_workspace_item_modal';
 
 const WorkspaceIndexItem = (props) => {
-    const [cardModalOpen, openModal] = useState(false)
+    const [dropDownMenuOpen, openDropDownMenu] = useState(false);
+    const [deleteModalOpen, openDeleteModal] = useState(false);
+    const [editModalOpen, openEditModal] = useState(false);
 
     const colorOptions = {
         0: "#cb5223",
@@ -27,31 +31,46 @@ const WorkspaceIndexItem = (props) => {
                     >
                         {props.workspace.title.slice(0, 1).toUpperCase()}
                     </p>
-                    <p className='workspace-index-item-title'>{props.workspace.title}</p>
+                    <p className='workspace-index-item-title'>
+                        {props.workspace.title}
+                    </p>
                 </div>
+            
+                { !dropDownMenuOpen &&
+                    <button onClick={() => openDropDownMenu(true) }>
+                    <img className='drop-down-icon' 
+                        src={window.drop_down_arrow} 
+                        alt="drop down menu icon" 
+                    />
+                    </button>
+                }
 
-                <button>
-                    <img className='drop-down-icon' src={window.drop_down_arrow} alt="drop down menu icon" />
-                </button>
-
-                <div className='workspace-index-item-drop-down'>
-                    <button onClick={() => props.destroyWorkspace(props.workspace.id)}>edit</button>
-                    <button onClick={() => props.destroyWorkspace(props.workspace.id)}>delete</button>
-                </div>
+                { dropDownMenuOpen &&
+                    <button onClick={() => openDropDownMenu(false) }>
+                    <img className='drop-down-icon open-drop-down' 
+                        src={window.drop_down_arrow} 
+                        alt="drop down menu icon" 
+                    />
+                    </button>
+                }
             </Link>
 
+            { dropDownMenuOpen &&
+                <div className='workspace-index-item-drop-down'>
+                    <button onClick={() => openEditModal(true) }>edit</button>
+                    <button onClick={() => openDeleteModal(true) }>delete</button>
+                </div>
+            }
 
-
-            { deleteModalOpen && <DeleteWorkspaceItemModal workspace={props.workspace}
-                list={props.list}
-                editCard={props.editCard}
-                openModal={openModal}
+            { deleteModalOpen && <DeleteWorkspaceItemModal  
+                destroyWorkspace={() => props.destroyWorkspace(props.workspace.id)}
+                openModal={openDeleteModal}
             />}
 
             { editModalOpen && <EditWorkspaceItemModal workspace={props.workspace}
-                list={props.list}
-                editCard={props.editCard}
-                openModal={openModal}
+                workspace={props.workspace}
+                editWorkspace={props.editWorkspace}
+                openModal={openEditModal}
             />}
         </div>
     )
