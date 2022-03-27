@@ -219,7 +219,12 @@
  }
 
  .create-workspace-form > input {
-     width: 110px;
-     border: 1px solid gray;
-     border-radius: 3px;
+    width: 110px;
+    border: 1px solid gray;
+    border-radius: 3px;
+ }
+
+ .drop-down-icon {
+    height: 6px;
+    filter: invert(31%) sepia(17%) saturate(996%) hue-rotate(178deg) brightness(89%) contrast(87%);
  }
