@@ -5,7 +5,7 @@ import MainNavBarContainer from './navbars/mainNavBar/main_nav_bar_container';
 import SignupFormContainer from './session/signup_form_container';
 import QuickSignupFormContainer from './SplashPage/quick_signup_container';
 import LoginFormContainer from './session/login_form_container';
-import WorkspaceBoardsIndexContainer from './boards/workspace_boards_index_container';
+import WorkspaceBoardsIndexContainer from './boards/workspace_board_index/workspace_boards_index_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import QuickSignup from './SplashPage/quick_signup';
 import LeftWorkspacesNavBarContainer from './left_workspaces_nav_bar/left_workspaces_nav_bar_container';

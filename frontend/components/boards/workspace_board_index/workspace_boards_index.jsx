@@ -1,5 +1,5 @@
 import React from 'react';
-import MainNavBarContainer from '../navbars/mainNavBar/main_nav_bar_container';
+import MainNavBarContainer from '../../navbars/mainNavBar/main_nav_bar_container';
 import BoardsIndexItem from './boards_index_item';
 
 class WorkspaceBoardsIndex extends React.Component {
@@ -52,9 +52,23 @@ class WorkspaceBoardsIndex extends React.Component {
     }
 
     render() {
-        if (!this.props.boards) {
-            return <p>Create a board!</p>
+        if (this.props.boards.length === 0) {
+            debugger
+            return (
+                <div className='workspace-boards-index'>
+                    <p>Boards are where work gets done in Trello. On a board, 
+                        you can move cards between lists to keep projects, 
+                        tasks, and more on track.
+                    </p>
+                    <button>
+                        Create your first board
+                    </button>
+                </div>
+
+            )
+            
         }
+
         return (
             <div className='workspace-boards-index'>
                 <header>
@@ -65,7 +79,8 @@ class WorkspaceBoardsIndex extends React.Component {
                     {
                         this.props.boards.map((board, idx) => {
                             return <BoardsIndexItem 
-                            key={board.id+idx} idx={idx} 
+                            key={board.id+idx} 
+                            idx={idx} 
                             destroyBoard={() => this.props.destroyBoard(board.id)} 
                             board={board} />
                         })

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import WorkspaceBoardsIndex from './workspace_boards_index';
-import { fetchAllWorkspaceBoards, createBoard, destroyBoard } from '../../actions/board_actions'
+import { fetchAllWorkspaceBoards, createBoard, destroyBoard } from '../../../actions/board_actions'
 
 const mapStateToProps = (state, ownProps) => {
     return {
