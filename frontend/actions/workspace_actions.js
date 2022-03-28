@@ -1,4 +1,8 @@
-import { getAllUserWorkspaces, postWorkspace, deleteWorkspace } from "../util/workspace_api_util";
+import { getAllUserWorkspaces, 
+    postWorkspace, 
+    deleteWorkspace,
+    patchWorkspace 
+} from "../util/workspace_api_util";
 
 
 
@@ -51,5 +55,7 @@ export const destroyWorkspace = workspaceId => dispatch => {
     .then(() => dispatch(removeUserWorkspace(workspaceId)));
 }
 
-
-
+export const editWorkspace = (workspace) => (dispatch) => {
+    return patchWorkspace(workspace)
+        .then(() => dispatch(receiveUserWorkspace(workspace)));
+}

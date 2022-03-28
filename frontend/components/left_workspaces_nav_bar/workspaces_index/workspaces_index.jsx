@@ -34,7 +34,8 @@ class WorkspacesIndex extends React.Component {
                         key={workspace.id} 
                         idx={idx} 
                         setSelected={(idx) => this.setSelected(idx)} 
-                        destroyWorkspace={(workspaceId) => this.props.destroyWorkspace(workspaceId)} 
+                        destroyWorkspace={(workspaceId) => this.props.destroyWorkspace(workspaceId)}
+                        editWorkspace={(workspace) => this.props.editWorkspace(workspace)} 
                         workspace={workspace} />
                     })  
                 }

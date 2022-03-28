@@ -30,8 +30,18 @@ class Api::WorkspacesController < ApplicationController
         end
     end
 
+    def update
+        @workspace = Workspace.find(params[:id])
+
+        if @workspace.update(new_workspace_params)
+            render :show
+        else
+            render json: @workspace.errors.full_messages, status: 422
+        end
+    end
+
     def new_workspace_params
-        params.require(:workspace).permit(:title, :user_id)
+        params.require(:workspace).permit(:id, :title, :user_id)
     end
 
 end

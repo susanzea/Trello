@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import WorkspacesIndex from "./workspaces_index";
-import { fetchAllUserWorkspaces, destroyWorkspace } from "../../../actions/workspace_actions";
+import { fetchAllUserWorkspaces, destroyWorkspace, editWorkspace } from "../../../actions/workspace_actions";
 
 const mapStateToProps = state => {
     return{
@@ -12,7 +12,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         fetchAllUserWorkspaces: (userId) => dispatch(fetchAllUserWorkspaces(userId)),
-        destroyWorkspace: (workspaceId) => dispatch(destroyWorkspace(workspaceId))
+        destroyWorkspace: (workspaceId) => dispatch(destroyWorkspace(workspaceId)),
+        editWorkspace: (workspace) => dispatch(editWorkspace(workspace))
     }
 }
 
