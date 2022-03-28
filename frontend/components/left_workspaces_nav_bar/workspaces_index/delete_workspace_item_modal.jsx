@@ -6,7 +6,7 @@ function DeleteWorkspaceItemModal(props) {
         <div className='edit-workspace-modal-background'>
             <div className='delete-modal-container'>
                 <button className='edit-workspace-modal' 
-                    onClick={() => props.openModal(false)}
+                    onClick={() => props.openDeleteModal(false)}
                 >✕</button>
                 
                 <h2>Delete board?</h2>
