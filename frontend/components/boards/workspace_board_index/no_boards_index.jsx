@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import CreateBoardModal from './create_board_modal';
+import CreateBoardModal from './create_board_modal_container';
 
 function NoBoardsIndex(props) {
     const [createBoardModalOpen, openCreateBoardModal] = useState(false)
@@ -19,6 +19,7 @@ function NoBoardsIndex(props) {
             { createBoardModalOpen && 
                 <CreateBoardModal 
                     workspaceId={props.workspaceId}
+                    openCreateBoardModal={openCreateBoardModal}
                 />
             }
         </div>

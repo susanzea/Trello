@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import CreateBoardModal from './create_board_modal';
+import CreateBoardModal from './create_board_modal_container';
 import BoardsIndexItem from './boards_index_item';
 
 function BoardsIndex(props) {
@@ -11,6 +11,8 @@ function BoardsIndex(props) {
                 <img src={window.generic_user_icon} alt="generic user icon" />
                 <h2>Workspace Boards</h2>
             </header>
+            
+            {/* // TODO: refactor board list into separate component since it's repeated code  */}
             <ul className="boards-index-list">
                 {
                     props.boards.map((board, idx) => {
@@ -21,26 +23,19 @@ function BoardsIndex(props) {
                         board={board} />
                     })
                 }
-
-
-                <button className="boards-index-button" 
-                    id="reveal-board-form"
-                >
-                    Create new board
-                </button>
             </ul>
 
-
-
-            <button 
+            <button className="boards-index-button" 
+                id="reveal-board-form"
                 onClick={() => openCreateBoardModal(true) }
             >
-                Create your first board
+                Create new board
             </button>
 
             { createBoardModalOpen && 
                 <CreateBoardModal 
                     workspaceId={props.workspaceId}
+                    openCreateBoardModal={openCreateBoardModal}
                 />
             }
         </div>

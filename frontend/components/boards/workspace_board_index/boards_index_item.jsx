@@ -12,8 +12,6 @@ const BoardsIndexItem = (props) => {
             >
                 <h3 className='boards-index-item-title'>{props.board.title}</h3>
             </Link>
-            
-            <button className='board-delete' onClick={props.destroyBoard} > — </button>
         </div>
     )
 }

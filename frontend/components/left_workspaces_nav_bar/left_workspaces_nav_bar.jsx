@@ -24,16 +24,6 @@ class LeftWorkspacesNavBar extends React.Component {
         this.setState({ title: '' })
     }
 
-    toggle(e) {
-        if (e.target.getAttribute('id') === 'show-create-workspace-form') {
-            $(e.target).hide();
-            $(e.target).prev().show();
-        } else {
-            $(e.target.parentElement).hide();
-            $(e.target.parentElement).next().show();
-        }
-    }
-
     render() {
         return(
             <nav className='left-workspaces-nav-bar'>

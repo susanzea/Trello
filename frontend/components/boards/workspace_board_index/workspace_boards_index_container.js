@@ -12,7 +12,6 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
     return {
         fetchAllWorkspaceBoards: (workspaceId) => dispatch(fetchAllWorkspaceBoards(workspaceId)),
-        createBoard: (board) => dispatch(createBoard(board)),
         destroyBoard: (boardId) => dispatch(destroyBoard(boardId))
     }
 }
