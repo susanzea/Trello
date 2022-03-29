@@ -1,6 +1,7 @@
 import React from 'react';
 import MainNavBarContainer from '../../navbars/mainNavBar/main_nav_bar_container';
-import BoardsIndexItem from './boards_index_item';
+import NoBoardsIndex from './no_boards_index';
+import BoardsIndex from './boards_index';
 
 class WorkspaceBoardsIndex extends React.Component {
     constructor(props) {
@@ -54,73 +55,10 @@ class WorkspaceBoardsIndex extends React.Component {
     render() {
         if (this.props.boards.length === 0) {
             debugger
-            return (
-                <div className='workspace-boards-index'>
-                    <p>Boards are where work gets done in Trello. On a board, 
-                        you can move cards between lists to keep projects, 
-                        tasks, and more on track.
-                    </p>
-                    <button>
-                        Create your first board
-                    </button>
-                </div>
-
-            )
-            
+            return <NoBoardsIndex workspaceId={this.props.workspaceId}/>   
+        } else {
+            return <BoardsIndex boards={this.props.boards} />
         }
-
-        return (
-            <div className='workspace-boards-index'>
-                <header>
-                    <img src={window.generic_user_icon} alt="generic user icon" />
-                    <h2>Workspace Boards</h2>
-                </header>
-                <ul className="boards-index-list">
-                    {
-                        this.props.boards.map((board, idx) => {
-                            return <BoardsIndexItem 
-                            key={board.id+idx} 
-                            idx={idx} 
-                            destroyBoard={() => this.props.destroyBoard(board.id)} 
-                            board={board} />
-                        })
-                    }
-
-
-                    <button className="boards-index-button" 
-                        id="reveal-board-form" 
-                        onClick={this.toggle}
-                    >
-                        Create new board
-                    </button>
-
-                    <form className='board-form' style={{display: "none"}} onSubmit={this.handleSubmit}>
-                        <input type="text"
-                            id='board-form-input'
-                            placeholder='Enter a title for the board...'
-                            value={this.state.title}
-                            onChange={this.handleChange}
-                        />
-
-                        <button className="add-board" 
-                            type='submit'
-                        >
-                            Add board
-                        </button>
-
-                        <button className='hide-board-form' 
-                            onClick={this.toggle} 
-                            type="button" 
-                        >
-                            ✕
-                        </button>
-                    </form>
-
-
-
-                </ul>
-            </div>
-        )
     }
 }
 
