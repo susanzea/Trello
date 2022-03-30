@@ -7,6 +7,7 @@ import BoardsIndex from './boards_index';
 class WorkspaceBoardsIndex extends React.Component {
     constructor(props) {
         super(props);
+        debugger
         
         this.state = {
             title: '',
