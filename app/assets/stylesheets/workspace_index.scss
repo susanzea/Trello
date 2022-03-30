@@ -83,25 +83,6 @@
     margin-right: 5px;
  }
 
-// .create-workspace-form {
-//     display: none;
-// }
-
-//  .create-workspace-form > button {
-//     border: none;
-//     color: #637189;
-//     font-weight: lighter;
-//     background-color: transparent;
-//     font-size: 17px;
-//     margin-right: 5px; 
-//  }
-
-//  .create-workspace-form > input {
-//     width: 110px;
-//     border: 1px solid gray;
-//     border-radius: 3px;
-//  }
-
  .drop-down-icon {
     height: 6px;
     filter: invert(31%) sepia(17%) saturate(996%) hue-rotate(178deg) brightness(89%) contrast(87%);
@@ -111,11 +92,3 @@
      transform: scaleY(-1);
  }
 
- .create-workspace-modal {
-     z-index: 3;
-     height: 200px;
- }
-
- .create-workspace-form-background {
-     height: 180px;
- }

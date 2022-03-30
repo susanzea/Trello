@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import WorkspaceBoardsIndex from './workspace_boards_index';
-import { fetchAllWorkspaceBoards, createBoard, destroyBoard } from '../../../actions/board_actions'
+import { fetchAllWorkspaceBoards, destroyBoard, fetchWorkspaceBoard } from '../../../actions/board_actions'
 
 const mapStateToProps = (state, ownProps) => {
     return {
@@ -10,6 +10,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = dispatch => {
+    
     return {
         fetchAllWorkspaceBoards: (workspaceId) => dispatch(fetchAllWorkspaceBoards(workspaceId)),
         destroyBoard: (boardId) => dispatch(destroyBoard(boardId))

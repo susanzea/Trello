@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import CreateWorkspaceForm from './create_workspace_form_container';
 
 function CreateWorkspaceModal(props) {
-    debugger
 
     return (
         <div className='create-workspace-modal-background'>

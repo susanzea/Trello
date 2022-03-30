@@ -40,8 +40,6 @@ class CardCommentForm extends React.Component {
     }
 
     render() {
-        console.log(this.props.card)
-
         return (
             <div>
                 <br />

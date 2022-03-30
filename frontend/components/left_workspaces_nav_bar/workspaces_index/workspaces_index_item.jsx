@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { withRouter, Link } from 'react-router-dom'
 import DeleteWorkspaceItemModal from './delete_workspace_item_modal'
 import EditWorkspaceItemModal from './edit_workspace_item_modal';
 
@@ -22,8 +22,13 @@ const WorkspaceIndexItem = (props) => {
         <div>
             <Link className={`${selected ? "selected" : "notSelected"} workspaces-index-item`}
                 onClick={() => props.setSelected(props.idx)}
-                to={`/workspaces/${props.workspace.id}/boards`}
-            >
+                to={{
+                    state: {
+                        workspace: props.workspace
+                    },
+                    pathname: `/workspaces/${props.workspace.id}/boards`
+                    }
+                }>
                 <div className='workspaces-index-item-header'>
                     <p className='workspace-index-item-symbol' 
                         style={{ backgroundColor: colorOptions[props.idx % 5] }}
@@ -75,4 +80,4 @@ const WorkspaceIndexItem = (props) => {
     )
 }
 
-export default WorkspaceIndexItem;
+export default withRouter(WorkspaceIndexItem);

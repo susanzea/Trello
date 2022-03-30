@@ -2,8 +2,6 @@ import React from 'react';
 
 class CreateWorkspaceForm extends React.Component {
     constructor(props) {
-        debugger
-
         super(props);
         this.state = {
             title: '',
@@ -19,25 +17,24 @@ class CreateWorkspaceForm extends React.Component {
         this.setState({ title: e.target.value })
     }
 
-    handleSubmit() {
-        // e.preventDefault();
+    handleSubmit(e) {
+        e.preventDefault();
         this.props.createWorkspace(this.state);
         this.props.openCreateWorkspaceModal(false);
     }
 
 
     render() {
-        debugger
         return (
-            <form onSubmit={this.handleSubmit}    className='create-workspace-form'>
+            <form className='create-workspace-form'
+                onSubmit={this.handleSubmit}    
+            >
                 <input type="text" id="workspace-input" 
                     onChange={this.handleChange} 
                     value={this.state.title} 
                     placeholder='Enter a title...'
                 />
-                <button type='submit'
-                    onClick={() => this.props.openCreateWorkspaceModal(this.state)}
-                >Create</button>
+                <button type='submit'>Create</button>
             </form>
         )
     }

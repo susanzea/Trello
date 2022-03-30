@@ -3,14 +3,14 @@ import MainNavBarContainer from '../../navbars/mainNavBar/main_nav_bar_container
 import NoBoardsIndex from './no_boards_index';
 import BoardsIndex from './boards_index';
 
+
 class WorkspaceBoardsIndex extends React.Component {
     constructor(props) {
         super(props);
-
+        
         this.state = {
             title: '',
-            workspace_id: this.props.workspaceId,
-            // user_id: this.props.currentUserId
+            workspace_id: this.props.workspaceId
         }
     }
 

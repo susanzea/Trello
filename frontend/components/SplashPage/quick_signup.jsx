@@ -30,7 +30,7 @@ class QuickSignup extends React.Component {
                             id="quick-signup-button"
                             to={{
                                 state: {
-                                    email: this.state.quick_email,
+                                    email: this.state.quick_email
                                 },
                                 pathname: "/quicksignup"
                             }

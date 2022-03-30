@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter, Link } from 'react-router-dom'
 
 const BoardsIndexItem = (props) => {
+
     return (
         <div className="boards-index-item">
             <Link className='boards-index-item-link' 
