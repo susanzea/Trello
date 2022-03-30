@@ -46,7 +46,6 @@ class CardDescriptionForm extends React.Component {
             <div>
                 <br />
                 <br />
-                <h1>Description</h1>
                 <button className="reveal-card-description-form" 
                     onClick={this.toggle} 
                     type='submit'>
