@@ -21,7 +21,6 @@ class CreateBoardModal extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.createBoard(this.state);
-        debugger
         this.props.openCreateBoardModal(false);
     }
 

@@ -3,8 +3,6 @@ import CreateBoardModal from './create_board_modal';
 import { createBoard} from '../../../actions/board_actions'
 
 const mapStateToProps = (state, ownProps) => {
-    debugger
-
     return {
         workspaceId: ownProps.workspaceId
     }
