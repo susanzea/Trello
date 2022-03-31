@@ -54,8 +54,9 @@ class CardDescriptionForm extends React.Component {
                     onSubmit={this.handleSubmit}
                     style={{display: "none"}}
                 >
-                        <input type="text"
+                        <textarea type="text"
                             id='card-description-form-input'
+                            rows='4'
                             placeholder="Add a more detailed description..."
                             value={this.state.description}
                             onChange={this.handleChange}
