@@ -8,25 +8,28 @@ function CardModal(props) {
 
     return (
         <div className='card-modal-background'>
-            <div className='modal-container'>
-                <button className='close-card-modal' 
-                    onClick={() => props.openModal(false)}
-                >✕</button>
+            <div className='card-modal-container'>
+                
+                <div className='card-modal-header'>
+                    <button className='close-card-modal' 
+                        onClick={() => props.openModal(false)}
+                    >✕</button>
 
-                <section className='card-modal-title'>
-                    <img id='card-title-icon' 
-                        src={window.card_title_icon} 
-                        alt="card title icon" 
-                    />
-                    <div>
-                        <CardTitleForm card={props.card} editCard={props.editCard}/>
-                        <p>in list <span>{props.list.title}</span></p>
-                    </div>
-                </section>
+                    <section className='card-modal-title'>
+                        <img className='card-title-icon card-icon' 
+                            src={window.card_title_icon} 
+                            alt="card title icon" 
+                        />
+                        <div>
+                            <CardTitleForm card={props.card} editCard={props.editCard}/>
+                            <p>in list <span>{props.list.title}</span></p>
+                        </div>
+                    </section>
+                </div>
 
                 <section className='card-modal-description'>
                     <div className='card-description-header'>
-                        <img id='card-description-icon' 
+                        <img className='card-description-icon card-icon' 
                             src={window.card_description_icon} 
                             alt="card description icon" 
                         />
@@ -36,10 +39,14 @@ function CardModal(props) {
                 </section>
                 
                 <section className='card-modal-activity'>
-                    <img id='card-activity-icon' 
-                        src={window.card_activity_icon} 
-                        alt="card activity icon" 
-                    />
+                    <div className='card-activity-header'>
+                        <img className='card-activity-icon card-icon' 
+                            src={window.card_activity_icon} 
+                            alt="card activity icon" 
+                        />
+                        <h1>Activity</h1>
+                    </div>
+
                     <CardCommentFormContainer card={props.card} 
                         editCard={props.editCard}
                         createComment={props.createComment}

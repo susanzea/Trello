@@ -41,10 +41,7 @@ class CardCommentForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <br />
-                <br />
-                <h1>Activity</h1>
+            <div className="card-new-comment">
                 <button className="reveal-card-comment-form" 
                     onClick={this.toggle} 
                     type='submit'>
@@ -56,21 +53,21 @@ class CardCommentForm extends React.Component {
                     style={{display: "none"}}
                 >
                         <input type="text"
-                            id='card-comment-form-input'
+                            className='card-comment-form-input'
                             placeholder="Add a comment..."
                             value={this.state.body}
                             onChange={this.handleChange}
                         />
 
-                        <button className="save-comment" 
-                            type='submit'
-                        >
-                            Save
-                        </button>
-
-                        <button className='hide-card-comment-form' onClick={this.toggle} type="button" >✕</button>
+                        <div className="card-comment-form-buttons">
+                            <button className="save-comment" 
+                                type='submit'
+                            >
+                                Save
+                            </button>
+                            <button className='hide-card-comment-form' onClick={this.toggle} type="button" >✕</button>
+                        </div>
                 </form>
-                <br />
             </div>
         )
     }

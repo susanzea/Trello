@@ -43,16 +43,14 @@ class CardDescriptionForm extends React.Component {
 
     render() {
         return (
-            <div>
-                <br />
-                <br />
+            <div className="card-description">
                 <button className="reveal-card-description-form" 
                     onClick={this.toggle} 
                     type='submit'>
-                    {this.state.description === undefined ? "Add a more detailed description..." : this.props.card.description}    
+                    {this.state.description === '' ? "Add a more detailed description..." : this.props.card.description}    
                 </button>
 
-                 <form className='card-description-form' 
+                <form className='card-description-form' 
                     onSubmit={this.handleSubmit}
                     style={{display: "none"}}
                 >
@@ -63,24 +61,21 @@ class CardDescriptionForm extends React.Component {
                             onChange={this.handleChange}
                         />
 
-                        <button className="save-description" 
-                            onClick={this.toggle}
-                            type='submit'
-                        >
-                            Save
-                        </button>
 
-                        <button className='hide-card-description-form' 
-                            onClick={this.toggle} 
-                            type="button"
-                        >
-                            ✕
-                        </button>
+                             <button className="save-description" 
+                                onClick={this.toggle}
+                                type='submit'
+                            >
+                                Save
+                            </button>
+
+                            <button className='hide-card-description-form' 
+                                onClick={this.toggle} 
+                                type="button"
+                            >
+                                ✕
+                            </button>
                 </form>
-                <br />
-
-                <br />
-                <br />
             </div>
         )
     }
