@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from 'classnames'
 
 class CardDescriptionForm extends React.Component {
     constructor(props) {
@@ -7,7 +8,7 @@ class CardDescriptionForm extends React.Component {
         this.state = {
             id: props.card.id,
             title: props.card.title,
-            description: props.card.description,
+            description: props.card.description === null ? '' : props.card.description,
             user_id: props.card.user_id,
             list_id: props.card.list_id,
             due_date: props.card.due_date
@@ -28,26 +29,28 @@ class CardDescriptionForm extends React.Component {
     }
 
     toggle(e) {
-        if (e.target.className === "reveal-card-description-form") {
+        if (e.target.className === "reveal-card-description-form" || e.target.className === 'has-description reveal-card-description-form') {
             $(e.target).hide();
             $(e.target).siblings().show();
         } else if (e.target.className === "save-description") {
             $(e.target.parentElement).hide();
             $(e.target.parentElement).siblings().show();
         } else if (e.target.className === "hide-card-description-form") {
-            this.setState({ description: this.props.card.description })
+            this.setState({ description: this.props.card.description === null ? '' : this.props.card.description })
             $(e.target.parentElement).hide();
             $(e.target.parentElement).siblings().show();
         }
     }
 
     render() {
+        debugger
         return (
             <div className="card-description">
-                <button className="reveal-card-description-form" 
+                <button 
+                    className={this.state.description === '' ? 'reveal-card-description-form' : 'has-description reveal-card-description-form'}
                     onClick={this.toggle} 
                     type='submit'>
-                    {this.state.description === '' ? "Add a more detailed description..." : this.props.card.description}    
+                    {this.state.description === '' ? "Add a more detailed description..." : this.state.description}    
                 </button>
 
                 <form className='card-description-form' 
