@@ -124,6 +124,12 @@
     }
 }
 
+
+
+
+
+// card description
+
 .card-description {
     textarea {
         width: 93%;
@@ -218,4 +224,25 @@
 // TODO: make button backbround transparent if a description is present
 .has-description {
     background-color: pink;
+}
+
+
+
+
+
+
+
+// card comments
+.reveal-card-comment-form {
+    border: #ccd1e0 1px solid;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px -1px #b3b8c5;
+    padding: 10px 12px 10px 12px;
+    color: #6b788e;
+    font-size: 14px;
+    letter-spacing: 0.015rem;
+}
+
+.reveal-card-comment-form:hover {
+    box-shadow: 0 1px 1px -1px #3e4044;
 }

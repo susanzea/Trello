@@ -40,12 +40,14 @@ class CardCommentForm extends React.Component {
     }
 
     render() {
+
+        // TODO: refactor comment form to grey out save button when no comment present and close if user clicks outside of form
         return (
             <div className="card-new-comment">
                 <button className="reveal-card-comment-form" 
                     onClick={this.toggle} 
                     type='submit'>
-                    {this.state.body === '' ? "Add a comment..." : this.state.body}    
+                    {this.state.body === '' ? "Write a comment..." : this.state.body}    
                 </button>
 
                  <form className='card-comment-form' 
@@ -59,14 +61,12 @@ class CardCommentForm extends React.Component {
                             onChange={this.handleChange}
                         />
 
-                        <div className="card-comment-form-buttons">
-                            <button className="save-comment" 
-                                type='submit'
-                            >
-                                Save
-                            </button>
-                            <button className='hide-card-comment-form' onClick={this.toggle} type="button" >✕</button>
-                        </div>
+                        <button className="save-comment" 
+                            type='submit'
+                        >
+                            Save
+                        </button>
+                        <button className='hide-card-comment-form' onClick={this.toggle} type="button" >✕</button>
                 </form>
             </div>
         )
