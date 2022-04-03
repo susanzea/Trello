@@ -35,3 +35,4 @@ export const patchComment = (comment) => {
         data: { comment }
     })
 }
+

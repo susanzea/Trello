@@ -42,9 +42,10 @@ class CommentsIndexItem extends React.Component {
 
 
     render() {
+
         return (
         <div>
-
+            <p>{"hi"}</p>
             <p>{this.props.comment.body}</p>
             <button className='reveal-comment-edit-form'
                 onClick={this.toggle} 

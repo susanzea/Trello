@@ -3,7 +3,8 @@ import {
     getCardComment,
     postComment, 
     deleteComment,
-    patchComment
+    patchComment,
+    getCommentUser
 } from '../util/comment_api_util';
 
 
@@ -37,6 +38,14 @@ export const removeCardComment = (commentId) => {
     }
 }
 
+export const RECEIVE_COMMENT_USER = `RECEIVE_COMMENT_USER`;
+
+export const receiveCommentUser = (user) => {
+    return {
+        type: RECEIVE_COMMENT_USER,
+        user
+    }
+}
 
 
 
@@ -64,4 +73,9 @@ export const destroyComment = (commentId) => (dispatch) => {
 export const editComment = (comment) => (dispatch) => {
     return patchComment(comment)
         .then(() => dispatch(receiveCardComment(comment)));
+}
+
+export const fetchCommentUser = (userId) => (dispatch) => {
+    return getCommentUser(userId)
+        .then(user => dispatch(receiveCommentUser(user)));
 }

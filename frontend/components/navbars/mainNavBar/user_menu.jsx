@@ -6,7 +6,7 @@ class UserMenu extends React.Component {
     }
 
     render() {
-        // issue: refactor full name in signup form to have two fields
+        // TODO: refactor full name in signup form to have two fields
         return (
             <div id="logged-in-user-icon">
                 DU

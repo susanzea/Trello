@@ -2,7 +2,7 @@ import { postUser, postSession, deleteSession } from '../util/session_api_util';
 
 
 
-///////////action creators
+//action creators
 export const RECEIVE_CURRENT_USER = `RECEIVE_CURRENT_USER`;
 
 const receiveCurrentUser = (user) => {
@@ -42,7 +42,7 @@ export const removeSessionErrors = () => {
 }
 
 
-//////////thunk action creators
+//thunk action creators
 
 export const signup = user => dispatch => {
     return postUser(user)
