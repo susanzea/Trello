@@ -162,9 +162,6 @@
 }
 
 .card-new-comment {
-    button:first-child {
-        background-color: white;
-    }
 
     .card-comment-form-input {
         width: 96%;
@@ -237,6 +234,14 @@
 .card-new-comment {
     display: flex;
     width: 100%;
+    margin: 24px 0px 12px;
+}
+
+.commenter-name {
+    margin-bottom: 7px;
+    font-weight: 600;
+    color: #182a4d;
+    letter-spacing: 0.005rem;
 }
 
 .reveal-card-comment-form {
@@ -245,9 +250,9 @@
     box-shadow: 0 1px 1px -1px #b3b8c5;
     padding: 10px 12px 10px 12px;
     color: #6b788e;
+    background-color: white;
     font-size: 14px;
     letter-spacing: 0.015rem;
-    margin: 10px 0px 10px;
 }
 
 .reveal-card-comment-form:hover {
@@ -264,6 +269,7 @@
 
 .comment-index-item {
     display: flex;
+    margin: 24px 0px 24px;
 
     .comment-body {
         border: #ccd1e0 1px solid;
@@ -274,7 +280,7 @@
         background-color: white;
         font-size: 14px;
         letter-spacing: 0.015rem;
-        margin: 7px 0px 7px; 
+        margin-bottom: 7px; 
     }
 }
 
@@ -284,6 +290,7 @@
     background-color: #0179bf;
     border-radius: 50%;
     margin: 0px 10px 10px;
+    padding: 5px 0px 5px;
 }
 
 .edit-comment, .delete-comment {
@@ -302,6 +309,6 @@
 
 .comment-index-item-buttons {
     display: flex;
-    margin-bottom: 22px;
+    // margin-bottom: 22px;
 }
 

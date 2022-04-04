@@ -5,7 +5,6 @@ import { fetchCommentUser } from "../../../../actions/user_actions";
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state) => {
-    debugger
     return {
         commenter: Object.values(state.entities.users)[0]
     }

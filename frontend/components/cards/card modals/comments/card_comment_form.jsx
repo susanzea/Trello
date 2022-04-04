@@ -44,8 +44,9 @@ class CardCommentForm extends React.Component {
         // TODO: refactor comment form to grey out save button when no comment present and close if user clicks outside of form
         return (
             <div className="card-new-comment">
-                <p className='commenter-icon'>DU</p>
-                <div>
+                <img className='commenter-icon' src={window.generic_user_icon} alt="generic user icon" />
+                <div className='new-comment-main'>
+                    <p className='commenter-name'>{this.props.commenter.full_name}</p>
                     <button className="reveal-card-comment-form" 
                         onClick={this.toggle} 
                         type='submit'>
