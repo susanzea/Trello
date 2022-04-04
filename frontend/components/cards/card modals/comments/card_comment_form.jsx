@@ -44,30 +44,33 @@ class CardCommentForm extends React.Component {
         // TODO: refactor comment form to grey out save button when no comment present and close if user clicks outside of form
         return (
             <div className="card-new-comment">
-                <button className="reveal-card-comment-form" 
-                    onClick={this.toggle} 
-                    type='submit'>
-                    {this.state.body === '' ? "Write a comment..." : this.state.body}    
-                </button>
+                <p className='commenter-icon'>DU</p>
+                <div>
+                    <button className="reveal-card-comment-form" 
+                        onClick={this.toggle} 
+                        type='submit'>
+                        {this.state.body === '' ? "Write a comment..." : this.state.body}    
+                    </button>
 
-                 <form className='card-comment-form' 
-                    onSubmit={this.handleSubmit}
-                    style={{display: "none"}}
-                >
-                        <input type="text"
-                            className='card-comment-form-input'
-                            placeholder="Add a comment..."
-                            value={this.state.body}
-                            onChange={this.handleChange}
-                        />
+                    <form className='card-comment-form' 
+                        onSubmit={this.handleSubmit}
+                        style={{display: "none"}}
+                    >
+                            <input type="text"
+                                className='card-comment-form-input'
+                                placeholder="Add a comment..."
+                                value={this.state.body}
+                                onChange={this.handleChange}
+                            />
 
-                        <button className="save-comment" 
-                            type='submit'
-                        >
-                            Save
-                        </button>
-                        <button className='hide-card-comment-form' onClick={this.toggle} type="button" >✕</button>
-                </form>
+                            <button className="save-comment" 
+                                type='submit'
+                            >
+                                Save
+                            </button>
+                            <button className='hide-card-comment-form' onClick={this.toggle} type="button" >✕</button>
+                    </form>
+                </div>
             </div>
         )
     }

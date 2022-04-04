@@ -169,6 +169,7 @@
     .card-comment-form-input {
         width: 96%;
         margin-left: 2%;
+        margin-top: 10px;
     }
 
     .save-comment {
@@ -232,7 +233,12 @@
 
 
 
-// card comments
+// card comment form
+.card-new-comment {
+    display: flex;
+    width: 100%;
+}
+
 .reveal-card-comment-form {
     border: #ccd1e0 1px solid;
     border-radius: 3px;
@@ -241,8 +247,61 @@
     color: #6b788e;
     font-size: 14px;
     letter-spacing: 0.015rem;
+    margin: 10px 0px 10px;
 }
 
 .reveal-card-comment-form:hover {
     box-shadow: 0 1px 1px -1px #3e4044;
 }
+
+
+
+
+
+
+
+// card comment index item
+
+.comment-index-item {
+    display: flex;
+
+    .comment-body {
+        border: #ccd1e0 1px solid;
+        border-radius: 3px;
+        box-shadow: 0 1px 1px -1px #b3b8c5;
+        padding: 10px 12px;
+        color: #1e2f51;
+        background-color: white;
+        font-size: 14px;
+        letter-spacing: 0.015rem;
+        margin: 7px 0px 7px; 
+    }
+}
+
+.commenter-icon {
+    height: 32px;
+    width: 32px;
+    background-color: #0179bf;
+    border-radius: 50%;
+    margin: 0px 10px 10px;
+}
+
+.edit-comment, .delete-comment {
+    color: #5e6c84;
+    font-size: 12px;
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    letter-spacing: 0.015rem;
+}
+
+.comment-hyphen {
+    color: #5e6c84;
+    font-size: 12px;
+}
+
+.comment-index-item-buttons {
+    display: flex;
+    margin-bottom: 22px;
+}
+

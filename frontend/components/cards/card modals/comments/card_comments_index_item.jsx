@@ -46,53 +46,56 @@ class CommentsIndexItem extends React.Component {
 
 
     render() {
-        debugger
+        // TODO: need to refactor signup form to have first and last name input
 
         return (
-        <div>
-            
-            <p>{this.props.commenter.full_name}</p>
-            <button className='reveal-comment-edit-form'
-                onClick={this.toggle} 
-                type="button"
-            >
-                Edit
-            </button>
+        <div className='comment-index-item'>
+            <p className='commenter-icon'>DU</p>
+            <div className='comment-index-item-main'>
+                <p>{this.props.commenter.full_name}</p>
+                <p className='comment-body'>{this.state.body}</p>
+                <div className='comment-index-item-buttons'>
+                    <button className='reveal-comment-edit-form edit-comment'
+                        onClick={this.toggle} 
+                        type="button"
+                    >
+                        Edit 
+                    </button>
+                    <p className='comment-hyphen'> - </p>
+                    <button 
+                        className='delete-comment'
+                        onClick={() => this.props.destroyComment(this.props.comment.id)}
+                    >
+                        Delete
+                    </button>
+                </div>
 
-            <button 
-                onClick={() => this.props.destroyComment(this.props.comment.id)}
-            >
-                Delete
-            </button>
-
-
-
-            <form className='comment-edit-form'
-                onSubmit={this.handleSubmit} 
-                style={{display: "none"}}
-            >
-                <input type="text"
-                    id='comment-edit-form-input'
-                    placeholder="You haven't typed anything!"
-                    value={this.state.body}
-                    onChange={this.handleChange}
-                />
-
-                <button className="save-edited-comment" 
-                    onClick={this.toggle}
-                    type='submit'
+                <form className='comment-edit-form'
+                    onSubmit={this.handleSubmit} 
+                    style={{display: "none"}}
                 >
-                    Save
-                </button>
+                    <input type="text"
+                        id='comment-edit-form-input'
+                        placeholder="You haven't typed anything!"
+                        value={this.state.body}
+                        onChange={this.handleChange}
+                    />
 
-                <button className='hide-comment-edit-form' 
-                    onClick={this.toggle} 
-                    type="button" 
-                >
-                    ✕
-                </button>
-            </form>
+                    <button className="save-edited-comment" 
+                        onClick={this.toggle}
+                        type='submit'
+                    >
+                        Save
+                    </button>
 
+                    <button className='hide-comment-edit-form' 
+                        onClick={this.toggle} 
+                        type="button" 
+                    >
+                        ✕
+                    </button>
+                </form>
+            </div>
         </div>
     )
     }

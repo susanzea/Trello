@@ -33,3 +33,7 @@
  ::placeholder {
   color: #5e6c84;
 }
+
+button {
+    cursor: pointer;
+}
