@@ -15,6 +15,10 @@ class CommentsIndexItem extends React.Component {
         this.toggle = this.toggle.bind(this);
     }
 
+    componentDidMount() {
+        this.props.fetchCommentUser(this.state.user_id);
+    }
+
      handleChange(e) {
         this.setState({ body: e.target.value })
     }  
@@ -42,11 +46,12 @@ class CommentsIndexItem extends React.Component {
 
 
     render() {
+        debugger
 
         return (
         <div>
-            <p>{"hi"}</p>
-            <p>{this.props.comment.body}</p>
+            
+            <p>{this.props.commenter.full_name}</p>
             <button className='reveal-comment-edit-form'
                 onClick={this.toggle} 
                 type="button"

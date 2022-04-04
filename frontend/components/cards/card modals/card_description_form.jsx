@@ -43,7 +43,7 @@ class CardDescriptionForm extends React.Component {
     }
 
     render() {
-        debugger
+
         return (
             <div className="card-description">
                 <button 
