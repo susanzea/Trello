@@ -175,3 +175,146 @@
     font-weight: normal;
     position: relative;
 }
+
+.create-workspace-modal-background {
+    background-color: rgba(40, 40, 40, 0.8);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: scroll;
+}
+
+// TODO: need to fix naxbar being over create modal background
+.create-workspace-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    width: 480px;
+    height: 600px;
+    margin-top: 75px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-bottom: 4px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(workspace-modal-background2.png);
+    border-radius: 2px;
+    z-index: 2;
+    font-weight: normal;
+    position: relative;
+
+    img {
+        height: 255px;
+        width: 350px;
+        margin-top: 35px;
+        position: center;
+        // margin-left: 25px;
+    }
+
+    h1 {
+        color: #091e42;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        margin: 10px 0px 15px;
+    }
+
+    h2 {
+        color: #8d96a6;
+        font-size: 16px;
+        font-weight: lighter;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    h3 {
+        color: #091e42;
+        font-size: 12px;
+        font-weight: 600; 
+    }
+
+    p {
+        color: #8d96a6;
+        font-size: 12px;
+        font-weight: lighter;
+        margin-bottom: 20px;
+    }
+    
+    #no-title {
+        border: none;
+        color: #aab3bf;
+        background-color: #f6f6f8;
+        cursor: not-allowed;
+    }
+
+    #title-present {
+        border: none;
+        color: white;
+        background-color: #0179bf;
+    }
+
+    #no-title, #title-present {
+        width: 100%;
+        height: 45px;
+        border-radius: 3px;
+    }
+
+    #main-content {
+        width: 85%;
+    }
+}
+
+.close-create-workspace-modal {
+    border: none;
+    color: #182a4d;
+    background-color: transparent;
+    font-size: 19px;
+    font-weight: bolder;
+    position: absolute;
+    top: 22px;
+    // left: 605px;
+    right: 5px;
+    height: 40px;
+    width: 40px;
+    margin-left: 3px;
+}
+
+// .create-workspace-modal {
+
+//     h1 {
+//         color: #091e42;
+//         font-size: 24px;
+//         font-weight: 600;
+//         text-align: center;
+//         margin: 30px 0px 15px;
+//     }
+    
+//     #main-content {
+//         width: 85%;
+//     }
+// }
+
+
+.create-workspace-form {
+
+    #workspace-input {
+        font-size: 14px;
+        letter-spacing: 0.015rem;
+        height: 40px;
+        width: 96.5%;
+        background-color: #fafbfc;
+        border: 2px #dee1e5 solid;
+        border-radius: 3px;
+        padding-left: 12px;
+        margin: 5px 0px 10px;
+    }
+}
+
+
