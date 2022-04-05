@@ -32,15 +32,18 @@ class Board extends React.Component {
             <>
                 <div className="board">
                     <MainNavBar />
-                    <BoardTitleForm 
-                        board={this.props.board} 
-                        editBoard={this.props.editBoard}
-                    />
-                    <button 
-                        onClick={this.handleBoardDelete}
-                    >
-                        <img src={window.delete_board} alt="delete board icon" />
-                    </button>                    
+                    <div className='board-header'>
+                        <BoardTitleForm 
+                            board={this.props.board} 
+                            editBoard={this.props.editBoard}
+                        />
+                        <button 
+                            className='delete-board'
+                            onClick={this.handleBoardDelete}
+                        >
+                            <img src={window.delete_board} alt="delete board icon" />
+                        </button>
+                    </div>                    
                     <ListIndex
                     lists={this.props.lists}/>
                 </div>

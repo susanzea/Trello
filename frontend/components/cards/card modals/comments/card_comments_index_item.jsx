@@ -47,7 +47,8 @@ class CommentsIndexItem extends React.Component {
 
     render() {
         // TODO: need to refactor signup form to have first and last name input
-
+        // TODO: fix delete bug
+        
         return (
         <div className='comment-index-item'>
             <div className='commenter-icon'>

@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 function DeleteWorkspaceItemModal(props) {
 
     return (
-        <div className='edit-workspace-modal-background'>
+        <div className='delete-workspace-modal-background'>
             <div className='delete-modal-container'>
                 <button className='edit-workspace-modal' 
                     onClick={() => props.openDeleteModal(false)}

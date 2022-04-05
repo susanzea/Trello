@@ -61,8 +61,8 @@ const WorkspaceIndexItem = (props) => {
 
             { dropDownMenuOpen &&
                 <div className='workspace-index-item-drop-down'>
-                    <button onClick={() => openEditModal(true) }>edit</button>
-                    <button onClick={() => openDeleteModal(true) }>delete</button>
+                    <button onClick={() => openEditModal(true) }><span>✎</span>edit</button>
+                    <button onClick={() => openDeleteModal(true) }><span>—</span>delete</button>
                 </div>
             }
 

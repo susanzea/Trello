@@ -61,7 +61,7 @@ class CardCommentForm extends React.Component {
                     >
                             <input type="text"
                                 className='card-comment-form-input'
-                                placeholder="Add a comment..."
+                                placeholder="Write a comment..."
                                 value={this.state.body}
                                 onChange={this.handleChange}
                             />

@@ -92,3 +92,86 @@
      transform: scaleY(-1);
  }
 
+
+
+
+ //index item drop down
+ .workspace-index-item-drop-down {
+    display: flex;
+    flex-direction: column;
+    
+    button {
+        color: #6f7a90;
+        height: 33px;
+        border: none;
+        border-radius: 2px;
+        text-align: left;
+        padding-left: 40px;
+        margin: 3px 0px;
+        margin-right: 5px;
+        background-color: transparent;
+
+        span {
+            padding-right: 12px;
+        }
+    }
+
+    button:hover {
+        color: #0179bf;
+        background-color: #e3f0f6;
+    }
+ }
+
+ .edit-workspace-modal-background {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+ }
+
+.edit-modal-container {
+    min-width: 250px;
+    width: 650px;
+    min-height: 600px;
+    height: 600px;
+    margin-top: 38px;
+    margin-left: 7px;
+    margin-right: 7px;
+    padding-bottom: 4px;
+    background-color: #f4f5f7;
+    border-radius: 2px;
+    z-index: 2;
+    font-weight: normal;
+    position: relative;
+}
+
+.delete-workspace-modal-background {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+ }
+
+.delete-modal-container {
+    min-width: 250px;
+    width: 650px;
+    min-height: 600px;
+    height: 600px;
+    margin-top: 38px;
+    margin-left: 7px;
+    margin-right: 7px;
+    padding-bottom: 4px;
+    background-color: #f4f5f7;
+    border-radius: 2px;
+    z-index: 2;
+    font-weight: normal;
+    position: relative;
+}

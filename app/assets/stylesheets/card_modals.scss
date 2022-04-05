@@ -170,15 +170,51 @@
 
 .card-new-comment {
 
-    .card-comment-form-input {
-        width: 96%;
-        margin-left: 2%;
-        margin-top: 10px;
-    }
+    .card-comment-form {
+        height: 85px;
+        width: 97%;
+        border-radius: 3px;
+        background-color: white;
+        border: #ccd1e0 1px solid;
+        box-shadow: 0 4px 6px #d5d6d8;
 
-    .save-comment {
-        color: white;
-        background-color: blue;
+
+        .card-comment-form-input {
+            width: 95%;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 12px 10px 12px;
+            color: #6b788e;
+            background-color: white;
+            font-size: 14px;
+            letter-spacing: 0.015rem;
+            margin-bottom: 9px;
+        }
+
+        .card-comment-form-input:focus {
+            outline: none;
+        }
+
+        .save-comment {
+            height: 32px;
+            width: 55px;
+            color: white;
+            border: none;
+            background-color: #0179bf;
+            border-radius: 2px;
+            margin-left: 11px;
+        }
+
+        .hide-card-comment-form {
+            position: relative;
+            color: #5e6c84;
+            font-weight: lighter;
+            font-size: 20px;
+            background-color: transparent;
+            border: none;
+            margin-left: 9px;
+            top: 3px;
+        }
     }
 }
 
@@ -186,6 +222,9 @@
     background-color: white;
 }
 
+.new-comment-main {
+    width: 100%;
+}
 
 // .card-comment-form-buttons {
 //     display: flex;
@@ -256,6 +295,7 @@
 }
 
 .reveal-card-comment-form {
+    width: 97.5%;
     border: #ccd1e0 1px solid;
     border-radius: 3px;
     box-shadow: 0 1px 1px -1px #b3b8c5;
@@ -264,15 +304,18 @@
     background-color: white;
     font-size: 14px;
     letter-spacing: 0.015rem;
+    text-align: left;
 }
 
 .reveal-card-comment-form:hover {
-    box-shadow: 0 1px 1px -1px #3e4044;
+    box-shadow: 1px 1px 1px -1px #3e4044;
 }
 
 
-
-
+// TODO: styling not working background
+.has-description.reveal-card-description-form {
+    background-color: white;
+}
 
 
 

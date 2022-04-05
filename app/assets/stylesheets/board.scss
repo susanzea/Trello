@@ -64,3 +64,29 @@ x
     background-color: #a1a7ab;
     border: none;
 }
+
+.board-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.board-title-input {
+    color: white;
+    max-width: 200px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: transparent;
+    border-radius: 3px;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 15px;
+}
+
+.board-title-input:hover {
+    background-color: #4f586184;
+}
+
+.board-title-input:focus {
+    color: black;
+    background-color: white;
+}
