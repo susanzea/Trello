@@ -50,7 +50,9 @@ class CommentsIndexItem extends React.Component {
 
         return (
         <div className='comment-index-item'>
-            <img className='commenter-icon' src={window.generic_user_icon} alt="generic user icon" />
+            <div className='commenter-icon'>
+                    <img src={window.generic_user_icon} alt="generic user icon" />
+            </div>
             <div className='comment-index-item-main'>
                 <p className='commenter-name'>{this.props.commenter.full_name}</p>
                 <p className='comment-body'>{this.state.body}</p>

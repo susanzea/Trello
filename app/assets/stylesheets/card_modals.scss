@@ -8,17 +8,24 @@
     top: 0;
     bottom: 0;
     z-index: 1;
+    overflow: scroll;
+    // overflow: hidden;
 }
 
 .card-modal-header {
     display: flex;
 }
 
+
 .card-modal-container {
     min-width: 250px;
     width: 650px;
+    min-height: 600px;
     height: 600px;
     margin-top: 38px;
+    margin-left: 7px;
+    margin-right: 7px;
+    padding-bottom: 4px;
     background-color: #f4f5f7;
     border-radius: 2px;
     z-index: 2;
@@ -175,6 +182,10 @@
     }
 }
 
+.has-description {
+    background-color: white;
+}
+
 
 // .card-comment-form-buttons {
 //     display: flex;
@@ -290,7 +301,13 @@
     background-color: #0179bf;
     border-radius: 50%;
     margin: 0px 10px 10px;
-    padding: 5px 0px 5px;
+
+    img {
+        height: 22px;
+        width: 26px;     
+        filter: brightness(0%) invert(87%) sepia(5%) saturate(88%) hue-rotate(182deg) brightness(113%) contrast(93%);  
+        padding: 3px 3px; 
+    }
 }
 
 .edit-comment, .delete-comment {
