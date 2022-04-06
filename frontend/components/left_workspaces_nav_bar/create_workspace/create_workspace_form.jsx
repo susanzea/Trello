@@ -37,7 +37,7 @@ class CreateWorkspaceForm extends React.Component {
                     placeholder='Recruitment Team'
                 />
                 <p>This is the name of your company, team or organization.</p>
-                 <button id={this.state.title ? 'title-present' : 'no-title'}  type={this.state.title ? 'submit' : 'button'} >Create</button>
+                <button id={this.state.title ? 'title-present' : 'no-title'}  type={this.state.title ? 'submit' : 'button'} >Create</button>
             </form>
         )
     }

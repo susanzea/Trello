@@ -1,0 +1,61 @@
+.workspaces-index-container {
+    z-index: 0;
+}
+
+.delete-workspace-modal {
+    min-width: 250px;
+    width: 650px;
+    min-height: 600px;
+    height: 600px;
+    margin-top: 38px;
+    margin-left: 7px;
+    margin-right: 7px;
+    padding-bottom: 4px;
+    background-color: #f4f5f7;
+    border-radius: 2px;
+    z-index: 2;
+    font-weight: normal;
+    position: relative;
+
+    .close-delete-workspace-modal {
+        border: none;
+        color: #182a4d;
+        background-color: transparent;
+        font-size: 19px;
+        font-weight: bolder;
+        position: absolute;
+        top: 22px;
+        // left: 605px;
+        right: 5px;
+        height: 40px;
+        width: 40px;
+        margin-left: 3px;
+    }
+}
+
+// .delete-workspace-modal-background {
+//     position: fixed;
+//     display: flex;
+//     justify-content: center;
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
+//     z-index: 1;
+//  }
+
+// .delete-modal-container {
+//     min-width: 250px;
+//     width: 650px;
+//     min-height: 600px;
+//     height: 600px;
+//     margin-top: 38px;
+//     margin-left: 7px;
+//     margin-right: 7px;
+//     padding-bottom: 4px;
+//     background-color: #f4f5f7;
+//     border-radius: 2px;
+//     z-index: 2;
+//     font-weight: normal;
+//     position: relative;
+// }

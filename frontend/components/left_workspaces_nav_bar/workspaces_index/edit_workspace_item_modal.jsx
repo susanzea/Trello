@@ -26,28 +26,27 @@ class EditWorkspaceItemModal extends React.Component {
     render() {
         return (
             <div className='edit-workspace-modal-background'>
-                <div className='edit-modal-container'>
-                    <button className='edit-workspace-modal' 
+                <div className='edit-workspace-modal'>
+                    <button id='close-edit-workspace-modal'
                         onClick={() => this.props.openEditModal(false)}
                     >✕</button>
-
-                    <form className='workspace-index-item-edit-form'
-                        onClick={this.handleSubmit}
-                    >
-                        <input type="text"
-                            id='workspace-index-item-edit-input'
-                            placeholder="Hey, you haven't typed anything yet!"
-                            value={this.state.title}
-                            onChange={this.handleChange}
-                        />
-
-                        <button className="save-workspace-title" 
-                            type='submit'
+                    <img src={window.workspace_modal_img} alt="image of a trelloh board" className='workspace-modal-img' />
+                    <div id='main-content'>
+                        <h1>Edit your Workspace</h1>
+                        <h3>Name</h3>
+                        <form className='edit-workspace-form'
+                            onClick={this.handleSubmit}
                         >
-                            Save
-                        </button>
-                    </form>
-                    
+                            <input type="text"
+                                id='workspace-index-item-edit-input'
+                                placeholder="Hey, you need a title!"
+                                value={this.state.title}
+                                onChange={this.handleChange}
+                            />
+
+                            <button id={this.state.title ? 'title-present' : 'no-title'}  type={this.state.title ? 'submit' : 'button'} >Save</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         )

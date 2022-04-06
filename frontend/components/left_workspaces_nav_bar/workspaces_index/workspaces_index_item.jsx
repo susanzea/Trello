@@ -19,7 +19,7 @@ const WorkspaceIndexItem = (props) => {
     const selected = props.selected === props.idx
     
     return(
-        <div>
+        <div className='workspaces-index-container'>
             <Link className={`${selected ? "selected" : "notSelected"} workspaces-index-item`}
                 onClick={() => props.setSelected(props.idx)}
                 to={{
@@ -69,6 +69,7 @@ const WorkspaceIndexItem = (props) => {
             { deleteModalOpen && <DeleteWorkspaceItemModal  
                 destroyWorkspace={() => props.destroyWorkspace(props.workspace.id)}
                 openDeleteModal={openDeleteModal}
+                workspaceTitle={props.workspace.title}
             />}
 
             { editModalOpen && <EditWorkspaceItemModal workspace={props.workspace}
