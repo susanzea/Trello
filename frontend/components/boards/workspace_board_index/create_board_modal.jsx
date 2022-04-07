@@ -38,7 +38,11 @@ class CreateBoardModal extends React.Component {
                     <button className='close-create-board-modal' 
                         onClick={() => this.props.openCreateBoardModal(false)}
                     >✕</button>
-
+                    <h1>Create board</h1>
+                    <img src={window.create_board_image} 
+                        alt="workspace placeholder since no board index rendering" 
+                    />
+                    <h3>Board title <span className='required'>*</span></h3>
                     <form className='create-board-form'
                         onSubmit={this.handleSubmit}
                     >

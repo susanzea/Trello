@@ -22,18 +22,46 @@
     width: 300px;
     min-height: 340px;
     height: 380;
-    // padding: 20px 15px 30px;
     background-color: white;
     border-radius: 2px;
     z-index: 2;
     font-weight: normal;
-    position: relative;
-    left: -99px;
-    top: -233px;
+    position: absolute;
+    left: 268px;
+    top: 230px;
     border: 1px #ebecf0 solid;
     border-radius: 2px;
 
+    img {
+        width: 80%;
+    }
+
+    .required {
+        color: red;
+    }
+
     form {
-        width: 100%
+        width: 90%;
+
+
+        input {
+            font-size: 14px;
+            width: 256px;
+            letter-spacing: 0.015rem;
+            height: 31px;
+            background-color: #fafbfc;
+            border: 2px #dee1e5 solid;
+            border-radius: 3px;
+            padding-left: 12px;
+        margin-bottom: 10px;
+        }
+
+        input:hover {
+            background-color: #dde0e5;
+        }
+
+        input:focus {
+            background-color: white;
+        }
     }
 }
