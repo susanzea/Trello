@@ -69,7 +69,7 @@ const WorkspaceIndexItem = (props) => {
             { deleteModalOpen && <DeleteWorkspaceItemModal  
                 destroyWorkspace={() => props.destroyWorkspace(props.workspace.id)}
                 openDeleteModal={openDeleteModal}
-                workspaceTitle={props.workspace.title}
+                workspace={props.workspace}
             />}
 
             { editModalOpen && <EditWorkspaceItemModal workspace={props.workspace}

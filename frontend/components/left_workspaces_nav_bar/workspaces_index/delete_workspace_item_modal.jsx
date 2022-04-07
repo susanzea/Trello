@@ -1,29 +1,75 @@
 import React, { useEffect } from 'react';
 
-function DeleteWorkspaceItemModal(props) {
+class DeleteWorkspaceItemModal extends React.Component {
 
-    return (
-        <div className='delete-workspace-modal'>
-            <div className='delete-modal-container'>
-                <button className='close-delete-workspace-modal' 
-                    onClick={() => props.openDeleteModal(false)}
-                >✕</button>
-                
-                <h2>Delete board?</h2>
-                <hr />
-                <h3>Are you sure you want to delete {props.workspaceTitle}?</h3>
-                <h1>Things to know:</h1>
-                <ul>
-                    <li>This is permanent and can't be undone.</li>
-                    <li>All boards in this Workspace will be deleted.</li>
-                </ul>
-                <p>All lists and cards will be deleted, there is no undo.</p>
-                <h1>Enter the Workspace name to delete</h1>
-                <input type="text" />
-                <button onClick={props.destroyWorkspace}>Delete Workspace</button>
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            input_workspace_title: ''
+        }
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleChange(e) {
+        this.setState({ input_workspace_title: e.target.value })
+    }  
+    
+    handleSubmit(e) {
+        debugger
+        e.preventDefault();
+        this.props.destroyWorkspace(this.props.workspace.id);
+    }
+
+
+    render() {
+        return (
+            <div id='delete-workspace-modal-background'>
+                <div id='delete-workspace-modal'>
+                    <button className='close-delete-workspace-modal' 
+                        onClick={() => this.props.openDeleteModal(false)}
+                    >✕</button>
+                    
+                    <h2>Delete workspace?</h2>
+                    <div id='main-content'>
+                        <h3>Are you sure you want to delete {this.props.workspace.title}?</h3>
+                        <h1>Things to know:</h1>
+                        <ul>
+                            <li><span>This is permanent and can't be undone.</span></li>
+                            <li>
+                                <span>All boards in this Workspace will be
+                                permanently deleted.</span>
+                            </li>
+                        </ul>
+                        
+                        <h1>Enter the Workspace name to delete</h1>
+                        
+                        <form id='delete-workspace-form'
+                            onSubmit={this.handleSubmit}
+                        >
+                            <input type="text" 
+                                value={this.state.input_workspace_title}
+                                onChange={this.handleChange}
+                                placeholder={this.props.workspace.title}
+                            />
+                            <button 
+                                id={this.props.workspace.title === 
+                                    this.state.input_workspace_title ? 
+                                    'title-match' : 'no-title-match'}  
+                                type={this.props.workspace.title === 
+                                    this.state.input_workspace_title ? 
+                                    'submit' : 'button'} 
+                            >Delete Workspace</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default DeleteWorkspaceItemModal;
+
+//  <button onClick={props.destroyWorkspace}>Delete Workspace</button>
