@@ -33,23 +33,25 @@ class CreateBoardModal extends React.Component {
         }
 
         return (
-            <div className='create-board-modal'>
-                <button className='close-create-board-modal' 
-                    onClick={() => this.props.openCreateBoardModal(false)}
-                >✕</button>
+            <div id='create-board-model-background'>
+                <div id='create-board-modal'>
+                    <button className='close-create-board-modal' 
+                        onClick={() => this.props.openCreateBoardModal(false)}
+                    >✕</button>
 
-                <form className='create-board-form'
-                    onSubmit={this.handleSubmit}
-                >
-                    <input type="text"
-                        id='create-board-form-input' 
-                        value={this.state.title}
-                        onChange={this.handleChange}
-                    />
-                    {titleRequiredNotification()}
-                    
-                    <button type='submit'>Create</button>
-                </form>
+                    <form className='create-board-form'
+                        onSubmit={this.handleSubmit}
+                    >
+                        <input type="text"
+                            id='create-board-form-input' 
+                            value={this.state.title}
+                            onChange={this.handleChange}
+                        />
+                        {titleRequiredNotification()}
+                        
+                        <button type='submit'>Create</button>
+                    </form>
+                </div>
             </div>
         )
     }

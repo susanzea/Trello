@@ -1,0 +1,39 @@
+#create-board-modal-background {
+    background-color: transparent;
+    position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    // align-items: flex-start;
+    display: -webkit-flex;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: scroll;
+    // background-color: pink;
+ }
+
+#create-board-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    width: 300px;
+    min-height: 340px;
+    height: 380;
+    // padding: 20px 15px 30px;
+    background-color: white;
+    border-radius: 2px;
+    z-index: 2;
+    font-weight: normal;
+    position: relative;
+    left: -99px;
+    top: -233px;
+    border: 1px #ebecf0 solid;
+    border-radius: 2px;
+
+    form {
+        width: 100%
+    }
+}
