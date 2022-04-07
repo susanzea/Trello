@@ -2,7 +2,9 @@
     background-color: transparent;
     position: fixed;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    // align-items: flex-start;
+    display: -webkit-flex;
     left: 0;
     right: 0;
     top: 0;
@@ -18,7 +20,8 @@
     align-items: center;
     z-index: 2;
     width: 300px;
-    height: 363px;
+    min-height: 340px;
+    height: 380;
     // padding: 20px 15px 30px;
     background-color: white;
     border-radius: 2px;
@@ -115,6 +118,14 @@
         border-radius: 3px;
         padding-left: 12px;
         margin-bottom: 10px;
+    }
+
+    input:hover {
+        background-color: #dde0e5;
+    }
+
+    input:focus {
+        background-color: white;
     }
 
     #delete-workspace-form {

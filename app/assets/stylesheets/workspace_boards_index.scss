@@ -1,6 +1,73 @@
 .workspace-boards-index {
-    margin-left: 300px;
-    margin-top: 200px;
+    // I originally used margins below but positioning is less hacky
+    // margin-left: 300px;
+    // margin-top: 200px;
+    position: absolute;
+    top: 90px;
+    margin-left: 41%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        width: 410px;
+        height: 200px;
+    }
+
+    p {
+        color: #6f7a90;
+        font-size: 14px;
+        line-height: 20px;
+        width: 500px;
+        margin: 32px 0px 37px;
+        text-align: center;
+    }
+
+    button {
+        color: white;
+        font-size: 14px;
+        background-color: #0179bf;
+        border: none;
+        width: 195px;
+        height: 30px;
+        border-radius: 3px;
+    }
+}
+
+.workspace-no-boards-index {
+    // I originally used margins below but positioning is less hacky
+    // margin-left: 300px;
+    // margin-top: 200px;
+    position: absolute;
+    top: 90px;
+    margin-left: 42%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        width: 410px;
+        height: 200px;
+    }
+
+    p {
+        color: #6f7a90;
+        font-size: 14px;
+        line-height: 20px;
+        width: 500px;
+        margin: 32px 0px 37px;
+        text-align: center;
+    }
+
+    button {
+        color: white;
+        font-size: 14px;
+        background-color: #0179bf;
+        border: none;
+        width: 195px;
+        height: 30px;
+        border-radius: 3px;
+    }
 }
 
 .workspace-boards-index > header {
@@ -77,3 +144,4 @@
     border: none;
     top: 0px;
 }
+

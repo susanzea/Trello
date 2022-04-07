@@ -5,7 +5,11 @@ function NoBoardsIndex(props) {
     const [createBoardModalOpen, openCreateBoardModal] = useState(false)
 
     return (
-        <div className='workspace-boards-index'>
+        <div className='workspace-no-boards-index'>
+            <img 
+                src={window.workspace_placeholder} 
+                alt="workspace placeholder since no board index rendering" 
+            />
             <p>Boards are where work gets done in Trello. On a board, 
                 you can move cards between lists to keep projects, 
                 tasks, and more on track.
