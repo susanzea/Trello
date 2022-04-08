@@ -9,7 +9,6 @@ const workspacesReducer = (prevState=[], action) => {
         case RECEIVE_USER_WORKSPACES:
             return action.workspaces;
         case RECEIVE_USER_WORKSPACE:
-            debugger
             nextState[action.workspace.id] = action.workspace
             return nextState;
         case REMOVE_USER_WORKSPACE:

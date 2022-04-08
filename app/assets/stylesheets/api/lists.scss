@@ -1,9 +1,22 @@
 
 .list-index {
-  display: flex;
-  align-items: flex-start;
-  display: -webkit-flex;
-  margin-left: 12px;
+    position: absolute;
+    top: 94px;
+    display: flex;
+    align-items: flex-start;
+    display: -webkit-flex;
+    margin-left: 12px;
+    margin-right: 6px;
+    overflow-y: scroll;
+    // padding-right: 17px;
+    box-sizing: content-box;
+    width: 99vw;
+    height: 87vh;
+
+    > li {
+        margin-top: -10px;
+        margin-left: 7px;
+    }
 }
 
 .list-index-item {
@@ -14,7 +27,8 @@
     border-radius: 3px;
     background-color: #ebecf0;
     border: none;
-    margin: 12px 5px;
+    margin: 0px 12px 5px;
+    max-height: 95%;
 }
 
 .list-header {
@@ -59,20 +73,25 @@
     padding: 0;
     margin-top: 11px;
     margin-left: 5px;
+    margin-right: 17px;
 
-    > input {
-        background-color: #dde4e9;
+    .reveal-list-form {
+        padding: 6px 12px 6px;
+    }
+
+    input {
+        background-color: white;
         font-family: arial, sans-serif;
         color: #182a4d;
-        border: none;
+        border: 2px #0179bf solid;
         display: block;
         margin: 0 auto;
         padding: 8px;
         width: 240px;
         resize: none;
         border-radius: 3px;
-        // margin: 8px 0px 8px;
-        box-shadow: 0 2px 2px -1px #6E6F76;
+        margin-bottom: 5px;
+        box-shadow: 0 2px 2px -1px #b3b8c5;
     }
 
     > button {
@@ -86,6 +105,17 @@
         border: none;
     }
 
+}
+
+.hide-list-form {
+    position: relative;
+    color: #5e6c84;
+    font-weight: lighter;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    margin-left: 9px;
+    top: 3px;
 }
 
 
@@ -151,11 +181,11 @@
 
 .create-list-form {
     display: none;
-    padding: 8px 0px 13px;
+    padding: 5px 0px 5px;
     width: 271px;
 }
 
-#hide-workspace {
+.add-list {
     background-color: #0179bf;
     border: none;
     border-radius: 3px;
@@ -165,11 +195,4 @@
     height: 32px;
     width: 86px;
     margin-left: 8px;
-    margin-bottom: 8px;
-}
-
-#create-workspace-input {
-    width: 260px;
-    display: block;
-    margin: 0 auto;
 }

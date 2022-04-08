@@ -4,7 +4,6 @@ import { fetchAllWorkspaceBoards, destroyBoard, fetchWorkspaceBoard } from '../.
 import { fetchUserWorkspace } from '../../../actions/workspace_actions';
 
 const mapStateToProps = (state, ownProps) => {
-    debugger
 
     return {
         workspaceId: parseInt(ownProps.match.params.workspaceId),

@@ -1,5 +1,9 @@
 
-
+.card-index {
+    max-height: 76vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
 
 .card-index-item {
     position: relative;
@@ -13,6 +17,7 @@
     box-shadow: 0 2px 2px -1px #b3b8c5;
     min-height: 29px;
     padding: 2px;
+    overflow-y: scroll;
 }
 
 .card-index-item > li {

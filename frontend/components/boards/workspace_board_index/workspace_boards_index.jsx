@@ -15,7 +15,6 @@ class WorkspaceBoardsIndex extends React.Component {
     }
 
     componentDidMount() {
-        debugger
         this.props.fetchUserWorkspace(this.props.workspaceId);
         this.props.fetchAllWorkspaceBoards(this.props.workspaceId);
     }

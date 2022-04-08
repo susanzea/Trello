@@ -25,10 +25,14 @@ class ListForm extends React.Component {
     }
 
     toggle(e) {
-        if (e.target.className === 'reveal-workspace-board-form add-button') {
+        if (e.target.className === 'reveal-list-form add-button') {
             $(e.target).hide();
             $(e.target).siblings().show();
-        } else if (e.target.className === 'hide-workspace-board-form add-button') {
+        } else if (e.target.className === 'hide-list-form') {
+            $(e.target.parentElement).hide();
+            $(e.target.parentElement).siblings().show();
+        } else if (e.target.className === 'add-list') {
+            debugger
             $(e.target.parentElement).hide();
             $(e.target.parentElement).siblings().show();
         }
@@ -38,7 +42,7 @@ class ListForm extends React.Component {
         return (
             <div className='list-form'>
                 <button
-                    className="reveal-workspace-board-form add-button"
+                    className="reveal-list-form add-button"
                     type='submit'
                     onClick={this.toggle}
                 >
@@ -46,16 +50,15 @@ class ListForm extends React.Component {
                     {this.props.totalBoardLists === 0 ? "Add a list" : "Add another list"}
                 </button>
                 <form onSubmit={this.handleSubmit} className='create-list-form'>
-                        <input type="text" id="create-list-input" value={this.state.title} onChange={this.handleChange} placeholder='Enter list title' />
-                        <button
-                            className="hide-list-form add-button"
-                            id="add-list"
+                        <input type="text" id="create-list-input" 
+                            value={this.state.title} onChange={this.handleChange} 
+                            placeholder='Enter list title...' />
+                        <button className="add-list" 
                             type='submit'
-                            onClick={this.toggle}
                         >
-                            <span className='add'>＋</span>
-                            {this.props.totalBoardLists === 0 ? "Add a list" : "Add another list"}
+                            Add list
                         </button>
+                        <button className='hide-list-form' onClick={this.toggle} type="button" >✕</button>
                 </form>
             </div>
         )

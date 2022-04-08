@@ -9,7 +9,6 @@ export const getAllUserWorkspaces = (userId) => {
 }
 
 export const getUserWorkspace = (workspaceId) => {
-    debugger
     return $.ajax({
         method: 'GET',
         url: `/api/workspaces/${workspaceId}`

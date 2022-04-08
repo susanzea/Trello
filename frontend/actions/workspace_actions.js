@@ -47,7 +47,6 @@ export const fetchAllUserWorkspaces = (userId) => (dispatch) => {
 }
 
 export const fetchUserWorkspace = (workspaceId) => (dispatch) => {
-    debugger
     return getUserWorkspace(workspaceId)
         .then(workspace => dispatch(receiveUserWorkspace(workspace)));
 }
