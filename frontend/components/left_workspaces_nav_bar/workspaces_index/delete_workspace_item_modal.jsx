@@ -18,7 +18,6 @@ class DeleteWorkspaceItemModal extends React.Component {
     }  
     
     handleSubmit(e) {
-        debugger
         e.preventDefault();
         this.props.destroyWorkspace(this.props.workspace.id);
     }

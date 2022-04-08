@@ -38,7 +38,7 @@ class Board extends React.Component {
                             editBoard={this.props.editBoard}
                         />
                         <button 
-                            className='delete-board'
+                            id='delete-board'
                             onClick={this.handleBoardDelete}
                         >
                             <img src={window.delete_board} alt="delete board icon" />

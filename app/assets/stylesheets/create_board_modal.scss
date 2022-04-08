@@ -26,14 +26,61 @@
     border-radius: 2px;
     z-index: 2;
     font-weight: normal;
-    position: absolute;
+    position: fixed;
     left: 268px;
     top: 230px;
     border: 1px #ebecf0 solid;
     border-radius: 2px;
 
+    #close-create-board-modal {
+        border: none;
+        color: #7d8899;
+        background-color: transparent;
+        font-size: 15px;
+        font-weight: bolder;
+        position: absolute;
+        top: -1px;
+        right: -4px;
+        height: 40px;
+        width: 40px;
+    }
+
+    #close-create-board-modal:hover {
+        color: #182a4d;
+    }
+
     img {
         width: 80%;
+    }
+
+    h1 {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 12px;
+        color: #9aa8c1;
+    }
+
+    #create-board-header {
+        text-align: center;
+        padding-bottom: 13px;
+        width: 90%;
+        margin: 15px 0px 17px;
+        border-bottom: 1px #a4adba solid;
+    }
+
+    h1, h3 {
+        color: #768196;
+    } 
+
+    h3 {
+        margin-top: 24px;
+        margin-right: 193px;
+        font-weight: bold;
+        font-size: 12px;
+        letter-spacing: 0.01rem;
+        margin-bottom: 3px;
     }
 
     .required {
@@ -43,25 +90,61 @@
     form {
         width: 90%;
 
+        #required-empty {
+            background-color: white;
+            border-color: red;   
+        }
+
+        #required-empty:hover {
+            border-color: red;
+            background-color: #ebecf0
+        }
+
+        #required-empty:focus {
+            background-color: white;
+            outline-color: red;  
+        }
+
+        #required-present {
+            background-color: #fafbfc;
+            border-color: #dee1e5;
+        }
 
         input {
             font-size: 14px;
             width: 256px;
             letter-spacing: 0.015rem;
             height: 31px;
-            background-color: #fafbfc;
-            border: 2px #dee1e5 solid;
+            border: 2px solid;
             border-radius: 3px;
             padding-left: 12px;
-        margin-bottom: 10px;
+            margin-bottom: 7px;
         }
 
-        input:hover {
-            background-color: #dde0e5;
+        #board-title-present {
+            border: none;
+            color: white;
+            background-color: #0179bf;
+            margin: 4px 0px 20px
         }
 
-        input:focus {
-            background-color: white;
+        #no-board-title-present {
+            border: none;
+            color: #aab3bf;
+            background-color: #f6f6f8;
+            cursor: not-allowed;
+            margin: 22px 0px 20px
+        }
+
+        #board-title-present, #no-board-title-present {
+            width: 273px;
+            height: 35px;
+            border-radius: 3px;
+            
+        }
+
+        p {
+            font-size: 13px;
         }
     }
 }

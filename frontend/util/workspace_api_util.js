@@ -8,6 +8,14 @@ export const getAllUserWorkspaces = (userId) => {
     })
 }
 
+export const getUserWorkspace = (workspaceId) => {
+    debugger
+    return $.ajax({
+        method: 'GET',
+        url: `/api/workspaces/${workspaceId}`
+    })
+}
+
 export const postWorkspace = (workspace) => {
     return $.ajax({
         method: 'POST',

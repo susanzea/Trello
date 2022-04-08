@@ -15,7 +15,9 @@ class WorkspaceBoardsIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchAllWorkspaceBoards(this.props.workspaceId)
+        debugger
+        this.props.fetchUserWorkspace(this.props.workspaceId);
+        this.props.fetchAllWorkspaceBoards(this.props.workspaceId);
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -27,11 +29,11 @@ class WorkspaceBoardsIndex extends React.Component {
 
     render() {
         if (this.props.boards.length === 0) {
-            return <NoBoardsIndex workspaceId={this.props.workspaceId}/>   
+            return <NoBoardsIndex workspace={this.props.workspace}/>   
         } else {
             return <BoardsIndex 
                     boards={this.props.boards} 
-                    workspaceId={this.props.workspaceId}
+                    workspace={this.props.workspace}
                 />
         }
     }

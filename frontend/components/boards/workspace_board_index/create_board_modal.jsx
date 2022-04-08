@@ -7,7 +7,7 @@ class CreateBoardModal extends React.Component {
 
         this.state = {
             title: '',
-            workspace_id: props.workspaceId
+            workspace_id: props.workspace.id
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -29,16 +29,19 @@ class CreateBoardModal extends React.Component {
         const titleRequiredNotification = () => {
             if (this.state.title === '') {
                 return <p>👋 Board title is required</p>
-            }
+            } 
         }
 
         return (
             <div id='create-board-model-background'>
                 <div id='create-board-modal'>
-                    <button className='close-create-board-modal' 
+                    <button id='close-create-board-modal' 
                         onClick={() => this.props.openCreateBoardModal(false)}
                     >✕</button>
-                    <h1>Create board</h1>
+                    <div id="create-board-header">
+                        <h1>Create board</h1>
+                        <h2>in {this.props.workspace.title}</h2>
+                    </div>
                     <img src={window.create_board_image} 
                         alt="workspace placeholder since no board index rendering" 
                     />
@@ -47,13 +50,20 @@ class CreateBoardModal extends React.Component {
                         onSubmit={this.handleSubmit}
                     >
                         <input type="text"
-                            id='create-board-form-input' 
+                            id={this.state.title === '' ? 'required-empty' : 'required-present'} 
                             value={this.state.title}
                             onChange={this.handleChange}
                         />
                         {titleRequiredNotification()}
                         
-                        <button type='submit'>Create</button>
+                        <button
+                            id={this.state.title === 
+                                    '' ? 
+                                    'no-board-title-present' : 'board-title-present'}  
+                            type={this.state.title === 
+                                '' ? 
+                                'button' : 'submit'}
+                        >Create</button>
                     </form>
                 </div>
             </div>
@@ -62,3 +72,5 @@ class CreateBoardModal extends React.Component {
 }
 
 export default CreateBoardModal;
+
+// id="create-board-form-input"

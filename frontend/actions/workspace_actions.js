@@ -1,4 +1,5 @@
 import { getAllUserWorkspaces, 
+    getUserWorkspace,
     postWorkspace, 
     deleteWorkspace,
     patchWorkspace 
@@ -43,6 +44,12 @@ export const removeUserWorkspace = (workspaceId) => {
 export const fetchAllUserWorkspaces = (userId) => (dispatch) => {
     return getAllUserWorkspaces(userId)
     .then(workspaces => dispatch(receiveUserWorkspaces(workspaces)));   
+}
+
+export const fetchUserWorkspace = (workspaceId) => (dispatch) => {
+    debugger
+    return getUserWorkspace(workspaceId)
+        .then(workspace => dispatch(receiveUserWorkspace(workspace)));
 }
 
 export const createWorkspace = workspace => dispatch => {

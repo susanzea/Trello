@@ -34,7 +34,7 @@ function BoardsIndex(props) {
 
             { createBoardModalOpen && 
                 <CreateBoardModal 
-                    workspaceId={props.workspaceId}
+                    workspace={props.workspace}
                     openCreateBoardModal={openCreateBoardModal}
                 />
             }

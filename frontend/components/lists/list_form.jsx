@@ -45,11 +45,11 @@ class ListForm extends React.Component {
                     <span className='add'>＋</span>
                     {this.props.totalBoardLists === 0 ? "Add a list" : "Add another list"}
                 </button>
-                <form onSubmit={this.handleSubmit} className='create-workspace-form-2'>
-                        <input type="text" id="create-workspace-input-2" value={this.state.title} onChange={this.handleChange} placeholder='Enter list title' />
+                <form onSubmit={this.handleSubmit} className='create-list-form'>
+                        <input type="text" id="create-list-input" value={this.state.title} onChange={this.handleChange} placeholder='Enter list title' />
                         <button
-                            className="hide-workspace-board-form add-button"
-                            id="add-workspace"
+                            className="hide-list-form add-button"
+                            id="add-list"
                             type='submit'
                             onClick={this.toggle}
                         >
