@@ -37,8 +37,8 @@ class ListIndexItem extends React.Component {
                             />)
                         })
                     }
-                    <li><CardFormContainer list={this.props.list}/></li>
                 </ul>
+                <li><CardFormContainer list={this.props.list}/></li>
             </div>
         )
     }

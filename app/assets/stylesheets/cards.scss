@@ -1,6 +1,6 @@
 
 .card-index {
-    max-height: 76vh;
+    max-height: 70vh;
     overflow: hidden;
     overflow-y: scroll;
 }
@@ -130,3 +130,6 @@
     margin-bottom: 8px;
 }
 
+.card-index-foot {
+    padding-top: 2px;
+}
