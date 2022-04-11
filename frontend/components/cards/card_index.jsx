@@ -29,7 +29,7 @@ class CardIndex extends React.Component {
             <ul className='card-index'>
                 {
                     this.props.cards.map((card, idx) => {
-                        return <CardIndexItemContainer
+                        return <CardIndexItemContainer card={card}
                         />
                     })
                 }

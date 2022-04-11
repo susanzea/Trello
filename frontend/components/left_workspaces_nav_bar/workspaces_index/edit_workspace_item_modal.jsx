@@ -21,6 +21,7 @@ class EditWorkspaceItemModal extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         this.props.editWorkspace(this.state);
+        this.props.openEditModal(false);
     }
 
     render() {
@@ -35,7 +36,7 @@ class EditWorkspaceItemModal extends React.Component {
                         <h1>Edit your Workspace</h1>
                         <h3>Name</h3>
                         <form className='edit-workspace-form'
-                            onClick={this.handleSubmit}
+                            onSubmit={this.handleSubmit}
                         >
                             <input type="text"
                                 id='workspace-index-item-edit-input'

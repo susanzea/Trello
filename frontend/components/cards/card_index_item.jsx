@@ -1,20 +1,22 @@
 import React, {useState, useEffect} from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import CardModal from './card modals/card_modal';
+import regeneratorRuntime from "regenerator-runtime";
 
 function CardIndexItem (props) {
     // first time using useState to conditionally render a modal below
-    const [cardModalOpen, openModal] = useState(false)
+    const [cardModalOpen, openModal] = useState(false);
 
-    // TODO: need to fetch comments so that I have access to count for icon. need to then make sure to not fetch them again later.
-    const [commentCount, setCount] = useState({ count: [] });
+    // ? need to fetch comments so that I have access to count for icon. need to then make sure to not fetch them again later.
+    const [data, setData] = useState([]);
+
 
     useEffect(async () => {
-        const comments = this.props.fetchAllCardComments(this.props.card.id);
-
-        setCount(comments.length);
+        props.fetchAllCardComments(props.card.id).then(
+            res => setData(res.data)
+        )
+        console.log(data)
     }, []);
-
 
 
     return (
@@ -28,7 +30,6 @@ function CardIndexItem (props) {
                     onClick={() => openModal(true) }
                 >✎</button>
                 <img src={window.comment_bubble} alt="card comment count bubble icon" />
-                <p>{commentCount}</p>
                 { cardModalOpen && <CardModal card={props.card}
                     list={props.list}
                     editCard={props.editCard}

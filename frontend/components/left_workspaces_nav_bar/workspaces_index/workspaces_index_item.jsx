@@ -16,6 +16,7 @@ const WorkspaceIndexItem = (props) => {
         4: "#017951"
     }
 
+    // TODO: set selected based on url, default should be first workspace
     const selected = props.selected === props.idx
     
     return(

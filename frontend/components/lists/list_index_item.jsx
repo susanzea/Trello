@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter} from 'react-router-dom';
-import CardIndexItem from '../cards/card_index_item';
+import CardIndexItem from '../cards/card_index_item_container';
 import CardFormContainer from '../cards/card_form_container'
 
 

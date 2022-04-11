@@ -18,6 +18,7 @@ class Board extends React.Component {
     handleBoardDelete() {
         this.props.destroyBoard(this.props.boardId);
         // TODO: after you get access to workspace, redirect to workspace show page that this board was on
+        const location = this.props.history.location.pathname
         this.props.history.push('/home')
     }
 
@@ -37,6 +38,7 @@ class Board extends React.Component {
                             board={this.props.board} 
                             editBoard={this.props.editBoard}
                         />
+                        <p>hi</p>
                         <button 
                             id='delete-board'
                             onClick={this.handleBoardDelete}

@@ -67,7 +67,7 @@ class CommentsIndexItem extends React.Component {
                     <p className='comment-hyphen'> - </p>
                     <button 
                         className='delete-comment'
-                        onClick={() => this.props.destroyComment(this.props.comment.id)}
+                        onClick={() => this.props.destroyComment(this.state.id)}
                     >
                         Delete
                     </button>

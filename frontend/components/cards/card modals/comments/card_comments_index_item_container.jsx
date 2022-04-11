@@ -14,7 +14,7 @@ const mapDispatchToProps = dispatch => {
     return {
         editComment: (comment) => dispatch(editComment(comment)),
         destroyComment: (commentId) => dispatch(destroyComment(commentId)),
-        fetchAllCardComments: (cardId) => dispatch(fetchAllCardComments(cardId)),
+        // fetchAllCardComments: (cardId) => dispatch(fetchAllCardComments(cardId)),
         fetchCommentUser: (userId) => dispatch(fetchCommentUser(userId))
     }
 }

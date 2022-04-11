@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import LogoHomeButton  from './logo_home_button'
+import LogoHomeButtonContainer  from './logo_home_button_container'
 import SearchBar  from './search_bar'
 import UserMenu from './user_menu';
 import PersonalLinks from './personal_links';
@@ -15,7 +15,7 @@ class MainNavBar extends React.Component {
         return (
             <nav id='main-nav-bar'>
                 <div id="main-nav-left">
-                    <LogoHomeButton />
+                    <LogoHomeButtonContainer />
                     <PersonalLinks />
                 </div>
                 <div id="main-nav-right">

@@ -32,7 +32,6 @@ class ListForm extends React.Component {
             $(e.target.parentElement).hide();
             $(e.target.parentElement).siblings().show();
         } else if (e.target.className === 'add-list') {
-            debugger
             $(e.target.parentElement).hide();
             $(e.target.parentElement).siblings().show();
         }
