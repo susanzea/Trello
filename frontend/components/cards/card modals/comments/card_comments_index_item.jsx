@@ -46,9 +46,8 @@ class CommentsIndexItem extends React.Component {
 
 
     render() {
-        // TODO: need to refactor signup form to have first and last name input
-        // TODO: fix delete bug
-        
+        // * fix delete bug
+
         return (
         <div className='comment-index-item'>
             <div className='commenter-icon'>
@@ -67,7 +66,7 @@ class CommentsIndexItem extends React.Component {
                     <p className='comment-hyphen'> - </p>
                     <button 
                         className='delete-comment'
-                        onClick={() => this.props.destroyComment(this.state.id)}
+                        onClick={() => this.props.destroyComment(this.props.comment.id)}
                     >
                         Delete
                     </button>

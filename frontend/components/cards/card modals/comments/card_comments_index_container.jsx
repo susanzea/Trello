@@ -4,10 +4,11 @@ import { fetchAllCardComments } from "../../../../actions/comment_actions";
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => {
-    if (!state.entities.comments) {
-        return null;
-    }
+    // if (!state.entities.comments) {
+    //     return null;
+    // }
 
+    debugger
     return {
         comments: Object.values(state.entities.comments)
     }

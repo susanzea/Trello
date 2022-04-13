@@ -9,12 +9,13 @@ const commentsReducer = (prevState = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_CARD_COMMENTS:
-            // comments accr=urately being fetched
+            // comments accrurately being fetched
             return action.comments;
         case RECEIVE_CARD_COMMENT:
             nextState[action.comment.id] = action.comment
             return nextState;
         case REMOVE_CARD_COMMENT:
+            debugger
             delete nextState[action.commentId]
 
             return nextState;

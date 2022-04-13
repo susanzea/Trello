@@ -15,7 +15,6 @@ function CardIndexItem (props) {
     useEffect(() => {
         props.fetchAllCardComments(props.card.id).then(res => {
             setComments(Object.values(res.comments))
-            debugger
         })
         
         
