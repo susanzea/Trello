@@ -13,6 +13,7 @@ function BoardsIndex(props) {
             </header>
             
             {/* // TODO: refactor board list into separate component since it's repeated code  */}
+
             <ul className="boards-index-list">
                 {
                     props.boards.map((board, idx) => {
@@ -23,14 +24,14 @@ function BoardsIndex(props) {
                         board={board} />
                     })
                 }
+                <button className="boards-index-button" 
+                    id="reveal-board-form"
+                    onClick={() => openCreateBoardModal(true) }
+                >
+                    Create new board
+                </button>
             </ul>
 
-            <button className="boards-index-button" 
-                id="reveal-board-form"
-                onClick={() => openCreateBoardModal(true) }
-            >
-                Create new board
-            </button>
 
             { createBoardModalOpen && 
                 <CreateBoardModal 

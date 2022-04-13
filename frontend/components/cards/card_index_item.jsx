@@ -8,7 +8,7 @@ function CardIndexItem (props) {
     const [cardModalOpen, openModal] = useState(false);
 
     // ? need to fetch comments so that I have access to count for icon. need to then make sure to not fetch them again later.
-    const [numComments, setNum] = useState(0);
+    // const [numComments, setNum] = useState(0);
     const [comments, setComments] = useState([]);
 
 
@@ -22,11 +22,11 @@ function CardIndexItem (props) {
     }, []);
     // console.log(comments.length)
 
-    useEffect(() => {
-        setNum(comments.length)
+    // useEffect(() => {
+    //     setNum(comments.length)
 
-    }, [])
-    console.log(numComments)
+    // }, [])
+    // // console.log(numComments)
 
     return (
             <div className='card-index-item'>
@@ -38,10 +38,12 @@ function CardIndexItem (props) {
                     className='card-edit' 
                     onClick={() => openModal(true) }
                 >✎</button>
-                <div className='comment-count-sec'>
-                    <img src={window.comment_bubble} alt="card comment count bubble icon" />
-                    <p>{comments.length}</p>
-                </div>
+                { comments.length > 0 && 
+                    <div className='comment-count-sec'>
+                        <img src={window.comment_bubble} alt="card comment count bubble icon" />
+                        <p>{comments.length}</p>
+                    </div>
+                }
                 { cardModalOpen && <CardModal card={props.card}
                     list={props.list}
                     editCard={props.editCard}
