@@ -17,6 +17,19 @@ class CommentsIndexItem extends React.Component {
 
     componentDidMount() {
         this.props.fetchCommentUser(this.state.user_id);
+        // console.log(this.props.comment)
+    }
+
+    componentDidUpdate(prevProps) {
+        if (this.props.comment.id !== prevProps.comment.id) {
+            console.log(this.props.comment)
+            this.setState({ 
+                id: this.props.comment.id,
+                body: this.props.comment.body,
+                user_id: this.props.comment.user_id,
+                card_id: this.props.comment.card_id 
+            })
+        }
     }
 
      handleChange(e) {
@@ -29,9 +42,11 @@ class CommentsIndexItem extends React.Component {
     }
 
     toggle(e) {
-        if (e.target.className === "reveal-comment-edit-form") {
-            $(e.target).hide();
-            $(e.target).siblings().show();
+        debugger
+        if (e.target.className === 'reveal-comment-edit-form edit-comment') {
+            debugger
+            $(e.target.parentElement).hide();
+            $(e.target.parentElement).siblings().show();
             $(e.target).prev().hide();
             $(e.target).next().hide();
         } else if (e.target.className === "save-edited-comment") {
@@ -47,6 +62,7 @@ class CommentsIndexItem extends React.Component {
 
     render() {
         // * fix delete bug
+        // console.log(this.props.comment)
 
         return (
         <div className='comment-index-item'>

@@ -21,9 +21,11 @@ class CardCommentsIndex extends React.Component {
 
         if (prevProps.comments.length !== this.props.comments.length) {
             debugger
-            this.props.fetchAllCardComments(this.props.card.id)
-            // this.setState({ comments: this.props.comments })
+            // console.log(this.props.comments)
+            // this.props.fetchAllCardComments(this.props.card.id)
+            this.setState({ comments: this.props.comments })
         }
+
     }
 
     render() {
@@ -31,13 +33,12 @@ class CardCommentsIndex extends React.Component {
             return <p>loading comments</p>
         }
 
-        console.log(this.props.comments)
-
         return (
             <ul className='comments-index'>
                 {
-                    this.props.comments.map((comment, idx) => {
-                        return <CommentsIndexItemContainer comment={comment} key={idx} />
+                    this.state.comments.map((comment, idx) => {
+                        // console.log(this.state.comments)
+                        return <CommentsIndexItemContainer comment={comment} />
                     })
                 }
             </ul>

@@ -21,7 +21,7 @@
     min-width: 250px;
     width: 650px;
     min-height: 600px;
-    height: 600px;
+    // height: 600px;
     margin-top: 38px;
     margin-left: 7px;
     margin-right: 7px;
@@ -30,7 +30,7 @@
     border-radius: 2px;
     z-index: 2;
     font-weight: normal;
-    position: relative;
+    position: absolute;
 }
 
 .close-card-modal {
