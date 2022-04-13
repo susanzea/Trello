@@ -9,6 +9,7 @@ const commentsReducer = (prevState = {}, action) => {
 
     switch (action.type) {
         case RECEIVE_CARD_COMMENTS:
+            // comments accr=urately being fetched
             return action.comments;
         case RECEIVE_CARD_COMMENT:
             nextState[action.comment.id] = action.comment

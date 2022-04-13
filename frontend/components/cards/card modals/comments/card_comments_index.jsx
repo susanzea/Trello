@@ -20,7 +20,6 @@ class CardCommentsIndex extends React.Component {
             <ul className='comments-index'>
                 {
                     this.props.comments.map((comment, idx) => {
-                        debugger
                         return <CommentsIndexItemContainer comment={comment} key={idx} />
                     })
                 }

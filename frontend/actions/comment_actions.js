@@ -58,7 +58,6 @@ export const createComment = (comment) => (dispatch) => {
 }
 
 export const destroyComment = (commentId) => (dispatch) => {
-    debugger
     return deleteComment(commentId)
         .then(() => dispatch(removeCardComment(commentId)));
 }

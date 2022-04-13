@@ -4,12 +4,8 @@ import { fetchAllCardComments } from "../../actions/comment_actions";
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state) => {
-    if (!state.entities.comments) {
-        return null;
-    }
-
     return {
-        comments: Object.values(state.entities.comments)
+        numComments: Object.values(state.entities.comments).length
     }
 }
 

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const LogoHomeButton = (props) => {
     // TODO: clicking on home button should fetch boards for first workspace
-    debugger
 
     return (
         <Link id='main-logo' to={`/home`}>
