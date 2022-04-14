@@ -43,7 +43,6 @@ export const removeCardComment = (commentId) => {
 
 //thunk action creators
 export const fetchAllCardComments = (cardId) => (dispatch) => {
-    debugger
     return getAllCardComments(cardId)
         .then(comments => dispatch(receiveCardComments(comments)));
 }

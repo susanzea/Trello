@@ -15,12 +15,7 @@ class CardCommentsIndex extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState) {
-        const compare = prevProps.comments.length !== this.props.comments.length
-        const curr = prevProps.comments !== this.props.comments
-        debugger
-
         if (prevProps.comments.length !== this.props.comments.length) {
-            debugger
             // console.log(this.props.comments)
             // this.props.fetchAllCardComments(this.props.card.id)
             this.setState({ comments: this.props.comments })

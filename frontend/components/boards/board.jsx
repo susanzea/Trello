@@ -3,6 +3,7 @@ import { Redirect } from 'react-router';
 import MainNavBar from '../navbars/mainNavBar/main_nav_bar';
 import ListIndex from '../lists/list_index';
 import BoardTitleForm from './board_title_form';
+import { prefetch } from 'webpack';
 
 class Board extends React.Component {
     constructor(props) {
@@ -12,8 +13,20 @@ class Board extends React.Component {
     }
 
     componentDidMount() {
+        debugger
         this.props.fetchWorkspaceBoard(parseInt(this.props.boardId))
+        debugger
     }
+
+    // componentDidUpdate(prevProps) {
+    //     debugger
+    //      if (this.props.board && (prevProps.workspace === this.props.workspace)) {
+    //         debugger
+    //         this.props.fetchUserWorkspace(parseInt(this.props.board.workspace_id))
+    //     }
+        
+    //     debugger
+    // }
 
     handleBoardDelete() {
         this.props.destroyBoard(this.props.boardId);

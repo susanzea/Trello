@@ -21,8 +21,9 @@ class CommentsIndexItem extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
+        // debugger
         if (this.props.comment.id !== prevProps.comment.id) {
-            console.log(this.props.comment)
+            // console.log(this.props.comment)
             this.setState({ 
                 id: this.props.comment.id,
                 body: this.props.comment.body,
@@ -37,18 +38,17 @@ class CommentsIndexItem extends React.Component {
     }  
     
     handleSubmit(e) {
+        // debugger
         e.preventDefault();
         this.props.editComment(this.state);
     }
 
     toggle(e) {
-        debugger
         if (e.target.className === 'reveal-comment-edit-form edit-comment') {
-            debugger
             $(e.target.parentElement).hide();
             $(e.target.parentElement).siblings().show();
-            $(e.target).prev().hide();
-            $(e.target).next().hide();
+            $(e.target.parentElement).prev().hide();
+            // $(e.target).next().hide();
         } else if (e.target.className === "save-edited-comment") {
             $(e.target.parentElement).hide();
             $(e.target.parentElement).siblings().show();
@@ -93,7 +93,7 @@ class CommentsIndexItem extends React.Component {
                     style={{display: "none"}}
                 >
                     <input type="text"
-                        id='comment-edit-form-input'
+                        className='comment-edit-form-input'
                         placeholder="You haven't typed anything!"
                         value={this.state.body}
                         onChange={this.handleChange}

@@ -15,9 +15,7 @@ const commentsReducer = (prevState = {}, action) => {
             nextState[action.comment.id] = action.comment
             return nextState;
         case REMOVE_CARD_COMMENT:
-            debugger
             delete nextState[action.commentId]
-
             return nextState;
         default:
             return prevState;

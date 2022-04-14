@@ -226,6 +226,14 @@
     width: 100%;
 }
 
+.comment-index-item-main {
+    width: 100%;
+}
+
+.comment-body {
+    width: 93.2%;
+}
+
 // .card-comment-form-buttons {
 //     display: flex;
     
@@ -352,6 +360,54 @@
         padding: 3px 3px; 
     }
 }
+
+
+.comment-edit-form {
+        height: 85px;
+        width: 97%;
+        border-radius: 3px;
+        background-color: white;
+        border: #ccd1e0 1px solid;
+        box-shadow: 0 4px 6px #d5d6d8;
+
+
+        .comment-edit-form-input {
+            width: 95%;
+            border: none;
+            border-radius: 3px;
+            padding: 10px 12px 10px 12px;
+            color: #6b788e;
+            background-color: white;
+            font-size: 14px;
+            letter-spacing: 0.015rem;
+            margin-bottom: 9px;
+        }
+
+        .comment-edit-form-input:focus {
+            outline: none;
+        }
+
+        .save-edited-comment {
+            height: 32px;
+            width: 55px;
+            color: white;
+            border: none;
+            background-color: #0179bf;
+            border-radius: 2px;
+            margin-left: 11px;
+        }
+
+        .hide-comment-edit-form {
+            position: relative;
+            color: #5e6c84;
+            font-weight: lighter;
+            font-size: 20px;
+            background-color: transparent;
+            border: none;
+            margin-left: 9px;
+            top: 3px;
+        }
+    }
 
 .edit-comment, .delete-comment {
     color: #5e6c84;

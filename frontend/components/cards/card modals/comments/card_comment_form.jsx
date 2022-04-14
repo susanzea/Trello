@@ -48,7 +48,6 @@ class CardCommentForm extends React.Component {
                     <img src={window.generic_user_icon} alt="generic user icon" />
                 </div>
                 <div className='new-comment-main'>
-                    <p className='commenter-name'>{this.props.commenter.full_name}</p>
                     <button className="reveal-card-comment-form" 
                         onClick={this.toggle} 
                         type='submit'>
