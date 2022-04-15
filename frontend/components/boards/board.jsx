@@ -8,19 +8,19 @@ import { prefetch } from 'webpack';
 class Board extends React.Component {
     constructor(props) {
         super(props);
-        
+
+
         this.handleBoardDelete = this.handleBoardDelete.bind(this);
     }
 
     componentDidMount() {
         debugger
         this.props.fetchWorkspaceBoard(parseInt(this.props.boardId))
-        debugger
     }
 
     // componentDidUpdate(prevProps) {
     //     debugger
-    //      if (this.props.board && (prevProps.workspace === this.props.workspace)) {
+    //      if (this.props.board && (prevProps.workspace[0] === this.props.workspace[0])) {
     //         debugger
     //         this.props.fetchUserWorkspace(parseInt(this.props.board.workspace_id))
     //     }
@@ -42,6 +42,7 @@ class Board extends React.Component {
             return <p>loading!!</p>
         }
 
+        debugger
         return (
             <>
                 <div className="board">
@@ -51,7 +52,7 @@ class Board extends React.Component {
                             board={this.props.board} 
                             editBoard={this.props.editBoard}
                         />
-                        <p>hi</p>
+                        <p id='board-workspace-title'>workspace title</p>
                         <button 
                             id='delete-board'
                             onClick={this.handleBoardDelete}

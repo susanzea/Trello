@@ -21,7 +21,8 @@ function BoardsIndex(props) {
                         key={board.id+idx} 
                         idx={idx} 
                         destroyBoard={() => props.destroyBoard(board.id)} 
-                        board={board} />
+                        board={board}
+                        workspace={props.workspace} />
                     })
                 }
                 <button className="boards-index-button" 
