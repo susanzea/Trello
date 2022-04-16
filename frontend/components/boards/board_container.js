@@ -10,8 +10,8 @@ const mapStateToProps = (state, ownProps) => {
     return {
         boardId: ownProps.match.params.board_id,
         board: state.entities.boards[ownProps.match.params.board_id],
-        lists: Object.values(state.entities.lists)
-        // workspace: Object.values(state.entities.workspaces)
+        lists: Object.values(state.entities.lists),
+        workspace: Object.values(state.entities.workspaces)
     }
 }
 

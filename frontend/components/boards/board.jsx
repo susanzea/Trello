@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom'
 import MainNavBar from '../navbars/mainNavBar/main_nav_bar';
 import ListIndex from '../lists/list_index';
 import BoardTitleForm from './board_title_form';
@@ -16,6 +17,7 @@ class Board extends React.Component {
     componentDidMount() {
         debugger
         this.props.fetchWorkspaceBoard(parseInt(this.props.boardId))
+        .then(() => this.props.fetchUserWorkspace(parseInt(this.props.board.workspace_id)))
     }
 
     // componentDidUpdate(prevProps) {
@@ -38,9 +40,12 @@ class Board extends React.Component {
 
 
     render() {
+        // console.log(this.props.workspace)
         if (!this.props.board) {
             return <p>loading!!</p>
         }
+
+        console.log(this.props.workspace.length !== 0 ? this.props.workspace.filter(ws => this.props.board.workspace_id === ws.id)[0].id : "no ws")
 
         debugger
         return (
@@ -52,7 +57,13 @@ class Board extends React.Component {
                             board={this.props.board} 
                             editBoard={this.props.editBoard}
                         />
-                        <p id='board-workspace-title'>workspace title</p>
+                        <Link
+                            id='board-workspace-title'
+                            to={`/workspaces/${this.props.workspace.length !== 0 ? this.props.workspace.filter(ws => this.props.board.workspace_id === ws.id)[0].id : "no ws"}/boards`}
+                        >
+                            {this.props.workspace.length !== 0 ? this.props.workspace.filter(ws => this.props.board.workspace_id === ws.id)[0].title : "no ws"}
+                        </Link>
+                        {/* <p id='board-workspace-title'>{this.props.workspace.length !== 0 ? this.props.workspace.filter(ws => this.props.board.workspace_id === ws.id)[0].title : "no ws"}</p> */}
                         <button 
                             id='delete-board'
                             onClick={this.handleBoardDelete}
