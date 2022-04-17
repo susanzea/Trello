@@ -6,7 +6,7 @@ class WorkspacesIndex extends React.Component {
         super(props);
 
         this.state = {
-            selected: 0
+            selected: props.workspace.id,
         }
 
         this.setSelected = this.setSelected.bind(this);

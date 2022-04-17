@@ -19,7 +19,17 @@ const WorkspaceIndexItem = (props) => {
     
 
     // TODO: set selected based on url, default should be first workspace
+    // on mount should fetch the workspace based on url and highlight that idx if the id matches
     const selected = props.selected === props.idx
+
+    // const [workspace, setWorkspace] = useState(0);
+
+
+    // useEffect(() => {
+    //     props.fetchUserWorkspace(props.workspace.id).then(res => {
+    //         setWorkspace(Object.values(res.workspace))
+    //     })
+    // }, []);
     
     
     return(
