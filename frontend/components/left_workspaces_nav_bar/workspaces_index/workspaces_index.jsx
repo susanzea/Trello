@@ -4,20 +4,35 @@ import WorkspaceIndexItem from "./workspaces_index_item";
 class WorkspacesIndex extends React.Component {
     constructor(props) {
         super(props);
+        // debugger
 
+    // if (props.pathname === '/home') {
+    //     let pathnameWildcard = NaN
+    //     debugger
+    // } else {
+    //     let pathnameWildcard = parseInt(props.pathname.slice(12,-7))
+    //     debugger
+    // }
+
+    debugger
         this.state = {
-            selected: props.workspace.id,
+            selected: parseInt(props.pathname.slice(12,-7))
         }
+
+        // debugger
 
         this.setSelected = this.setSelected.bind(this);
     }
 
     componentDidMount() {
+        // debugger
         this.props.fetchAllUserWorkspaces(this.props.userId)
+        // .then(() => this.props.fetchUserWorkspace(selectedWorkspaceId))
     }
 
-    setSelected(idx) {
-        this.setState({ selected: idx })
+    setSelected(id) {
+        debugger
+        this.setState({ selected: id })
     }
 
     render() {
@@ -25,6 +40,7 @@ class WorkspacesIndex extends React.Component {
             return <p>You don't have any workspaces.</p>
         }
 
+        debugger
         return(
             <ul className="workspaces-index">
                 {

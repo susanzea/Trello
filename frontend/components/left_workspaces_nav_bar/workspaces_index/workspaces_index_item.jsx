@@ -4,6 +4,7 @@ import DeleteWorkspaceItemModal from './delete_workspace_item_modal'
 import EditWorkspaceItemModal from './edit_workspace_item_modal';
 
 const WorkspaceIndexItem = (props) => {
+    debugger
     const [dropDownMenuOpen, openDropDownMenu] = useState(false);
     const [deleteModalOpen, openDeleteModal] = useState(false);
     const [editModalOpen, openEditModal] = useState(false);
@@ -20,7 +21,7 @@ const WorkspaceIndexItem = (props) => {
 
     // TODO: set selected based on url, default should be first workspace
     // on mount should fetch the workspace based on url and highlight that idx if the id matches
-    const selected = props.selected === props.idx
+    const selected = props.selected === props.workspace.id
 
     // const [workspace, setWorkspace] = useState(0);
 
@@ -35,7 +36,7 @@ const WorkspaceIndexItem = (props) => {
     return(
         <div className='workspaces-index-container'>
             <Link className={`${selected ? "selected" : "notSelected"} workspaces-index-item`}
-                onClick={() => props.setSelected(props.idx)}
+                onClick={() => props.setSelected(props.workspace.id)}
                 to={{
                     state: {
                         workspace: props.workspace

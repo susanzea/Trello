@@ -15,7 +15,7 @@ class Board extends React.Component {
     }
 
     componentDidMount() {
-        debugger
+        // debugger
         this.props.fetchWorkspaceBoard(parseInt(this.props.boardId))
         .then(() => this.props.fetchUserWorkspace(parseInt(this.props.board.workspace_id)))
     }
@@ -47,7 +47,7 @@ class Board extends React.Component {
 
         console.log(this.props.workspace.length !== 0 ? this.props.workspace.filter(ws => this.props.board.workspace_id === ws.id)[0].id : "no ws")
 
-        debugger
+        // debugger
         return (
             <>
                 <div className="board">

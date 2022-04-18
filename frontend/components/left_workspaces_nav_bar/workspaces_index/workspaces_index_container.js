@@ -1,12 +1,25 @@
 import { connect } from "react-redux";
 import WorkspacesIndex from "./workspaces_index";
+import { withRouter } from 'react-router-dom'
 import { fetchAllUserWorkspaces, fetchUserWorkspace, destroyWorkspace, editWorkspace } from "../../../actions/workspace_actions";
 
 const mapStateToProps = (state, ownProps) => {
     debugger
+
+    // if (ownProps.location.pathname === '/home') {
+    //     let pathnameWildcard = NaN
+    //     debugger
+    // } else {
+    //     let pathnameWildcard = parseInt(ownProps.location.pathname.slice(12,-7))
+    //     debugger
+    // }
+    // debugger
+
     return{
         userId: state.entities.users[state.session.id].id,
-        workspaces: Object.values(state.entities.workspaces)
+        workspaces: Object.values(state.entities.workspaces),
+        pathname: ownProps.location.pathname
+        // selectedWorkspaceId: pathnameWildcard
     }
 }
 
@@ -19,4 +32,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(WorkspacesIndex);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(WorkspacesIndex));
