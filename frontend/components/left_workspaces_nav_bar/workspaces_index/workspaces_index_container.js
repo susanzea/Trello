@@ -15,7 +15,6 @@ const mapStateToProps = (state, ownProps) => {
     // }
     // debugger
 
-    debugger
     return{
         userId: state.session.id,
         workspaces: Object.values(state.entities.workspaces),

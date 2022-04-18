@@ -1,18 +1,17 @@
 import React from 'react';
 
-class UserMenu extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+function UserMenu(props) {
+    // constructor(props) {
+    //     super(props);
+    // }
 
-    render() {
-        // TODO: refactor full name in signup form to have two fields
-        return (
+    debugger
+    return (
             <div id="logged-in-user-icon">
-                DU
+                { this.props.currentUser.full_name.slice(0,1).toUpperCase() }
             </div>
         )
-    }
+    
 }
 
 export default UserMenu;
