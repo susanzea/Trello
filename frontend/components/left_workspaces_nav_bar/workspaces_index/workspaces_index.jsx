@@ -14,7 +14,7 @@ class WorkspacesIndex extends React.Component {
     //     debugger
     // }
 
-    debugger
+    // debugger
         this.state = {
             selected: parseInt(props.pathname.slice(12,-7))
         }
@@ -31,7 +31,7 @@ class WorkspacesIndex extends React.Component {
     }
 
     setSelected(id) {
-        debugger
+        // debugger
         this.setState({ selected: id })
     }
 
@@ -40,7 +40,7 @@ class WorkspacesIndex extends React.Component {
             return <p>You don't have any workspaces.</p>
         }
 
-        debugger
+        // debugger
         return(
             <ul className="workspaces-index">
                 {

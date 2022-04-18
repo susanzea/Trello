@@ -31,10 +31,11 @@ class Board extends React.Component {
     // }
 
     handleBoardDelete() {
+        this.props.history.push(`/workspaces/${this.props.board.workspace_id}/boards`)
         this.props.destroyBoard(this.props.boardId);
         // TODO: after you get access to workspace, redirect to workspace show page that this board was on
-        const location = this.props.history.location.pathname
-        this.props.history.push('/home')
+        // const location = this.props.history.location.pathname
+        // this.props.history.push(`/workspaces/${this.props.board.workspace_id}/boards`)
     }
 
 

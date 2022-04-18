@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom'
 import { fetchAllUserWorkspaces, fetchUserWorkspace, destroyWorkspace, editWorkspace } from "../../../actions/workspace_actions";
 
 const mapStateToProps = (state, ownProps) => {
-    debugger
+    // debugger
 
     // if (ownProps.location.pathname === '/home') {
     //     let pathnameWildcard = NaN
@@ -15,8 +15,9 @@ const mapStateToProps = (state, ownProps) => {
     // }
     // debugger
 
+    debugger
     return{
-        userId: state.entities.users[state.session.id].id,
+        userId: state.session.id,
         workspaces: Object.values(state.entities.workspaces),
         pathname: ownProps.location.pathname
         // selectedWorkspaceId: pathnameWildcard

@@ -9,11 +9,13 @@
 }
 
 .session-header {
+    position: absolute;
+    top: 35px;
     display: flex;
     align-items: center;
     font-size: 48px;
     font-weight: bolder;
-    margin-top: 35px;
+    // margin-top: 35px;
 }
 
 .session-header > img {
@@ -26,6 +28,9 @@
 }
 
 .login-form, .signup-form {
+    position: absolute;
+    top: 86px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,8 +42,14 @@
     margin-top: 35px;
 }
 
+.signup-form {
+    height: 480px;
+}
+
 .login-form {
-    height: 850px;
+    // height: 850px;
+    height: 368px;
+    padding-bottom: 15px;
 }
 
 .session-form-title {

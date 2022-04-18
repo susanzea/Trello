@@ -4,7 +4,7 @@ import DeleteWorkspaceItemModal from './delete_workspace_item_modal'
 import EditWorkspaceItemModal from './edit_workspace_item_modal';
 
 const WorkspaceIndexItem = (props) => {
-    debugger
+    // debugger
     const [dropDownMenuOpen, openDropDownMenu] = useState(false);
     const [deleteModalOpen, openDeleteModal] = useState(false);
     const [editModalOpen, openEditModal] = useState(false);

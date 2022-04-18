@@ -40,17 +40,35 @@
         border: none;
         border-radius: 3px;
         right: 10px;
+        padding: 5.5px 10px 3px;
 
         &:hover {
             background-color: #606a7584;
         }
 
         img {
-            height: 18px;
+            height: 19px;
             filter: invert(100%);
         }
     }
 
+}
+
+#board-workspace-title {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 8px 16px;
+    position: absolute;
+    background-color: #4f586184;
+    border: none;
+    border-radius: 3px;
+    right: 59px;
+
+    &:hover {
+        background-color: #606a7584;
+    }
 }
 
 // .board #main-nav-bar {
