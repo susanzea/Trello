@@ -4,7 +4,7 @@ import {
     postComment, 
     deleteComment,
     patchComment,
-    getCommentUser
+    getUser
 } from '../util/comment_api_util';
 
 

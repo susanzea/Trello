@@ -1,20 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-function UserMenu(props) {
+function UserMenu (props) {
     // constructor(props) {
     //     super(props);
     // }
-
+    const [currentUser, setFullName] = useState([])
     debugger
+
+    // TODO: not hitting useEffect
+    useEffect(() => {
+        debugger
+        props.fetchUser(props.currentUserId).then(res => {
+            debugger
+            setFullName(Object.values(res.user))
+        })
+        
+    }, []);
+
+    // console.log(props.currentUser)
+    // debugger
     return (
             <div id="logged-in-user-icon">
-                { this.props.currentUser.full_name.slice(0,1).toUpperCase() }
+                { currentUser.full_name.slice(0,1).toUpperCase() }
             </div>
         )
     
 }
 
 export default UserMenu;
-
-// { this.props.currentUser.full_name.slice(0, 1).toUpperCase() }
-// { this.props.currentUser.full_name.split(" ")[1].slice(0, 1).toUpperCase() }

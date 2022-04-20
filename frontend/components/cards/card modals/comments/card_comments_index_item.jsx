@@ -3,12 +3,13 @@ import React from 'react';
 class CommentsIndexItem extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
             id: props.comment.id,
             body: props.comment.body,
             user_id: props.comment.user_id,
             card_id: props.comment.card_id,
-            body_two: props.comment.body
+            body_copy: props.comment.body
         }
 
         this.handleChange = this.handleChange.bind(this);
@@ -17,19 +18,19 @@ class CommentsIndexItem extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchCommentUser(this.state.user_id);
+        this.props.fetchUser(this.state.user_id);
         // console.log(this.props.comment)
     }
 
     componentDidUpdate(prevProps) {
-        // debugger
         if (this.props.comment.id !== prevProps.comment.id) {
             // console.log(this.props.comment)
             this.setState({ 
                 id: this.props.comment.id,
                 body: this.props.comment.body,
                 user_id: this.props.comment.user_id,
-                card_id: this.props.comment.card_id 
+                card_id: this.props.comment.card_id,
+                body_copy: this.props.comment.body
             })
         }
 
@@ -49,7 +50,6 @@ class CommentsIndexItem extends React.Component {
     }  
     
     handleSubmit(e) {
-        // debugger
         e.preventDefault();
         this.props.editComment(this.state);
     }
@@ -67,7 +67,7 @@ class CommentsIndexItem extends React.Component {
             $(e.target.parentElement).hide();
             $(e.target.parentElement).siblings().show();
         } else if (e.target.className === "hide-comment-edit-form") {
-            this.setState({ body: this.state.body2 })
+            this.setState({ body: this.state.body_copy })
             $(e.target.parentElement).hide();
             $(e.target.parentElement).siblings().show();
         }

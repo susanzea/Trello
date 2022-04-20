@@ -11,13 +11,14 @@ import QuickSignup from './SplashPage/quick_signup';
 import LeftWorkspacesNavBarContainer from './left_workspaces_nav_bar/left_workspaces_nav_bar_container';
 import WorkspacesImage from './workspaces_image';
 import BoardContainer from './boards/board_container';
+import WorkspacesLanding from './workspaces_landing';
 
 const App = () => {
     return(
         <>
             <ProtectedRoute path="/home" component={LeftWorkspacesNavBarContainer} />
             <ProtectedRoute path="/workspaces" component={LeftWorkspacesNavBarContainer} />
-            <ProtectedRoute exact path="/home" component={WorkspacesImage} />
+            <ProtectedRoute exact path="/home" component={WorkspacesLanding} />
             <ProtectedRoute path="/workspaces" component={MainNavBarContainer} />
             <ProtectedRoute path="/home" component={MainNavBarContainer} />
             

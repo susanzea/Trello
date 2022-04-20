@@ -1,7 +1,7 @@
 import React from 'react';
 import { Redirect } from 'react-router';
 import { Link } from 'react-router-dom'
-import MainNavBar from '../navbars/mainNavBar/main_nav_bar';
+import MainNavBar from '../navbars/mainNavBar/main_nav_bar_container';
 import ListIndex from '../lists/list_index';
 import BoardTitleForm from './board_title_form';
 import { prefetch } from 'webpack';
@@ -15,19 +15,15 @@ class Board extends React.Component {
     }
 
     componentDidMount() {
-        // debugger
         this.props.fetchWorkspaceBoard(parseInt(this.props.boardId))
         .then(() => this.props.fetchUserWorkspace(parseInt(this.props.board.workspace_id)))
     }
 
     // componentDidUpdate(prevProps) {
-    //     debugger
     //      if (this.props.board && (prevProps.workspace[0] === this.props.workspace[0])) {
-    //         debugger
     //         this.props.fetchUserWorkspace(parseInt(this.props.board.workspace_id))
     //     }
         
-    //     debugger
     // }
 
     handleBoardDelete() {
@@ -48,7 +44,6 @@ class Board extends React.Component {
 
         console.log(this.props.workspace.length !== 0 ? this.props.workspace.filter(ws => this.props.board.workspace_id === ws.id)[0].id : "no ws")
 
-        // debugger
         return (
             <>
                 <div className="board">

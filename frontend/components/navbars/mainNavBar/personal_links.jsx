@@ -10,7 +10,7 @@ const personalLinks = (props) => {
                 <img id="github" src={window.github} alt="github link" />
             </a>
             <a href="https://github.com/susanzea/trelloh">
-                <img id="source" src={window.source} alt="source code link" />
+                <img id="source" src={window.source} alt="portfolio link" />
             </a>
         </div>
     )

@@ -2,14 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import LogoHomeButton  from './logo_home_button'
 import SearchBar  from './search_bar'
-import UserMenu from './user_menu';
+import UserMenu from './user_menu_container';
 import PersonalLinks from './personal_links';
 
 class MainNavBar extends React.Component {
     constructor(props) {
         super(props);
     }
-
 
     render(){
         return (

@@ -35,6 +35,8 @@ class LoginForm extends React.Component {
 
     handleDemoUser(e) {
         e.preventDefault();
+        this.setState({ email: 'demo@user.com' })
+        this.setState({ password: 'password' })
         const user = ({
             username: 'demo_user',
             email: 'demo@user.com',
@@ -42,6 +44,7 @@ class LoginForm extends React.Component {
             password: 'password'
         });
         this.props.login(user);
+        // this.handleSubmit(e);
     }
 
 
