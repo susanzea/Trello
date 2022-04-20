@@ -84,7 +84,15 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
-        extensions: ['.js', '.jsx', '*']
+        extensions: ['.js', '.jsx', '*'],
+        fallback: {
+            "fs": false,
+            "child_process": false,
+            "worker_threads": false,
+            "uglify-js": false,
+            "@swc/core": false,
+            "esbuild": false
+        }
     },
     module: {
         rules: [
