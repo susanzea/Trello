@@ -1,6 +1,6 @@
 import { 
     // RECEIVE_CURRENT_USER, 
-    RECEIVE_COMMENT_USER } from "../actions/user_actions";
+    RECEIVE_USER } from "../actions/user_actions";
 
 const usersReducer = (prevState={}, action) => {
     Object.freeze(prevState);
@@ -10,7 +10,7 @@ const usersReducer = (prevState={}, action) => {
         //     nextState = {};
         //     nextState[action.user.id] = action.user;
         //     return nextState;
-        case RECEIVE_COMMENT_USER:
+        case RECEIVE_USER:
             nextState = {};
             nextState[action.user.id] = action.user;
             return nextState;
