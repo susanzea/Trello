@@ -32,7 +32,7 @@
     "@babel/preset-env": "^7.16.5",
     "@babel/preset-react": "^7.16.5",
     "@fortawesome/fontawesome-svg-core": "^6.1.0",
-    "@fortawesome/react-fontawesome": "^0.1.18",
+    "@fortawesome/free-solid-svg-icons": "^6.1.0",
     "babel-loader": "^8.2.3",
     "classnames": "^2.3.1",
     "module": "^1.2.5",
