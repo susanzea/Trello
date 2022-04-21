@@ -26,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/susanzea/Trelloh/issues"
   },
-  "homepage": "https://trelloh.herokuapp.com/",
+  "homepage": "https://github.com/susanzea/Trelloh#readme",
   "dependencies": {
     "@babel/core": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
