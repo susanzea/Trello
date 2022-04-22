@@ -10,7 +10,7 @@
     <%= javascript_include_tag 'application' %>
 
 <%# attaching images to window %>
-    <script type="text/javascript">
+    <script type="text/babel">
       window.trelloh_logo_url = "<%= image_url('navbar/trelloh-logo.png') %>"
       window.trelloh_logo_main_url = "<%= image_url('navbar/main_nav_bar/trelloh-logo-main.png') %>"
       window.session_left = "<%= image_url('session_forms/left.png') %>"
@@ -36,7 +36,7 @@
 
 <%# setting current user %>
     <% if current_user %>
-      <script type="text/javascript">
+      <script type="text/babel">
         window.currentUser = <%= render(
         "api/users/user.json.jbuilder",
         user: current_user
