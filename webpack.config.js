@@ -74,7 +74,6 @@
 
 const path = require('path');
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
-// ? ask about polyfill error
 
 module.exports = {
     context: __dirname,
@@ -84,15 +83,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
-        extensions: ['.js', '.jsx', '*'],
-        fallback: {
-            "fs": false,
-            "child_process": false,
-            "worker_threads": false,
-            "uglify-js": false,
-            "@swc/core": false,
-            "esbuild": false
-        }
+        extensions: ['.js', '.jsx', '*']
     },
     module: {
         rules: [
