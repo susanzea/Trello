@@ -3,12 +3,12 @@ import React, { useState, useEffect } from 'react';
 function UserMenu (props) {
 
     const [currentUser, setCurrentUser] = useState('')
-    debugger
+    // debugger
 
     // TODO: not hitting useEffect
     useEffect(() => {
         props.fetchUser(props.currentUserId).then(res => {
-            debugger
+            // debugger
             setCurrentUser(res.user.full_name.slice(0,1))
             console.log(currentUser)
         })
