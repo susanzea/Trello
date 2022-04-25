@@ -42,7 +42,7 @@ class Board extends React.Component {
             return <p>loading!!</p>
         }
 
-        console.log(this.props.workspace.length !== 0 ? this.props.workspace.filter(ws => this.props.board.workspace_id === ws.id)[0].id : "no ws")
+        // console.log(this.props.workspace.length !== 0 ? this.props.workspace.filter(ws => this.props.board.workspace_id === ws.id)[0].id : "no ws")
 
         return (
             <>

@@ -10,7 +10,7 @@ function UserMenu (props) {
         props.fetchUser(props.currentUserId).then(res => {
             // debugger
             setCurrentUser(res.user.full_name.slice(0,1))
-            console.log(currentUser)
+            // console.log(currentUser)
         })
         
     }, []);
