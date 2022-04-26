@@ -84,16 +84,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
-        extensions: ['.js', '.jsx', '*'],
-        fallback: {
-            "fs": false,
-            "child_process": false,
-            "worker_threads": false,
-            "uglify-js": false,
-            "@swc/core": false,
-            "esbuild": false,
-            "inspector": false
-        }
+        extensions: ['.js', '.jsx', '*']
     },
     module: {
         rules: [
@@ -125,10 +116,23 @@ module.exports = {
     devtool: 'source-map',
     plugins: [
         new NodePolyfillPlugin(),
-        new webpack.ContextReplacementPlugin(/jest-worker/),
-        new webpack.ContextReplacementPlugin(/lazy-debug-legacy/),
-        new webpack.ContextReplacementPlugin(/loader-runner/),
-        new webpack.ContextReplacementPlugin(/terser-webpack-plugin/),
-        new webpack.ContextReplacementPlugin(/webpack/)
     ]
 };
+
+
+
+//  fallback: {
+//             "fs": false,
+//             "child_process": false,
+//             "worker_threads": false,
+//             "uglify-js": false,
+//             "@swc/core": false,
+//             "esbuild": false,
+//             "inspector": false
+//         }
+
+//  new webpack.ContextReplacementPlugin(/jest-worker/),
+//         new webpack.ContextReplacementPlugin(/lazy-debug-legacy/),
+//         new webpack.ContextReplacementPlugin(/loader-runner/),
+//         new webpack.ContextReplacementPlugin(/terser-webpack-plugin/),
+        // new webpack.ContextReplacementPlugin(/webpack/)
