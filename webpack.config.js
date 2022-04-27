@@ -76,6 +76,7 @@ const path = require('path');
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 module.exports = {
+    mode: 'production',
     stats: { errorDetails: true },
     context: __dirname,
     entry: './frontend/trelloh.jsx',
