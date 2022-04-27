@@ -84,7 +84,16 @@ module.exports = {
         filename: 'bundle.js'
     },
     resolve: {
-        extensions: ['.js', '.jsx', '*']
+        extensions: ['.js', '.jsx', '*'],
+         fallback: {
+            "fs": false,
+            "child_process": false,
+            "worker_threads": false,
+            "uglify-js": false,
+            "@swc/core": false,
+            "esbuild": false,
+            "inspector": false
+        }
     },
     module: {
         rules: [
@@ -121,15 +130,7 @@ module.exports = {
 
 
 
-//  fallback: {
-//             "fs": false,
-//             "child_process": false,
-//             "worker_threads": false,
-//             "uglify-js": false,
-//             "@swc/core": false,
-//             "esbuild": false,
-//             "inspector": false
-//         }
+
 
 //  new webpack.ContextReplacementPlugin(/jest-worker/),
 //         new webpack.ContextReplacementPlugin(/lazy-debug-legacy/),
