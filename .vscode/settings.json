@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/b3b677a4-9290-44df-a8d2-d56ba9cb4ff5/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/trelloh",
+    "appService.deploySubpath": "."
+}
