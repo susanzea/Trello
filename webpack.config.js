@@ -123,16 +123,15 @@ module.exports = {
     },
     devtool: 'source-map',
     plugins: [
-        new NodePolyfillPlugin(),
-        new webpack.ContextReplacementPlugin(/jest-worker/),
-        new webpack.ContextReplacementPlugin(/lazy-debug-legacy/),
-        new webpack.ContextReplacementPlugin(/loader-runner/),
-        new webpack.ContextReplacementPlugin(/terser-webpack-plugin/),
-        new webpack.ContextReplacementPlugin(/webpack/)
+        new NodePolyfillPlugin()
     ]
 };
 
-
+// new webpack.ContextReplacementPlugin(/jest-worker/),
+//         new webpack.ContextReplacementPlugin(/lazy-debug-legacy/),
+//         new webpack.ContextReplacementPlugin(/loader-runner/),
+//         new webpack.ContextReplacementPlugin(/terser-webpack-plugin/),
+//         new webpack.ContextReplacementPlugin(/webpack/)
 
 
 
