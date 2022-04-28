@@ -84,17 +84,11 @@ module.exports = {
         path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
         filename: 'bundle.js'
     },
+    optimization: {
+        runtimeChunk: true,
+    },
     resolve: {
-        extensions: ['.js', '.jsx', '*'],
-         fallback: {
-            "fs": false,
-            "child_process": false,
-            "worker_threads": false,
-            "uglify-js": false,
-            "@swc/core": false,
-            "esbuild": false,
-            "inspector": false
-        }
+        extensions: ['.js', '.jsx', '*']
     },
     module: {
         rules: [
@@ -129,7 +123,15 @@ module.exports = {
 };
 
 
-
+// fallback: {
+//             "fs": false,
+//             "child_process": false,
+//             "worker_threads": false,
+//             "uglify-js": false,
+//             "@swc/core": false,
+//             "esbuild": false,
+//             "inspector": false
+//         }
 
 
 //  new webpack.ContextReplacementPlugin(/jest-worker/),
