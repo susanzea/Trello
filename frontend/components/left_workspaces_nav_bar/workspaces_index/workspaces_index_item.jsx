@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { withRouter, Link } from 'react-router-dom'
-import DeleteWorkspaceItemModal from './delete_workspace_item_modal'
+import DeleteWorkspaceItemModal from './delete_workspace_item_modal_container'
 import EditWorkspaceItemModal from './edit_workspace_item_modal';
 
 const WorkspaceIndexItem = (props) => {
     const [dropDownMenuOpen, openDropDownMenu] = useState(false);
     const [deleteModalOpen, openDeleteModal] = useState(false);
     const [editModalOpen, openEditModal] = useState(false);
+    debugger
 
     const colorOptions = {
         0: "#cb5223",
@@ -84,6 +85,7 @@ const WorkspaceIndexItem = (props) => {
                 destroyWorkspace={() => props.destroyWorkspace(props.workspace.id)}
                 openDeleteModal={openDeleteModal}
                 workspace={props.workspace}
+                history={props.history}
             />}
 
             { editModalOpen && <EditWorkspaceItemModal workspace={props.workspace}

@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 class DeleteWorkspaceItemModal extends React.Component {
 
     constructor(props) {
         super(props);
+        debugger
 
         this.state = {
             input_workspace_title: ''
@@ -19,6 +20,7 @@ class DeleteWorkspaceItemModal extends React.Component {
     
     handleSubmit(e) {
         e.preventDefault();
+        this.props.history.push(`/home`)
         this.props.destroyWorkspace(this.props.workspace.id);
     }
 

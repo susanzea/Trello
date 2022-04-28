@@ -10,7 +10,7 @@ class Board extends React.Component {
     constructor(props) {
         super(props);
 
-
+        debugger
         this.handleBoardDelete = this.handleBoardDelete.bind(this);
     }
 

@@ -10,7 +10,6 @@ export const receiveUser = (user) => {
 }
 
 export const fetchUser = (userId) => (dispatch) => {
-    // debugger
     return getUser(userId)
         .then(user => dispatch(receiveUser(user)));
 }
