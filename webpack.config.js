@@ -125,6 +125,11 @@ module.exports = {
     },
     plugins: [
         new NodePolyfillPlugin(),
+        new webpack.ContextReplacementPlugin(/jest-worker/),
+        new webpack.ContextReplacementPlugin(/lazy-debug-legacy/),
+        new webpack.ContextReplacementPlugin(/loader-runner/),
+        new webpack.ContextReplacementPlugin(/terser-webpack-plugin/),
+        new webpack.ContextReplacementPlugin(/webpack/)
     ]
 };
 
@@ -132,8 +137,3 @@ module.exports = {
 
 
 
-//  new webpack.ContextReplacementPlugin(/jest-worker/),
-//         new webpack.ContextReplacementPlugin(/lazy-debug-legacy/),
-//         new webpack.ContextReplacementPlugin(/loader-runner/),
-//         new webpack.ContextReplacementPlugin(/terser-webpack-plugin/),
-        // new webpack.ContextReplacementPlugin(/webpack/)
