@@ -5,7 +5,6 @@ import { fetchAllBoardLists } from '../../actions/list_actions'
 import { fetchUserWorkspace } from '../../actions/workspace_actions'
 
 const mapStateToProps = (state, ownProps) => {
-    debugger
     return {
         boardId: ownProps.match.params.board_id,
         board: state.entities.boards[ownProps.match.params.board_id],

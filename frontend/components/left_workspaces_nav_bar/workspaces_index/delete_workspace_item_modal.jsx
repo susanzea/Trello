@@ -4,7 +4,6 @@ class DeleteWorkspaceItemModal extends React.Component {
 
     constructor(props) {
         super(props);
-        debugger
 
         this.state = {
             input_workspace_title: ''

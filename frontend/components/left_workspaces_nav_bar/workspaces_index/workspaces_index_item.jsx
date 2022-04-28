@@ -7,7 +7,6 @@ const WorkspaceIndexItem = (props) => {
     const [dropDownMenuOpen, openDropDownMenu] = useState(false);
     const [deleteModalOpen, openDeleteModal] = useState(false);
     const [editModalOpen, openEditModal] = useState(false);
-    debugger
 
     const colorOptions = {
         0: "#cb5223",
