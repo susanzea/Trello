@@ -35,14 +35,12 @@ class LoginForm extends React.Component {
 
     handleDemoUser(e) {
         e.preventDefault();
-        this.setState({ email: 'demo@user.com' })
-        this.setState({ password: 'password' })
-        const user = ({
-            username: 'demo_user',
+        // this.setState({ email: 'demo@user.com' })
+        // this.setState({ password: 'password' })
+        const user = {
             email: 'demo@user.com',
-            full_name: 'Demo User',
             password: 'password'
-        });
+        }
         this.props.login(user);
         // this.handleSubmit(e);
     }
@@ -52,11 +50,11 @@ class LoginForm extends React.Component {
         return (
             <ul className='signup-errors'>
                 {
-                    this.props.errors.map((err, idx) => (
+                    this.props.errors.length > 0 ?  this.props.errors.map((err, idx) => (
                         <li key={idx}>
                             {err}
                         </li>
-                    ))
+                    )) : ''
                 }
             </ul>
         )

@@ -37,11 +37,11 @@ class QuickSignupForm extends React.Component {
         return (
             <ul className='signup-errors'>
                 {
-                    this.props.errors.map((err, idx) => (
+                    this.props.errors.length > 0 ?  this.props.errors.map((err, idx) => (
                         <li key={idx}>
                             {err}
                         </li>
-                    ))
+                    )) : ''
                 }
             </ul>
         )
