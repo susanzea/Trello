@@ -76,8 +76,8 @@ class LoginForm extends React.Component {
                     <button onClick={this.handleDemoUser} className="session-button">Log in as Demo User</button>
                     <hr className='session-hr' />
                     <footer className='login-redirect-footer'> 
-                        <Link className="session-redirect" to={`/login`}>Can't log in?</Link>&nbsp;
-                        <p>·</p>&nbsp;
+                        {/* <button>Can't log in?</button>
+                        <p>·</p>&nbsp; */}
                         <Link to={`/signup`} className="session-redirect">Sign up for an account</Link>
                     </footer>
                 </form>

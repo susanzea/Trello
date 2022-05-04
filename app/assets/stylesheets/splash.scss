@@ -16,6 +16,10 @@ body {
     color: #091e42;
 }
 
+#product-intro {
+    margin-bottom: 45px;
+}
+
 .splash-form {
     width: 50%;
     margin-right: 30%;
@@ -41,10 +45,10 @@ body {
 #quick-signup-input {
     border: 1px solid #ced4da;
     border-radius: 6px;
-    width: 50%;
+    width: 300px;
     height: 2.8em;
     padding: 0px 8px 0px 15px;
-    margin: 6% 3% 0% 0%;
+    margin-right: 20px;
     font-size: 17px;
     font-weight: 550;
     color: #7493a6;
@@ -52,19 +56,24 @@ body {
 
 #quick-signup-button {
     color: white;
-    font-weight: bolder;
+    // font-weight: bold;
     background-color:#0164ff;
     border-radius: 6px;
     border: none;
+    padding-top: 7px;
+    text-align: center;
     text-decoration: none;
-    letter-spacing: 1px;
+    letter-spacing: 0.6px;
     margin-right: 17px;
-    padding: 12px 55px 12px;
-    font-size: 20px;
-    height: 2.25em;
-    width: 35%;
+    font-size: 19px;
+    height: 38px;
+    width: 210px;
 }
 
 .quick-signup-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
     width: 100%;
 }
