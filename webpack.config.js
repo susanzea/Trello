@@ -69,12 +69,79 @@
 
 
 
+// const webpack = require('webpack');
+// const path = require('path');
+// const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
+
+// module.exports = {
+//     mode: 'production',
+//     stats: { errorDetails: true },
+//     context: __dirname,
+//     entry: './frontend/trelloh.jsx',
+//     output: {
+//         path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
+//         filename: 'bundle.js'
+//     },
+//     resolve: {
+//         extensions: ['.js', '.jsx', '*'],
+//          fallback: {
+//             "fs": false,
+//             "child_process": false,
+//             "worker_threads": false,
+//             "uglify-js": false,
+//             "@swc/core": false,
+//             "esbuild": false,
+//             "inspector": false
+//         }
+//     },
+//     module: {
+//         rules: [
+//             {
+//                 test: /\.jsx?$/,
+//                 exclude: /(node_modules)/,
+//                 use: {
+//                     loader: 'babel-loader',
+//                     options: {
+//                         presets: ['@babel/env', '@babel/react']
+//                     }
+//                 },
+//             },
+//             {
+//                 test: /\.(png|jpe?g|gif)$/i,
+//                 use: [
+//                     {
+//                         loader: 'file-loader',
+//                         options: {
+//                             name: '[name][md5:hash].[ext]',
+//                             outputPath: 'webpack-assets/',
+//                             publicPath: 'assets/webpack-assets'
+//                         }
+//                     }
+//                 ]
+//             }
+//         ]
+//     },
+//     devtool: 'source-map',
+//     plugins: [
+//         new NodePolyfillPlugin()
+//     ]
+// };
+
+// new webpack.ContextReplacementPlugin(/jest-worker/),
+//         new webpack.ContextReplacementPlugin(/lazy-debug-legacy/),
+//         new webpack.ContextReplacementPlugin(/loader-runner/),
+//         new webpack.ContextReplacementPlugin(/terser-webpack-plugin/),
+//         new webpack.ContextReplacementPlugin(/webpack/)
+
+
+
 const webpack = require('webpack');
 const path = require('path');
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
-    mode: 'production',
+    mode: 'development',
     stats: { errorDetails: true },
     context: __dirname,
     entry: './frontend/trelloh.jsx',
@@ -121,16 +188,13 @@ module.exports = {
             }
         ]
     },
+    devtool: 'source-map',
     plugins: [
-        new NodePolyfillPlugin()
+        new NodePolyfillPlugin(),
+        new webpack.ContextReplacementPlugin(/jest-worker/),
+        new webpack.ContextReplacementPlugin(/lazy-debug-legacy/),
+        new webpack.ContextReplacementPlugin(/loader-runner/),
+        new webpack.ContextReplacementPlugin(/terser-webpack-plugin/),
+        new webpack.ContextReplacementPlugin(/webpack/)
     ]
 };
-
-// new webpack.ContextReplacementPlugin(/jest-worker/),
-//         new webpack.ContextReplacementPlugin(/lazy-debug-legacy/),
-//         new webpack.ContextReplacementPlugin(/loader-runner/),
-//         new webpack.ContextReplacementPlugin(/terser-webpack-plugin/),
-//         new webpack.ContextReplacementPlugin(/webpack/)
-
-
-
