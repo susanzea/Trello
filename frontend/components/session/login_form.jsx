@@ -70,8 +70,8 @@ class LoginForm extends React.Component {
                 <form onSubmit={this.handleSubmit} className='login-form'>
                     <h2 className="session-form-title">Log in to Trello</h2>
                     {this.displayErrors()}
-                    <input className="session-input" type="text" value={this.props.email} placeholder="  Enter email" onChange={this.handleChange('email')} />
-                    <input className="session-input" type="password" value={this.props.password} placeholder="  Enter password" onChange={this.handleChange('password')} />
+                    <input className="session-input" type="text" value={this.props.email} placeholder="Enter email" onChange={this.handleChange('email')} />
+                    <input className="session-input" type="password" value={this.props.password} placeholder="Enter password" onChange={this.handleChange('password')} />
                     <button type="submit" className="session-button">Log in</button>
                     <button onClick={this.handleDemoUser} className="session-button">Log in as Demo User</button>
                     <hr className='session-hr' />
