@@ -39,6 +39,8 @@ A link component was used to pass the email from the quick signup form to the fu
   <img align="center" width="750" alt="Screen Shot 2022-05-05 at 4 46 36 PM" src="https://user-images.githubusercontent.com/87621185/167022831-f69cb973-1204-466a-a322-842576f67210.png">
 </p>
 Each card has a respective modal with the following features:
+
+
 * An input box that autofills with the card’s title. The title can be edited when the input box is in focus and automatically saves once the input box is out of focus again.
 * An optional card description form
 * A comment section 
