@@ -164,9 +164,7 @@ export default Board;
 <br /> 
 
 
-## Future Improvements and Expansions 👷🏻‍♀️
-*sorted from highest to lowest priority*
-
+## Future Improvements 👷🏻‍♀️
 * finish converting css code syntax to nested style
 * finish converting all React class components to functional components
 * chunk Webpack to increase loading speed
