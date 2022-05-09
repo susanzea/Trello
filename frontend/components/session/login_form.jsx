@@ -48,7 +48,7 @@ class LoginForm extends React.Component {
 
     displayErrors() {
         return (
-            <ul className='signup-errors'>
+            <ul className='session-errors'>
                 {
                     this.props.errors.length > 0 ?  this.props.errors.map((err, idx) => (
                         <li key={idx}>

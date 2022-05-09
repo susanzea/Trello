@@ -54,9 +54,12 @@ class Board extends React.Component {
                         />
                         <Link
                             id='board-workspace-title'
-                            to={`/workspaces/${this.props.workspace.length !== 0 ? this.props.workspace.filter(ws => this.props.board.workspace_id === ws.id)[0].id : "no ws"}/boards`}
+                            to={`/workspaces/${this.props.workspaces.length !== 0 ? 
+                                    this.props.workspaces.filter(ws => this.props.board.workspace_id === ws.id)[0].id 
+                                    : "error"}/boards`
+                                }
                         >
-                            {this.props.workspace.length !== 0 ? this.props.workspace.filter(ws => this.props.board.workspace_id === ws.id)[0].title : "no ws"}
+                            {this.props.workspaces.length !== 0 ? this.props.workspaces.filter(ws => this.props.board.workspace_id === ws.id)[0].title : "no ws"}
                         </Link>
                         {/* <p id='board-workspace-title'>{this.props.workspace.length !== 0 ? this.props.workspace.filter(ws => this.props.board.workspace_id === ws.id)[0].title : "no ws"}</p> */}
                         <button 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { withRouter, Link } from 'react-router-dom'
 import DeleteWorkspaceItemModal from './delete_workspace_item_modal_container'
 import EditWorkspaceItemModal from './edit_workspace_item_modal';
@@ -16,22 +16,8 @@ const WorkspaceIndexItem = (props) => {
         4: "#017951"
     }
 
-    
-
-    // TODO: set selected based on url, default should be first workspace
-    // on mount should fetch the workspace based on url and highlight that idx if the id matches
     const selected = props.selected === props.workspace.id
 
-    // const [workspace, setWorkspace] = useState(0);
-
-
-    // useEffect(() => {
-    //     props.fetchUserWorkspace(props.workspace.id).then(res => {
-    //         setWorkspace(Object.values(res.workspace))
-    //     })
-    // }, []);
-    
-    
     return(
         <div className='workspaces-index-container'>
             <Link className={`${selected ? "selected" : "notSelected"} workspaces-index-item`}

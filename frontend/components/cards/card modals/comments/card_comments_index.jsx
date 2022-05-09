@@ -33,7 +33,7 @@ class CardCommentsIndex extends React.Component {
                 {
                     this.state.comments.map((comment, idx) => {
                         // console.log(this.state.comments)
-                        return <CommentsIndexItemContainer comment={comment} />
+                        return <CommentsIndexItemContainer comment={comment} key={idx} />
                     })
                 }
             </ul>

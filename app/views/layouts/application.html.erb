@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Trelloh</title>
+    <%= favicon_link_tag asset_path('favicon.png') %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -9,7 +10,6 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
 
-<%# attaching images to window %>
     <script type="text/javascript">
       window.trelloh_logo_url = "<%= image_url('navbar/trelloh-logo.png') %>"
       window.trelloh_logo_main_url = "<%= image_url('navbar/main_nav_bar/trelloh-logo-main.png') %>"
