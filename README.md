@@ -178,3 +178,5 @@ export default Board;
 
 ## Feedback 📝
 Please don’t hesitate to open an issue on this repo or shoot me an email (susanzea16@gmail.com) if you find any bugs or have any suggestions for this project.  
+
+Note: Some images features in project are the property of Trello.com and used for educational, non-commercial purposes only.
